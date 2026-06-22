@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
+import { ServiceCards } from "@/components/ServiceCards";
 import { interpolate, useTranslation } from "@/contexts/LanguageContext";
 import { siteConfig } from "@/lib/site";
 
@@ -25,6 +26,8 @@ export function ServicesContent() {
           <p className="text-lg leading-relaxed text-slate-600">{p.marketingNote}</p>
         </div>
       </section>
+
+      <ServiceCards />
 
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">

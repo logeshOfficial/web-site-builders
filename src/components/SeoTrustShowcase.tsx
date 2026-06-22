@@ -275,6 +275,12 @@ export function SeoTrustShowcase() {
             >
               {t.seoShowcase.talkToUs}
             </Link>
+            <Link
+              href="/what-is-seo"
+              className="mt-3 inline-flex text-sm font-semibold text-teal-700 hover:text-teal-900"
+            >
+              {t.common.readFullSeoGuide}
+            </Link>
           </div>
         </div>
       </div>

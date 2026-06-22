@@ -4,15 +4,19 @@ import Link from "next/link";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { useTranslation } from "@/contexts/LanguageContext";
 
-/** Top FAQ teaser IDs shown on the homepage */
+/** Top FAQ category IDs for homepage teaser */
 const TEASER_IDS = ["marketing", "basics", "pricing", "contact"] as const;
 const TEASER_ITEM_INDEX = 0;
 
-export function FaqTeaser() {
+type FaqTeaserProps = {
+  maxItems?: number;
+};
+
+export function FaqTeaser({ maxItems = TEASER_IDS.length }: FaqTeaserProps) {
   const { t } = useTranslation();
   const p = t.faqPage;
 
-  const teaserItems = TEASER_IDS.flatMap((categoryId) => {
+  const teaserItems = TEASER_IDS.slice(0, maxItems).flatMap((categoryId) => {
     const category = p.categories.find((c) => c.id === categoryId);
     const item = category?.items[TEASER_ITEM_INDEX];
     return item ? [item] : [];

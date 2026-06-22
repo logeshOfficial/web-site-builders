@@ -18,6 +18,7 @@ export const ta: Translation = {
     viewFullPricing: "முழு விலை பார்க்க",
     viewDetails: "விவரங்கள் பார்க்க →",
     viewAllFaqs: "அனைத்து FAQ-களும் பார்க்க →",
+    viewMore: "மேலும் பார்க்க →",
     learnMore: "மேலும் அறிய",
     backToHome: "← முகப்புக்கு திரும்ப",
     allRightsReserved: "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
@@ -103,6 +104,13 @@ export const ta: Translation = {
           text: "Mobile-first pages, தெளிவான service details, local shops மற்றும் online stores இரண்டிற்கும் வேலை செய்யும் trust signals.",
         },
       ],
+    },
+    pricingTeaser: {
+      eyebrow: "Affordable packages",
+      title: "தெளிவான விலை — ₹6,000-ல் இருந்து",
+      subtitle: "ஒரு முறை build fee. Agency markup இல்லை. எல்லா plan-லும் hosting included.",
+      ctaLink: "முழு விலை & add-ons பார்க்க →",
+      domainNote: "Domain & hosting செலவு என்ன? →",
     },
   },
 
@@ -254,6 +262,7 @@ export const ta: Translation = {
       "Dentists, plumbers, salons மட்டும் அல்ல—எல்லா business owners-க்கும் welcome. சென்னை local shop அல்லது India முழுவதும் online store. customers வேண்டுமென்றால், build செய்கிறோம்.",
     dontSee: "உங்கள் industry தெரியவில்லையா?",
     contactLink: "Contact us — எந்த business type-க்கும் work செய்கிறோம் →",
+    showcaseLink: "Industry showcase பார்க்க →",
     items: [
       "Dentists & Clinics",
       "Plumbers & Electricians",

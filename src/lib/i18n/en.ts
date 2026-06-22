@@ -16,6 +16,7 @@ export const en = {
     viewFullPricing: "View Full Pricing",
     viewDetails: "View details →",
     viewAllFaqs: "View all FAQs →",
+    viewMore: "View more →",
     learnMore: "Learn more",
     backToHome: "← Back to home",
     allRightsReserved: "All rights reserved.",
@@ -101,6 +102,13 @@ export const en = {
           text: "Mobile-first pages, clear service details, and trust signals that work for local shops and online stores alike.",
         },
       ],
+    },
+    pricingTeaser: {
+      eyebrow: "Affordable packages",
+      title: "Clear pricing — from ₹6,000",
+      subtitle: "One-time build fee. No agency markup. Hosting included on all plans.",
+      ctaLink: "View full pricing & add-ons →",
+      domainNote: "What are domain & hosting costs? →",
     },
   },
 
@@ -252,6 +260,7 @@ export const en = {
       "Not only dentists, plumbers, or salons—we welcome all business owners. Local shop in Chennai or online store across India. If you need customers, we build for you.",
     dontSee: "Don't see your industry?",
     contactLink: "Contact us — we work with any business type →",
+    showcaseLink: "See our industry showcase →",
     items: [
       "Dentists & Clinics",
       "Plumbers & Electricians",

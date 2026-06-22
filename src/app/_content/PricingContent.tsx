@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
 import { DomainHostingExplainer } from "@/components/DomainHostingExplainer";
+import { PriceComparison } from "@/components/PriceComparison";
 import { PricingCards } from "@/components/PricingCards";
 import { PricingTransparencyTable } from "@/components/PricingTransparencyTable";
 import { useTranslation } from "@/contexts/LanguageContext";
@@ -29,6 +30,8 @@ export function PricingContent() {
       </section>
 
       <PricingCards />
+
+      <PriceComparison />
 
       <PricingTransparencyTable />
 

@@ -4,7 +4,11 @@ import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { businessTypeEmojis } from "@/lib/site";
 
-export function AllBusinessTypes() {
+type AllBusinessTypesProps = {
+  showShowcaseLink?: boolean;
+};
+
+export function AllBusinessTypes({ showShowcaseLink = false }: AllBusinessTypesProps) {
   const { t } = useTranslation();
 
   return (
@@ -31,12 +35,29 @@ export function AllBusinessTypes() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-slate-600">
-          {t.businessTypes.dontSee}{" "}
-          <Link href="/contact" className="font-semibold text-teal-700 hover:text-teal-800">
-            {t.businessTypes.contactLink}
-          </Link>
-        </p>
+        <div className="mt-8 flex flex-col items-center gap-3 text-center">
+          {showShowcaseLink ? (
+            <Link
+              href="/showcase"
+              className="text-sm font-semibold text-teal-700 hover:text-teal-800"
+            >
+              {t.businessTypes.showcaseLink}
+            </Link>
+          ) : (
+            <Link
+              href="/industries"
+              className="text-sm font-semibold text-teal-700 hover:text-teal-800"
+            >
+              {t.servicesShowcase.viewAll}
+            </Link>
+          )}
+          <p className="text-slate-600">
+            {t.businessTypes.dontSee}{" "}
+            <Link href="/contact" className="font-semibold text-teal-700 hover:text-teal-800">
+              {t.businessTypes.contactLink}
+            </Link>
+          </p>
+        </div>
       </div>
     </section>
   );

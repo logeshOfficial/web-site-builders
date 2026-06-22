@@ -2,7 +2,11 @@
 
 import { useTranslation } from "@/contexts/LanguageContext";
 
-export function MarketingSection() {
+type MarketingSectionProps = {
+  compact?: boolean;
+};
+
+export function MarketingSection({ compact = false }: MarketingSectionProps) {
   const { t } = useTranslation();
   const m = t.home.marketingSection;
 
@@ -15,17 +19,19 @@ export function MarketingSection() {
           <p className="mt-4 text-base leading-relaxed text-slate-600 break-words sm:text-lg">{m.description}</p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-3 sm:gap-6">
-          {m.points.map((point) => (
-            <div
-              key={point.title}
-              className="rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6"
-            >
-              <h3 className="font-semibold text-slate-900 break-words">{point.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600 break-words">{point.text}</p>
-            </div>
-          ))}
-        </div>
+        {!compact && (
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-3 sm:gap-6">
+            {m.points.map((point) => (
+              <div
+                key={point.title}
+                className="rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6"
+              >
+                <h3 className="font-semibold text-slate-900 break-words">{point.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 break-words">{point.text}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

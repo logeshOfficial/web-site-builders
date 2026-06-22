@@ -4,7 +4,12 @@ import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { packagePrices } from "@/lib/site";
 
-export function PricingCards({ showAllLink = false }: { showAllLink?: boolean }) {
+type PricingCardsProps = {
+  showAllLink?: boolean;
+  compact?: boolean;
+};
+
+export function PricingCards({ showAllLink = false, compact = false }: PricingCardsProps) {
   const { t } = useTranslation();
 
   return (
@@ -13,9 +18,11 @@ export function PricingCards({ showAllLink = false }: { showAllLink?: boolean })
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 break-words sm:text-3xl md:text-4xl">{t.packages.title}</h2>
           <p className="mt-4 text-base text-slate-600 break-words sm:text-lg">{t.packages.description}</p>
-          <p className="mt-3 rounded-xl bg-teal-50 px-4 py-3 text-sm font-medium text-teal-800 break-words">
-            {t.packages.gymNote}
-          </p>
+          {!compact && (
+            <p className="mt-3 rounded-xl bg-teal-50 px-4 py-3 text-sm font-medium text-teal-800 break-words">
+              {t.packages.gymNote}
+            </p>
+          )}
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 sm:gap-8 lg:grid-cols-3">
@@ -45,19 +52,23 @@ export function PricingCards({ showAllLink = false }: { showAllLink?: boolean })
                   {"priceNote" in pkg && pkg.priceNote && (
                     <p className="mt-2 text-xs font-medium text-teal-700">{pkg.priceNote}</p>
                   )}
-                  <p className="mt-3 text-sm text-slate-600 break-words">{pkg.description}</p>
+                  {!compact && (
+                    <p className="mt-3 text-sm text-slate-600 break-words">{pkg.description}</p>
+                  )}
                 </div>
 
-                <ul className="mt-6 flex-1 space-y-3 sm:mt-8">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-sm text-slate-700">
-                      <svg className="mt-0.5 h-5 w-5 shrink-0 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="break-words">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                {!compact && (
+                  <ul className="mt-6 flex-1 space-y-3 sm:mt-8">
+                    {pkg.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3 text-sm text-slate-700">
+                        <svg className="mt-0.5 h-5 w-5 shrink-0 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="break-words">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
                 <Link
                   href="/contact"
