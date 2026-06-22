@@ -74,6 +74,19 @@ export const ta: Translation = {
       fastDelivery: "விரைவான delivery",
       mobileFirst: "Mobile-first",
     },
+    scopeVisual: {
+      caption: "எல்லா business type-க்கும் build செய்கிறோம்",
+      mockSiteTitle: "உங்கள் வணிகம்",
+      mockSiteTagline: "Professional · SEO-ready",
+      industries: {
+        gym: "Gym",
+        salon: "Salon",
+        clinic: "Clinic",
+        ecommerce: "E-commerce",
+        restaurant: "Restaurant",
+        shop: "Shop",
+      },
+    },
   },
 
   home: {

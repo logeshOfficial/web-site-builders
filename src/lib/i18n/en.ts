@@ -72,6 +72,19 @@ export const en = {
       fastDelivery: "Fast delivery",
       mobileFirst: "Mobile-first",
     },
+    scopeVisual: {
+      caption: "We build for every business type",
+      mockSiteTitle: "Your Business",
+      mockSiteTagline: "Professional · SEO-ready",
+      industries: {
+        gym: "Gym",
+        salon: "Salon",
+        clinic: "Clinic",
+        ecommerce: "E-commerce",
+        restaurant: "Restaurant",
+        shop: "Shop",
+      },
+    },
   },
 
   home: {

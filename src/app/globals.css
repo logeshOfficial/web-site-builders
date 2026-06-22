@@ -175,3 +175,61 @@ body {
 .seo-flow-arrow {
   opacity: 0.7;
 }
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes hero-float-badge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.hero-float-device {
+  animation: hero-float 4s ease-in-out infinite;
+}
+
+.hero-float-device-delay {
+  animation-delay: 0.6s;
+}
+
+.hero-float-badge {
+  animation: hero-float-badge 3.5s ease-in-out infinite;
+}
+
+.hero-float-badge-1 {
+  animation-delay: 0s;
+}
+.hero-float-badge-2 {
+  animation-delay: 0.4s;
+}
+.hero-float-badge-3 {
+  animation-delay: 0.8s;
+}
+.hero-float-badge-4 {
+  animation-delay: 1.2s;
+}
+.hero-float-badge-5 {
+  animation-delay: 1.6s;
+}
+.hero-float-badge-6 {
+  animation-delay: 2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-float-device,
+  .hero-float-badge {
+    animation: none;
+  }
+}
