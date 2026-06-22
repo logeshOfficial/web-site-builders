@@ -68,7 +68,7 @@ export const en = {
     stats: {
       all: "All",
       businessTypes: "Business types",
-      belowMarket: "Below market",
+      belowMarket: "Below market price",
       fastDelivery: "Fast delivery",
       mobileFirst: "Mobile-first",
     },
