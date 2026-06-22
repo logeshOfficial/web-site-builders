@@ -34,7 +34,7 @@ export function Header() {
           asLink
           truncateName
           subtitleVisible="sm"
-          className="min-w-0 flex-1 md:flex-none md:shrink-0"
+          className="min-w-0 max-w-[calc(100%-7.5rem)] flex-1 sm:max-w-none md:flex-none md:shrink-0"
           subtitle={interpolate(t.header.subtitle, { shortName: siteConfig.shortName })}
         />
 

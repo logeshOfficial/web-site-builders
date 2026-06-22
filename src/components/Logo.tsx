@@ -11,7 +11,7 @@ type LogoProps = {
   subtitle?: string;
   subtitleVisible?: "always" | "sm";
   asLink?: boolean;
-  /** Single-line truncated name — use in the header to leave room for nav. */
+  /** Header layout: wrap on small screens, full name on md+. */
   truncateName?: boolean;
 };
 
@@ -95,26 +95,22 @@ export function Logo({
       : `hidden text-[11px] leading-snug sm:block ${styles.subtext}`;
 
   const iconWrapperClass = defaultConcept
-    ? `flex aspect-square h-full w-auto min-h-[40px] shrink-0 items-center justify-center sm:min-h-[52px] md:min-h-[62px] ${styles.box}`
-    : `flex aspect-square h-full w-auto min-h-[40px] shrink-0 items-center justify-center rounded-lg sm:min-h-[52px] md:min-h-[62px] ${styles.box}`;
+    ? `flex aspect-square h-full w-auto min-h-[36px] shrink-0 items-center justify-center sm:min-h-[52px] md:min-h-[62px] ${styles.box}`
+    : `flex aspect-square h-full w-auto min-h-[36px] shrink-0 items-center justify-center rounded-lg sm:min-h-[52px] md:min-h-[62px] ${styles.box}`;
 
   const inner = (
     <>
       <span className={iconWrapperClass}>
         <BrandLogoMark
-          className={defaultConcept ? "h-full w-full max-h-[40px] max-w-[40px] sm:max-h-none sm:max-w-none" : "h-9 w-9 sm:h-10 sm:w-10 md:h-full md:w-full md:max-h-[62px] md:max-w-[62px]"}
+          className={defaultConcept ? "h-full w-full max-h-[36px] max-w-[36px] sm:max-h-none sm:max-w-none" : "h-8 w-8 sm:h-10 sm:w-10 md:h-full md:w-full md:max-h-[62px] md:max-w-[62px]"}
         />
       </span>
       {variant === "full" ? (
-        <span
-          className={`flex min-w-0 flex-col justify-center overflow-hidden leading-tight${
-            truncateName ? " max-w-[7rem] sm:max-w-[11rem] lg:max-w-[10rem] xl:max-w-[12rem]" : ""
-          }`}
-        >
+        <span className="flex min-w-0 flex-col justify-center leading-tight">
           <span
             className={`block font-semibold tracking-tight ${styles.text} ${
               truncateName
-                ? "truncate whitespace-nowrap text-sm sm:text-base md:text-lg"
+                ? "line-clamp-2 text-sm leading-snug sm:text-base md:line-clamp-none md:overflow-visible md:whitespace-nowrap md:text-lg"
                 : "overflow-hidden text-ellipsis whitespace-nowrap text-lg sm:overflow-visible sm:whitespace-normal sm:text-xl md:text-2xl"
             }`}
           >
