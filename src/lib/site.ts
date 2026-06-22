@@ -1,9 +1,34 @@
 /** Placeholder until custom domain is confirmed — set NEXT_PUBLIC_SITE_URL in Vercel or .env.local. */
 const DEFAULT_SITE_URL = "https://websitebuilders.in";
 
+function resolveSiteUrl(raw: string | undefined): string | null {
+  if (!raw?.trim()) return null;
+
+  try {
+    const value = raw.trim();
+    const withProtocol = /^https?:\/\//i.test(value) ? value : `https://${value}`;
+    return new URL(withProtocol).origin;
+  } catch {
+    return null;
+  }
+}
+
 /** Public site URL for metadata, sitemap, and canonical links. */
 export function getSiteUrl(): string {
-  return process.env.NEXT_PUBLIC_SITE_URL?.trim() || DEFAULT_SITE_URL;
+  return (
+    resolveSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ??
+    resolveSiteUrl(
+      process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined,
+    ) ??
+    DEFAULT_SITE_URL
+  );
+}
+
+/** Build an absolute URL for a site path (e.g. `/services`). */
+export function absoluteUrl(path = ""): string {
+  const base = getSiteUrl();
+  if (!path || path === "/") return base;
+  return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
 export function getWhatsAppUrl(): string {
