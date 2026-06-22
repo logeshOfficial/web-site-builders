@@ -7,39 +7,62 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Logo } from "@/components/Logo";
 import { navLinks, siteConfig } from "@/lib/site";
 
+type NavLinkItem = (typeof navLinks)[number];
+
+function desktopNavLinkClassName(link: NavLinkItem) {
+  const base =
+    "whitespace-nowrap text-xs font-medium text-slate-600 transition hover:text-teal-700 xl:text-sm";
+
+  const hideUntil = "hideUntil" in link ? link.hideUntil : undefined;
+
+  if (hideUntil === "xl") {
+    return `${base} hidden xl:inline`;
+  }
+  if (hideUntil === "lg") {
+    return `${base} hidden lg:inline`;
+  }
+  return base;
+}
+
 export function Header() {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 sm:px-6 sm:py-3.5">
+      <div className="mx-auto flex max-w-6xl min-h-[3.25rem] items-center gap-3 px-4 py-3 sm:min-h-[3.5rem] sm:px-6 sm:py-3.5">
         <Logo
           variant="full"
           theme="light"
           asLink
           subtitleVisible="sm"
-          className="min-w-0 shrink-0 sm:min-w-0"
+          className="min-w-0 shrink-0"
           subtitle={interpolate(t.header.subtitle, { shortName: siteConfig.shortName })}
         />
 
-        <div className="ml-auto hidden shrink-0 items-center gap-4 lg:gap-6 md:flex">
-          <nav className="flex flex-nowrap items-center gap-5 lg:gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="whitespace-nowrap text-sm font-medium text-slate-600 transition hover:text-teal-700"
-              >
-                {t.nav[link.key]}
-              </Link>
-            ))}
+        <div className="ml-auto hidden min-w-0 flex-1 items-center justify-end gap-2 md:flex lg:gap-3">
+          <nav
+            className="min-w-0 flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            aria-label="Main navigation"
+          >
+            <div className="flex w-max max-w-full flex-nowrap items-center gap-3 lg:gap-4 xl:gap-5">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={desktopNavLinkClassName(link)}
+                >
+                  {t.nav[link.key]}
+                </Link>
+              ))}
+            </div>
           </nav>
-          <div className="flex shrink-0 items-center gap-3">
+
+          <div className="flex shrink-0 items-center gap-2 lg:gap-3">
             <LanguageSwitcher />
             <Link
               href="/contact"
-              className="whitespace-nowrap rounded-full bg-teal-600 px-5 py-2 text-sm font-semibold leading-none text-white transition hover:bg-teal-700"
+              className="shrink-0 whitespace-nowrap rounded-full bg-teal-600 px-4 py-2 text-xs font-semibold leading-none text-white transition hover:bg-teal-700 xl:px-5 xl:text-sm"
             >
               {t.common.freeConsultation}
             </Link>

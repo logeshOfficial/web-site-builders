@@ -16,7 +16,7 @@ export function Footer() {
             <Logo
               variant="full"
               theme="dark"
-              subtitle={`${siteConfig.shortName} · ${t.common.chennaiFreelancers}`}
+              subtitle={t.header.subtitle}
               subtitleVisible="always"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">

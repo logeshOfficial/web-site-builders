@@ -13,24 +13,24 @@ export function getWhatsAppUrl(): string {
 export const siteConfig = {
   name: "Business Website Makers",
   shortName: "Web site builders",
-  tagline: "Trusted online website builders & freelancers",
+  tagline: "Trusted professional website makers",
   description:
-    "Business Website Makers is a trusted team of online website builders and freelancers in Chennai, India. We create affordable SEO-ready business websites for shops, clinics, restaurants, and online brands—30–40% below agency prices.",
+    "Business Website Makers is a trusted team of professional website makers in India. We create affordable SEO-ready business websites for shops, clinics, restaurants, and online brands—30–40% below agency prices.",
   valueProposition:
-    "Trusted business website makers at freelancer prices—typically 30–40% less than market agencies.",
+    "Trusted business website makers at fair prices—typically 30–40% less than market agencies.",
   seoKeywords: [
     "business website makers Chennai",
-    "online website builders freelancers India",
+    "website makers India",
     "affordable SEO website",
     "trusted website builders Chennai",
-    "freelance web designers India",
+    "professional web designers India",
     "business website design Chennai",
     "SEO website for small business",
     "local business website makers",
   ],
   alternateNames: [
     "Web site builders",
-    "Online Website Builders Freelancers",
+    "Professional Website Makers",
     "Business Website Makers Chennai",
   ],
   email: "iamlogeshwaran.info@gmail.com",
@@ -48,8 +48,8 @@ export const siteConfig = {
 } as const;
 
 export const navLinks = [
-  { href: "/", key: "home" },
-  { href: "/what-is-seo", key: "whatIsSeo" },
+  { href: "/", key: "home", hideUntil: "xl" },
+  { href: "/what-is-seo", key: "whatIsSeo", hideUntil: "xl" },
   { href: "/services", key: "services" },
   { href: "/showcase", key: "showcase" },
   { href: "/pricing", key: "pricing" },

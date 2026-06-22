@@ -4,8 +4,6 @@ export const ta: Translation = {
   common: {
     brandName: "Business Website Makers",
     shortName: "Web site builders",
-    freelancers: "ஃப்ரீலான்சர்கள்",
-    chennaiFreelancers: "சென்னை ஃப்ரீலான்சர்கள்",
     freeConsultation: "இலவச ஆலோசனை",
     getFreeQuote: "இலவச மதிப்பீடு பெறுங்கள்",
     getFreeQuoteShort: "இலவச மதிப்பீடு",
@@ -44,22 +42,22 @@ export const ta: Translation = {
   nav: {
     home: "முகப்பு",
     faq: "FAQ",
-    whatIsSeo: "SEO என்றால் என்ன?",
+    whatIsSeo: "SEO என்றால்?",
     whatIsDomainHosting: "Domain & Hosting",
     services: "சேவைகள்",
-    showcase: "என்ன கட்டுவோம்",
+    showcase: "கட்டுமானம்",
     pricing: "விலை",
     about: "எங்களைப் பற்றி",
     contact: "தொடர்பு",
   },
 
   header: {
-    subtitle: "{shortName} · ஃப்ரீலான்சர்கள்",
+    subtitle: "SEO · Web Design · India",
   },
 
   footer: {
     description:
-      "நம்பகமான business website makers மற்றும் online website builders freelancers. {city} மற்றும் இந்தியா முழுவதும் எல்லா வணிக வகைகளுக்கும் affordable SEO websites.",
+      "நம்பகமான business website makers. இந்தியா முழுவதும் எல்லா வணிக வகைகளுக்கும் affordable SEO websites.",
     pages: "பக்கங்கள்",
     learn: "கற்றுக்கொள்ளுங்கள்",
     examples: "உதாரணங்கள்",
@@ -67,7 +65,7 @@ export const ta: Translation = {
   },
 
   hero: {
-    defaultBadge: "சென்னை, இந்தியா · Local & Online வணிகங்கள்",
+    defaultBadge: "Professional websites · Local & Online வணிகங்கள்",
     stats: {
       all: "எல்லாம்",
       businessTypes: "வணிக வகைகள்",
@@ -78,14 +76,14 @@ export const ta: Translation = {
   },
 
   home: {
-    badge: "நம்பகமான freelancers · சென்னை · agency விலையில் 30–40% குறைவு",
+    badge: "நம்பகமான website makers · agency விலையில் 30–40% குறைவு",
     headline: "நம்பகமான business website makers",
     subheadline:
-      "{brandName} சென்னையில் உள்ள online website builders மற்றும் freelancers. சிறு வணிகங்கள் வளர marketing-ஆல் தான் — இன்று அது professional website மற்றும் Google visibility-உடன் தொடங்குகிறது. shops, clinics, restaurants, gyms, online brands-க்கு affordable, SEO-ready sites உருவாக்குகிறோம் — உங்கள் digital marketing engine-ஆக வேலை செய்யும்.",
+      "{brandName} professional website makers. சிறு வணிகங்கள் வளர marketing-ஆல் தான் — இன்று அது professional website மற்றும் Google visibility-உடன் தொடங்குகிறது. shops, clinics, restaurants, gyms, online brands-க்கு affordable, SEO-ready sites உருவாக்குகிறோம் — உங்கள் digital marketing engine-ஆக வேலை செய்யும்.",
     secondaryCta: "SEO என்றால் என்ன?",
     ctaHeadline: "நம்பகமான business website makers — நீங்கள் தயாராக இருக்கும்போது",
     ctaSubheadline:
-      "எங்கள் online website builders freelancers-உடன் 15 நிமிட இலவச call. நேர்மையான quote, எளிய விளக்கம், tech jargon இல்லை.",
+      "எங்கள் website team-உடன் 15 நிமிட இலவச call. நேர்மையான quote, எளிய விளக்கம், tech jargon இல்லை.",
     marketingSection: {
       eyebrow: "உங்கள் வளர்ச்சி strategy",
       title: "Professional website + Google visibility = உங்கள் digital marketing engine",
@@ -112,7 +110,7 @@ export const ta: Translation = {
     eyebrow: "எங்களை ஏன் தேர்வு செய்ய வேண்டும்",
     title: "எங்கள் company specs — நீங்கள் பெறுவது",
     description:
-      "சென்னையில் skilled freelance team. costly agency அல்ல—உங்கள் வணிகத்தை online-ல் build செய்யும் partner, நீங்கள் afford செய்யக்கூடிய விலையில்.",
+      "முடிவுகளில் கவனம் செலுத்தும் skilled website team. costly agency அல்ல—உங்கள் வணிகத்தை online-ல் build செய்யும் partner, நீங்கள் afford செய்யக்கூடிய விலையில்.",
     items: [
       {
         title: "எல்லா வணிக வகைகளும் welcome",
@@ -122,7 +120,7 @@ export const ta: Translation = {
       {
         title: "market விலையில் 30–40% குறைவு",
         description:
-          "நாங்கள் lean freelance team, பெரிய agency அல்ல. same quality website-ஐ குறைந்த விலையில் பெறுங்கள்.",
+          "நாங்கள் lean team, பெரிய agency அல்ல. same quality website-ஐ குறைந்த விலையில் பெறுங்கள்.",
       },
       {
         title: "எல்லா plan-லும் SEO included",
@@ -171,12 +169,12 @@ export const ta: Translation = {
 
   whyTrustUs: {
     eyebrow: "எங்களை ஏன் நம்ப வேண்டும்",
-    title: "நம்பகமான online website builders & freelancers",
+    title: "நம்பகமான professional website makers",
     description:
       "{brandName} ({shortName}) Indian business owners-க்கு confidence-உடன் online-ல் வர உதவுகிறது—clear pricing, honest advice, customers-ஐ உண்மையில் கொண்டு வரும் websites.",
     items: [
       {
-        title: "Real freelancers, real accountability",
+        title: "Direct accountability",
         text: "உங்கள் site build செய்யும் people-உடன் directly work செய்யுங்கள்—agency departments-க்கு between pass ஆகாது.",
       },
       {
@@ -208,7 +206,7 @@ export const ta: Translation = {
 
   testimonials: {
     title: "Business owners என்ன சொல்கிறார்கள்",
-    subtitle: "எங்கள் freelance website team-ஐ தேர்ந்தெடுத்த Chennai businesses-ன் real feedback.",
+    subtitle: "எங்கள் website team-ஐ தேர்ந்தெடுத்த businesses-ன் real feedback.",
     disclaimer:
       "Demonstration-க்கான sample client stories. உங்கள் real testimonials collect செய்தவுடன் replace செய்யுங்கள்.",
     items: [
@@ -224,7 +222,7 @@ export const ta: Translation = {
         business: "Vel Plumbing Services",
         location: "Velachery, Chennai",
         quote:
-          "முன்பு website இல்லை. இப்போது plumber near me search செய்யும்போது என் number அங்கே இருக்கும். ஒரு முறை pay, every week calls. Genuine freelancers.",
+          "முன்பு website இல்லை. இப்போது plumber near me search செய்யும்போது என் number அங்கே இருக்கும். ஒரு முறை pay, every week calls. Genuine team, fair price.",
       },
       {
         name: "Anitha S",
@@ -530,11 +528,11 @@ export const ta: Translation = {
     eyebrow: "பணம் சேமிக்க",
     title: "Market-ஐ விட குறைவு — same quality",
     valueProposition:
-      "Trusted business website makers freelancer prices-ல்—பொதுவாக market agencies-ஐ விட 30–40% குறைவு.",
+      "Trusted business website makers fair prices-ல்—பொதுவாக market agencies-ஐ விட 30–40% குறைவு.",
     service: "Service",
     typicalAgency: "Typical agency",
     howWeKeepLow:
-      "விலை குறைவாக வைப்பது எப்படி: lean freelance team, fancy office rent இல்லை, efficient process—website-க்கு pay, agency overhead-க்கு அல்ல.",
+      "விலை குறைவாக வைப்பது எப்படி: lean team, fancy office rent இல்லை, efficient process—website-க்கு pay, agency overhead-க்கு அல்ல.",
   },
 
   marketComparison: [
@@ -574,7 +572,7 @@ export const ta: Translation = {
   },
 
   packages: {
-    title: "Realistic freelancer pricing — agency markup இல்லை",
+    title: "Realistic pricing — agency markup இல்லை",
     description:
       "Gym, salon, shop, clinic — clear one-time build fees. எல்லா plans-லும் hosting included. Growth tier-லிருந்து domain included. 50% start, 50% launch.",
     seeAddons: "Cost breakdown & add-ons பார்க்க →",
@@ -857,7 +855,7 @@ export const ta: Translation = {
     interestedPackage: "ஆர்வமுள்ள package",
     message: "உங்கள் project பற்றி சொல்லுங்கள் *",
     placeholderName: "உங்கள் பெயர்",
-    placeholderPhone: "+91 8608036735",
+    placeholderPhone: "உங்கள் தொலைபேசி எண்",
     placeholderEmail: "you@business.com",
     placeholderMessage: "உங்கள் business என்ன செய்கிறது? உங்கள் goals என்ன?",
     selectIndustry: "உங்கள் industry தேர்ந்தெடுக்க",
@@ -893,7 +891,7 @@ export const ta: Translation = {
   contactPage: {
     title: "Trusted business website makers-உடன் பேசுங்கள்",
     subtitle:
-      "சென்னை online website builders freelancers-உடன் 15 நிமிட இலவச consultation. உங்கள் business சொல்லுங்கள்—24 hours-ல் honest, affordable quote reply.",
+      "எங்கள் website team-உடன் 15 நிமிட இலவச consultation. உங்கள் business சொல்லுங்கள்—24 hours-ல் honest, affordable quote reply.",
     getInTouch: "தொடர்பு கொள்ளுங்கள்",
     phoneLabel: "Phone / WhatsApp",
     emailLabel: "Email",
@@ -1172,13 +1170,13 @@ export const ta: Translation = {
     ],
     readyTitle: "Google-ல் found ஆக தயாரா?",
     readyText:
-      "{brandName} Chennai-ல் trusted business website makers மற்றும் online website builders freelancers. எந்த business type-க்கும் affordable SEO websites, agencies-ஐ விட 30–40% குறைவு. Free consultation—எளிய Tamil அல்லது English-ல் explain.",
+      "{brandName} trusted business website makers. எந்த business type-க்கும் affordable SEO websites, agencies-ஐ விட 30–40% குறைவு. Free consultation—எளிய Tamil அல்லது English-ல் explain.",
   },
 
   servicesPage: {
     title: "நம்பகமான business website services",
     subtitle:
-      "{brandName}-இலிருந்து end-to-end affordable SEO solutions—Chennai மற்றும் India முழுவதும் local மற்றும் online businesses-க்கு online website builders freelancers.",
+      "{brandName}-இலிருந்து end-to-end affordable SEO solutions—India முழுவதும் local மற்றும் online businesses-க்கு.",
     marketingNote:
       "எல்லா website-யையும் marketing investment-ஆக treat செய்கிறோம். Professional site + strong SEO = gyms, shops, clinics, salons-க்கு digital marketing foundation—paid ads மட்டும் rely ஆகாமல் Google-லிருந்து customers.",
     addOnsTitle: "Popular add-ons",
@@ -1190,7 +1188,7 @@ export const ta: Translation = {
   pricingPage: {
     title: "Trusted website makers-இலிருந்து transparent pricing",
     subtitle:
-      "Gym, shop, clinic, small business-க்கு realistic freelancer rates. INR prices — hosting included, Growth-லிருந்து domain. SEO & mobile எல்லா plan-லும்.",
+      "Gym, shop, clinic, small business-க்கு realistic rates. INR prices — hosting included, Growth-லிருந்து domain. SEO & mobile எல்லா plan-லும்.",
     addOnsTitle: "Add-ons & yearly renewals",
     addOnsSubtitle: "Site live-க்கு பிறகு optional extras. Domain renewal மட்டும் typical yearly cost.",
     domainHostingLink: "Domain & hosting செலவு என்ன?",
@@ -1210,16 +1208,16 @@ export const ta: Translation = {
   aboutPage: {
     title: "{brandName} பற்றி",
     subtitle:
-      "Chennai-ல் trusted business website makers மற்றும் online website builders freelancers—எல்லா Indian business type-க்கும் Google-ல் found, big agencies-ஐ விட 30–40% குறைவு.",
+      "Trusted business website makers—எல்லா Indian business type-க்கும் Google-ல் found, big agencies-ஐ விட 30–40% குறைவு.",
     whoWeAre: "நாம் யார்",
     p1: "{brandName} {shortName}-ஆக start—business owners agencies-க்கு ₹80,000–₹2,00,000 overpay, Google-லிருந்து customers bring ஆகாத websites.",
-    p2: "நாங்கள் online website builders freelancers, bloated agency அல்ல. Lower prices, direct communication, actually build செய்யும் people-ன் accountability. Chennai மற்றும் India முழுவதும் shops, clinics, restaurants, coaches, startups, online stores.",
+    p2: "நாங்கள் professional website makers, bloated agency அல்ல. Lower prices, direct communication, actually build செய்யும் people-ன் accountability. India முழுவதும் shops, clinics, restaurants, coaches, startups, online stores.",
     p3: "Trust matter. Pay-க்கு முன் SEO plain language-ல் explain. Price, timeline, என்ன getting என்று always தெரியும்.",
     marketingTitle: "Design மட்டும் அல்ல — marketing-ஐ ஏன் focus செய்கிறோம்",
     marketingP:
       "அழகான website மட்டும் business-ஐ grow செய்யாது. Marketing தான்—especially digital marketing. உங்கள் future customers பெரும்பாலும் shop அல்லது gym-க்கு வருவதற்கு முன் Google-ல் discover செய்வார்கள். Websites-ஐ marketing tools-ஆக build: fast, mobile-ready, search engines மற்றும் real people இரண்டும் trust. Chennai மற்றும் India முழுவதும் small businesses one-time website cost-ஐ steady customer flow-ஆக மாற்றுவது இதுதான்.",
     ctaHeadline: "Trusted business website makers-உடன் work",
-    ctaSubheadline: "Chennai freelancer team-உடன் free consultation. No pressure, no jargon.",
+    ctaSubheadline: "எங்கள் team-உடன் free consultation. No pressure, no jargon.",
   },
 
   industriesPage: {

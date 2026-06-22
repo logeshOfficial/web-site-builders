@@ -2,8 +2,6 @@ export const en = {
   common: {
     brandName: "Business Website Makers",
     shortName: "Web site builders",
-    freelancers: "Freelancers",
-    chennaiFreelancers: "Chennai freelancers",
     freeConsultation: "Free Consultation",
     getFreeQuote: "Get a Free Quote",
     getFreeQuoteShort: "Get Free Quote",
@@ -52,12 +50,12 @@ export const en = {
   },
 
   header: {
-    subtitle: "{shortName} · Freelancers",
+    subtitle: "SEO · Web Design · India",
   },
 
   footer: {
     description:
-      "Trusted business website makers and online website builders freelancers. Affordable SEO websites for every business type in {city} and across India.",
+      "Trusted business website makers. Affordable SEO websites for every business type across India.",
     pages: "Pages",
     learn: "Learn",
     examples: "Examples",
@@ -65,7 +63,7 @@ export const en = {
   },
 
   hero: {
-    defaultBadge: "Chennai, India · Local & Online Businesses",
+    defaultBadge: "Professional websites · Local & Online Businesses",
     stats: {
       all: "All",
       businessTypes: "Business types",
@@ -76,14 +74,14 @@ export const en = {
   },
 
   home: {
-    badge: "Trusted freelancers · Chennai · 30–40% below agency prices",
+    badge: "Trusted website makers · 30–40% below agency prices",
     headline: "Business website makers you can trust",
     subheadline:
-      "{brandName} are online website builders and freelancers in Chennai, India. Marketing is how small businesses grow — and today that starts with a professional website and Google visibility. We build affordable, SEO-ready sites for shops, clinics, restaurants, gyms, and online brands that work as your digital marketing engine.",
+      "{brandName} are professional website makers. Marketing is how small businesses grow — and today that starts with a professional website and Google visibility. We build affordable, SEO-ready sites for shops, clinics, restaurants, gyms, and online brands that work as your digital marketing engine.",
     secondaryCta: "What is SEO?",
     ctaHeadline: "Trusted business website makers — ready when you are",
     ctaSubheadline:
-      "Free 15-minute call with our online website builders freelancers. Honest quote, simple explanation, no tech jargon.",
+      "Free 15-minute call with our website team. Honest quote, simple explanation, no tech jargon.",
     marketingSection: {
       eyebrow: "Your growth strategy",
       title: "A professional website + Google visibility is your digital marketing engine",
@@ -110,7 +108,7 @@ export const en = {
     eyebrow: "Why choose us",
     title: "Our company specs — what you get",
     description:
-      "A skilled freelance team in Chennai. Not a costly agency—a partner who builds your business online at a price you can afford.",
+      "A skilled website team focused on results. Not a costly agency—a partner who builds your business online at a price you can afford.",
     items: [
       {
         title: "All business types welcome",
@@ -120,7 +118,7 @@ export const en = {
       {
         title: "30–40% below market price",
         description:
-          "We're a lean freelance team, not a big agency with huge overheads. You get the same quality website for less.",
+          "We're a lean team, not a big agency with huge overheads. You get the same quality website for less.",
       },
       {
         title: "SEO included in every plan",
@@ -169,12 +167,12 @@ export const en = {
 
   whyTrustUs: {
     eyebrow: "Why trust us",
-    title: "Trusted online website builders & freelancers",
+    title: "Trusted professional website makers",
     description:
       "{brandName} ({shortName}) helps Indian business owners get online with confidence—clear pricing, honest advice, and websites that actually bring customers.",
     items: [
       {
-        title: "Real freelancers, real accountability",
+        title: "Direct accountability",
         text: "You work directly with the people building your site—not passed between agency departments.",
       },
       {
@@ -206,7 +204,7 @@ export const en = {
 
   testimonials: {
     title: "What business owners say",
-    subtitle: "Real feedback from Chennai businesses who chose our freelance website team.",
+    subtitle: "Real feedback from businesses who chose our website team.",
     disclaimer:
       "Sample client stories for demonstration. Replace with your real testimonials as you collect them.",
     items: [
@@ -222,7 +220,7 @@ export const en = {
         business: "Vel Plumbing Services",
         location: "Velachery, Chennai",
         quote:
-          "I had no website before. Now when people search plumber near me, my number is right there. Paid once, getting calls every week. Genuine freelancers.",
+          "I had no website before. Now when people search plumber near me, my number is right there. Paid once, getting calls every week. Genuine team, fair price.",
       },
       {
         name: "Anitha S",
@@ -528,11 +526,11 @@ export const en = {
     eyebrow: "Save money",
     title: "Cheaper than market — same quality",
     valueProposition:
-      "Trusted business website makers at freelancer prices—typically 30–40% less than market agencies.",
+      "Trusted business website makers at fair prices—typically 30–40% less than market agencies.",
     service: "Service",
     typicalAgency: "Typical agency",
     howWeKeepLow:
-      "How we keep prices low: lean freelance team, no fancy office rent, efficient process—you pay for the website, not agency overhead.",
+      "How we keep prices low: lean team, no fancy office rent, efficient process—you pay for the website, not agency overhead.",
   },
 
   marketComparison: [
@@ -572,7 +570,7 @@ export const en = {
   },
 
   packages: {
-    title: "Realistic freelancer pricing — no agency markup",
+    title: "Realistic pricing — no agency markup",
     description:
       "Gym, salon, shop, or clinic — clear one-time build fees. Hosting included on all plans. Domain included from Growth tier. 50% to start, 50% before launch.",
     seeAddons: "See cost breakdown & add-ons →",
@@ -855,7 +853,7 @@ export const en = {
     interestedPackage: "Interested package",
     message: "Tell us about your project *",
     placeholderName: "Your name",
-    placeholderPhone: "+91 8608036735",
+    placeholderPhone: "Your phone number",
     placeholderEmail: "you@business.com",
     placeholderMessage: "What does your business do? What are your goals?",
     selectIndustry: "Select your industry",
@@ -891,7 +889,7 @@ export const en = {
   contactPage: {
     title: "Talk to trusted business website makers",
     subtitle:
-      "Free 15-minute consultation with our online website builders freelancers in Chennai. Tell us about your business—we reply within 24 hours with an honest, affordable quote.",
+      "Free 15-minute consultation with our website team. Tell us about your business—we reply within 24 hours with an honest, affordable quote.",
     getInTouch: "Get in touch",
     phoneLabel: "Phone / WhatsApp",
     emailLabel: "Email",
@@ -1170,13 +1168,13 @@ export const en = {
     ],
     readyTitle: "Ready to get found on Google?",
     readyText:
-      "{brandName} are trusted business website makers and online website builders freelancers in Chennai. We build affordable SEO websites for any business type at prices 30–40% below agencies. Free consultation—we explain everything in simple language.",
+      "{brandName} are trusted business website makers. We build affordable SEO websites for any business type at prices 30–40% below agencies. Free consultation—we explain everything in simple language.",
   },
 
   servicesPage: {
     title: "Business website services you can trust",
     subtitle:
-      "End-to-end affordable SEO solutions from {brandName}—online website builders freelancers serving local and online businesses across Chennai and India.",
+      "End-to-end affordable SEO solutions from {brandName}—serving local and online businesses across India.",
     marketingNote:
       "We treat every website as a marketing investment. A professional site with strong SEO is the foundation of digital marketing for gyms, shops, clinics, and salons—bringing customers from Google without relying only on paid ads.",
     addOnsTitle: "Popular add-ons",
@@ -1188,7 +1186,7 @@ export const en = {
   pricingPage: {
     title: "Transparent pricing from trusted website makers",
     subtitle:
-      "Realistic freelancer rates for gyms, shops, clinics, and small businesses. All prices in INR — hosting included, domain from Growth tier. SEO and mobile on every plan.",
+      "Realistic rates for gyms, shops, clinics, and small businesses. All prices in INR — hosting included, domain from Growth tier. SEO and mobile on every plan.",
     addOnsTitle: "Add-ons & yearly renewals",
     addOnsSubtitle: "Optional extras after your site is live. Domain renewal is the only typical yearly cost.",
     domainHostingLink: "What are domain & hosting costs?",
@@ -1208,16 +1206,16 @@ export const en = {
   aboutPage: {
     title: "About {brandName}",
     subtitle:
-      "Trusted business website makers and online website builders freelancers in Chennai—helping every type of Indian business get found on Google at prices 30–40% below big agencies.",
+      "Trusted business website makers—helping every type of Indian business get found on Google at prices 30–40% below big agencies.",
     whoWeAre: "Who we are",
-    p1: "{brandName} started as {shortName}—a freelance team tired of seeing business owners overpay agencies ₹80,000–₹2,00,000 for websites that never bring customers from Google.",
-    p2: "We are online website builders freelancers, not a bloated agency. That means lower prices for you, direct communication, and accountability from the people actually building your site. We serve shops, clinics, restaurants, coaches, startups, and online stores across Chennai and India.",
+    p1: "{brandName} started as {shortName}—a dedicated team tired of seeing business owners overpay agencies ₹80,000–₹2,00,000 for websites that never bring customers from Google.",
+    p2: "We are professional website makers, not a bloated agency. That means lower prices for you, direct communication, and accountability from the people actually building your site. We serve shops, clinics, restaurants, coaches, startups, and online stores across India.",
     p3: "Trust matters to us. We explain SEO in plain language before you pay anything. You always know the price, the timeline, and what you're getting.",
     marketingTitle: "Why we focus on marketing, not just design",
     marketingP:
       "A beautiful website alone does not grow a business. Marketing does—especially digital marketing. Most of your future customers will discover you on Google before they ever visit your shop or gym. We build websites as marketing tools: fast, mobile-ready, and structured so search engines and real people both trust you. That is how small businesses in Chennai and across India turn a one-time website cost into steady customer flow.",
     ctaHeadline: "Work with trusted business website makers",
-    ctaSubheadline: "Free consultation with our Chennai freelancer team. No pressure, no jargon.",
+    ctaSubheadline: "Free consultation with our team. No pressure, no jargon.",
   },
 
   industriesPage: {
