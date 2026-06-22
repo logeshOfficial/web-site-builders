@@ -20,3 +20,156 @@ body {
   color: var(--foreground);
   font-family: var(--font-dm-sans), system-ui, sans-serif;
 }
+
+@keyframes showcase-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes showcase-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(20, 184, 166, 0);
+  }
+}
+
+@keyframes showcase-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes showcase-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.showcase-progress {
+  animation: showcase-progress linear forwards;
+}
+
+.showcase-glow {
+  animation: showcase-glow 1.5s ease-in-out infinite;
+}
+
+.showcase-pop {
+  animation: showcase-pop 0.4s ease-out forwards;
+}
+
+.showcase-bounce {
+  animation: showcase-bounce 1s ease-in-out infinite;
+}
+
+.showcase-type::after {
+  content: "plumber near me";
+  animation: showcase-type 3s steps(14) infinite;
+}
+
+@keyframes showcase-type {
+  0% {
+    content: "p";
+  }
+  7% {
+    content: "pl";
+  }
+  14% {
+    content: "plu";
+  }
+  21% {
+    content: "plum";
+  }
+  28% {
+    content: "plumb";
+  }
+  35% {
+    content: "plumbe";
+  }
+  42% {
+    content: "plumber";
+  }
+  50% {
+    content: "plumber ";
+  }
+  57% {
+    content: "plumber n";
+  }
+  64% {
+    content: "plumber ne";
+  }
+  71% {
+    content: "plumber nea";
+  }
+  78% {
+    content: "plumber near";
+  }
+  85% {
+    content: "plumber near ";
+  }
+  92%,
+  100% {
+    content: "plumber near me";
+  }
+}
+
+@keyframes seo-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes seo-pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(20, 184, 166, 0);
+  }
+}
+
+.seo-results {
+  animation: seo-fade-in-up 0.6s ease-out 2s forwards;
+}
+
+.seo-result-highlight {
+  animation: seo-pulse-glow 2s ease-in-out 2.5s infinite;
+}
+
+.seo-pulse-box {
+  animation: seo-fade-in-up 0.5s ease-out forwards, seo-pulse-glow 2.5s ease-in-out 1s infinite;
+}
+
+.seo-journey-step {
+  animation: seo-fade-in-up 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.seo-journey-step:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.seo-flow-arrow {
+  opacity: 0.7;
+}

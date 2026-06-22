@@ -51,7 +51,7 @@ export const industryPages: Record<string, IndustryContent> = {
       {
         question: "How much does a dental website cost in Chennai?",
         answer:
-          "Our dental websites start from ₹29,999 for a Starter package with up to 7 pages and basic SEO. Growth and Premium packages with booking integration and advanced local SEO range from ₹59,999 to ₹1,29,999+.",
+          "Our dental websites start from ₹6,000–8,000 for a Starter package with 5–6 pages and basic SEO. Growth packages with domain, hosting, and booking range from ₹15,000–22,000. Premium custom sites are ₹28,000–45,000.",
       },
       {
         question: "How long does it take to build a dental clinic website?",
@@ -111,7 +111,7 @@ export const industryPages: Record<string, IndustryContent> = {
       {
         question: "How much does a plumber website cost?",
         answer:
-          "Starter packages begin at ₹29,999. Most plumbers choose our Growth package (₹59,999) for service area pages and enhanced local SEO.",
+          "Starter packages begin at ₹6,000–8,000. Most plumbers choose our Growth package (₹15,000–22,000) for service area pages, domain, and enhanced local SEO.",
       },
       {
         question: "Can you help me get more Google reviews?",
@@ -161,7 +161,7 @@ export const industryPages: Record<string, IndustryContent> = {
       {
         question: "How much does a salon website cost in India?",
         answer:
-          "Our salon websites start from ₹29,999. Packages with booking integration and advanced SEO range from ₹59,999 to ₹1,29,999 depending on features.",
+          "Our salon websites start from ₹6,000–8,000. Growth packages with domain, hosting, and booking integration range from ₹15,000–22,000. Premium custom sites are ₹28,000–45,000.",
       },
       {
         question: "Can you integrate online booking for my salon?",

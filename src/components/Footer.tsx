@@ -1,31 +1,36 @@
+"use client";
+
 import Link from "next/link";
-import { industries, navLinks, siteConfig } from "@/lib/site";
+import { interpolate, useTranslation } from "@/contexts/LanguageContext";
+import { Logo } from "@/components/Logo";
+import { navLinks, siteConfig } from "@/lib/site";
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="border-t border-slate-200 bg-slate-900 text-slate-300">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-teal-500 text-sm font-bold text-white">
-                WB
-              </span>
-              <span className="text-lg font-semibold text-white">{siteConfig.name}</span>
-            </div>
+            <Logo
+              variant="full"
+              theme="dark"
+              subtitle={`${siteConfig.shortName} · ${t.common.chennaiFreelancers}`}
+              subtitleVisible="always"
+            />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
-              SEO-ready websites and web apps for local businesses and online brands in{" "}
-              {siteConfig.location.city}, {siteConfig.location.country}.
+              {interpolate(t.footer.description, { city: siteConfig.location.city })}
             </p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Pages</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">{t.footer.pages}</h3>
             <ul className="mt-4 space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm hover:text-teal-400">
-                    {link.label}
+                    {t.nav[link.key]}
                   </Link>
                 </li>
               ))}
@@ -33,14 +38,42 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Industries</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">{t.footer.learn}</h3>
             <ul className="mt-4 space-y-2">
-              {industries.map((industry) => (
+              <li>
+                <Link href="/what-is-seo" className="text-sm hover:text-teal-400">
+                  {t.nav.whatIsSeo}
+                </Link>
+              </li>
+              <li>
+                <Link href="/what-is-domain-hosting" className="text-sm hover:text-teal-400">
+                  {t.nav.whatIsDomainHosting}
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-sm hover:text-teal-400">
+                  {t.nav.faq}
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="text-sm hover:text-teal-400">
+                  {t.nav.pricing}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">{t.footer.examples}</h3>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <Link href="/showcase" className="text-sm hover:text-teal-400">
+                  {t.nav.showcase}
+                </Link>
+              </li>
+              {t.industries.list.map((industry) => (
                 <li key={industry.slug}>
-                  <Link
-                    href={`/industries/${industry.slug}`}
-                    className="text-sm hover:text-teal-400"
-                  >
+                  <Link href={`/industries/${industry.slug}`} className="text-sm hover:text-teal-400">
                     {industry.title}
                   </Link>
                 </li>
@@ -49,7 +82,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Contact</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">{t.footer.contact}</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
                 <a href={`mailto:${siteConfig.email}`} className="hover:text-teal-400">
@@ -68,9 +101,9 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-800 pt-8 sm:flex-row">
           <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+            © {new Date().getFullYear()} {siteConfig.name}. {t.common.allRightsReserved}
           </p>
-          <p className="text-sm text-slate-500">Built with Next.js · SEO-first by design</p>
+          <p className="text-sm text-slate-500">{t.common.builtWith}</p>
         </div>
       </div>
     </footer>

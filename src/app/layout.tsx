@@ -3,8 +3,9 @@ import { DM_Sans } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
-import { localBusinessJsonLd } from "@/lib/seo";
-import { siteConfig } from "@/lib/site";
+import { Providers } from "@/components/Providers";
+import { rootJsonLd } from "@/lib/seo";
+import { getSiteUrl, siteConfig } from "@/lib/site";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -13,27 +14,21 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
   title: {
     default: `${siteConfig.name} — ${siteConfig.tagline}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  metadataBase: new URL(siteConfig.url),
-  keywords: [
-    "web design Chennai",
-    "SEO website India",
-    "website for dentists",
-    "website for plumbers",
-    "salon website design",
-    "local business website",
-    "web app development Chennai",
-  ],
+  metadataBase: new URL(siteUrl),
+  keywords: [...siteConfig.seoKeywords],
   authors: [{ name: siteConfig.name }],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: siteConfig.url,
+    url: siteUrl,
     siteName: siteConfig.name,
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
@@ -49,10 +44,12 @@ export default function RootLayout({
   return (
     <html lang="en-IN" className={`${dmSans.variable} h-full`}>
       <body className="flex min-h-full flex-col antialiased">
-        <JsonLd data={localBusinessJsonLd()} />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <Providers>
+          <JsonLd data={rootJsonLd()} />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

@@ -1,11 +1,40 @@
+/** Placeholder until custom domain is confirmed — set NEXT_PUBLIC_SITE_URL in Vercel or .env.local. */
+const DEFAULT_SITE_URL = "https://websitebuilders.in";
+
+/** Public site URL for metadata, sitemap, and canonical links. */
+export function getSiteUrl(): string {
+  return process.env.NEXT_PUBLIC_SITE_URL?.trim() || DEFAULT_SITE_URL;
+}
+
+export function getWhatsAppUrl(): string {
+  return `https://wa.me/${siteConfig.phone.replace(/\D/g, "")}`;
+}
+
 export const siteConfig = {
-  name: "Web site builders",
-  tagline: "SEO websites that bring customers to your door",
+  name: "Business Website Makers",
+  shortName: "Web site builders",
+  tagline: "Trusted online website builders & freelancers",
   description:
-    "Chennai-based web design agency building fast, Google-ready websites and web apps for local businesses and online brands. Dentists, plumbers, salons, and more.",
-  url: "https://websitebuilders.in",
-  email: "hello@websitebuilders.in",
-  phone: "+91 98765 43210",
+    "Business Website Makers is a trusted team of online website builders and freelancers in Chennai, India. We create affordable SEO-ready business websites for shops, clinics, restaurants, and online brands—30–40% below agency prices.",
+  valueProposition:
+    "Trusted business website makers at freelancer prices—typically 30–40% less than market agencies.",
+  seoKeywords: [
+    "business website makers Chennai",
+    "online website builders freelancers India",
+    "affordable SEO website",
+    "trusted website builders Chennai",
+    "freelance web designers India",
+    "business website design Chennai",
+    "SEO website for small business",
+    "local business website makers",
+  ],
+  alternateNames: [
+    "Web site builders",
+    "Online Website Builders Freelancers",
+    "Business Website Makers Chennai",
+  ],
+  email: "iamlogeshwaran.info@gmail.com",
+  phone: "+91 8608036735",
   location: {
     city: "Chennai",
     state: "Tamil Nadu",
@@ -19,145 +48,58 @@ export const siteConfig = {
 } as const;
 
 export const navLinks = [
-  { href: "/services", label: "Services" },
-  { href: "/industries", label: "Industries" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", key: "home" },
+  { href: "/what-is-seo", key: "whatIsSeo" },
+  { href: "/services", key: "services" },
+  { href: "/showcase", key: "showcase" },
+  { href: "/pricing", key: "pricing" },
+  { href: "/about", key: "about" },
+  { href: "/contact", key: "contact" },
 ] as const;
 
-export const services = [
-  {
-    title: "SEO Websites",
-    description:
-      "Fast, mobile-first websites built to rank on Google and convert visitors into calls and bookings.",
-    icon: "globe",
-  },
-  {
-    title: "Local SEO",
-    description:
-      "Google Business Profile, local keywords, schema markup, and city pages so customers in Chennai find you first.",
-    icon: "map",
-  },
-  {
-    title: "Web Apps",
-    description:
-      "Custom dashboards, booking systems, and online tools for businesses that need more than a brochure site.",
-    icon: "code",
-  },
-  {
-    title: "Care & Maintenance",
-    description:
-      "Hosting, updates, security, and ongoing SEO so your site keeps performing month after month.",
-    icon: "shield",
-  },
+export const companySpecIcons = [
+  "users",
+  "savings",
+  "search",
+  "megaphone",
+  "mobile",
+  "clock",
+  "chat",
+  "shield",
+  "globe",
 ] as const;
 
-export const packages = [
-  {
-    name: "Starter",
-    subtitle: "Get Found Locally",
-    price: "₹29,999",
-    priceNote: "one-time",
-    description: "Perfect for new salons, solo plumbers, and small practices getting online.",
-    features: [
-      "Up to 7 pages (Home, About, Services, Contact)",
-      "Mobile-first responsive design",
-      "On-page SEO (titles, meta, headings)",
-      "Contact form + click-to-call",
-      "Google Maps integration",
-      "Speed optimization",
-      "30 days post-launch support",
-    ],
-    highlighted: false,
-    cta: "Get Started",
-  },
-  {
-    name: "Growth",
-    subtitle: "Rank & Convert",
-    price: "₹59,999",
-    priceNote: "one-time",
-    description: "For established businesses in competitive local markets.",
-    features: [
-      "Everything in Starter",
-      "Up to 12 pages + service area pages",
-      "Blog setup for content marketing",
-      "Local SEO structure & schema markup",
-      "Booking or quote request integration",
-      "GA4 + Search Console setup",
-      "60 days post-launch support",
-    ],
-    highlighted: true,
-    cta: "Most Popular",
-  },
-  {
-    name: "Premium",
-    subtitle: "Dominate Your Area",
-    price: "₹1,29,999",
-    priceNote: "one-time",
-    description: "Multi-location businesses and competitive niches like dentistry and law.",
-    features: [
-      "Everything in Growth",
-      "Custom design (no generic templates)",
-      "Multi-location SEO pages",
-      "Advanced schema (FAQ, reviews, LocalBusiness)",
-      "Priority support + 90 days revisions",
-      "3 months SEO guidance included",
-      "Performance analytics dashboard",
-    ],
-    highlighted: false,
-    cta: "Go Premium",
-  },
+export const trustBadgeIcons = ["location", "pricing", "secure", "star"] as const;
+
+export const businessTypeEmojis = [
+  "🦷",
+  "🔧",
+  "💇",
+  "🍽️",
+  "🏋️",
+  "⚖️",
+  "🏪",
+  "🏠",
+  "📚",
+  "🛒",
+  "💼",
+  "🚀",
+  "📸",
+  "🚗",
+  "🏥",
+  "➕",
 ] as const;
 
-export const addOns = [
-  { name: "Online booking integration", price: "₹8,000 – ₹25,000" },
-  { name: "E-commerce (small catalog)", price: "₹35,000 – ₹1,00,000" },
-  { name: "Monthly SEO retainer", price: "₹12,000 – ₹40,000/mo" },
-  { name: "Hosting & maintenance", price: "₹2,500 – ₹8,000/mo" },
-  { name: "Professional copywriting", price: "₹8,000 – ₹35,000" },
+export const packagePrices = [
+  { price: "₹6,000–8,000", highlighted: false },
+  { price: "₹15,000–22,000", highlighted: true },
+  { price: "₹28,000–45,000", highlighted: false },
 ] as const;
 
-export const industries = [
-  {
-    slug: "dentists",
-    title: "Dentists & Dental Clinics",
-    shortDescription: "Patient-focused websites with online booking and local SEO.",
-    keywords: ["dental website design Chennai", "SEO for dentists"],
-  },
-  {
-    slug: "plumbers",
-    title: "Plumbers & Home Services",
-    shortDescription: "Emergency-ready sites with click-to-call and service area pages.",
-    keywords: ["plumber website design", "local SEO for plumbers Chennai"],
-  },
-  {
-    slug: "salons",
-    title: "Salons & Spas",
-    shortDescription: "Beautiful portfolios with booking and Google Maps visibility.",
-    keywords: ["salon website design Chennai", "beauty salon SEO"],
-  },
-] as const;
+export const serviceIcons = ["globe", "map", "code", "shield"] as const;
 
-export const processSteps = [
-  {
-    step: "01",
-    title: "Discover",
-    description: "We learn your business, competitors, and target customers in Chennai and beyond.",
-  },
-  {
-    step: "02",
-    title: "Design & Build",
-    description: "Fast, mobile-first site with SEO structure baked in from day one.",
-  },
-  {
-    step: "03",
-    title: "Optimize",
-    description: "On-page SEO, schema markup, Google Business Profile, and speed tuning.",
-  },
-  {
-    step: "04",
-    title: "Launch & Grow",
-    description: "Go live, track results, and keep improving with ongoing support.",
-  },
-] as const;
+export const processStepNumbers = ["01", "02", "03", "04"] as const;
+
+export const industrySlugs = ["dentists", "plumbers", "salons"] as const;
+
+export type IndustrySlug = (typeof industrySlugs)[number];

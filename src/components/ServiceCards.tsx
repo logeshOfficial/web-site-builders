@@ -1,4 +1,7 @@
-import { services } from "@/lib/site";
+"use client";
+
+import { useTranslation } from "@/contexts/LanguageContext";
+import { serviceIcons } from "@/lib/site";
 
 const icons: Record<string, React.ReactNode> = {
   globe: (
@@ -24,26 +27,24 @@ const icons: Record<string, React.ReactNode> = {
 };
 
 export function ServiceCards() {
+  const { t } = useTranslation();
+
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Everything you need to grow online
-          </h2>
-          <p className="mt-4 text-lg text-slate-600">
-            From your first website to ongoing SEO—we handle the tech so you can focus on your customers.
-          </p>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{t.services.title}</h2>
+          <p className="mt-4 text-lg text-slate-600">{t.services.description}</p>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
+          {t.services.items.map((service, i) => (
             <div
               key={service.title}
               className="group rounded-2xl border border-slate-200 bg-slate-50 p-6 transition hover:border-teal-200 hover:shadow-lg hover:shadow-teal-500/5"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
-                {icons[service.icon]}
+                {icons[serviceIcons[i]]}
               </div>
               <h3 className="mt-4 text-lg font-semibold text-slate-900">{service.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">{service.description}</p>
