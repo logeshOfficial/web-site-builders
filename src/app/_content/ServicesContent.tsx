@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
+import { PageHero } from "@/components/PageHero";
+import { ServicesPageVisual } from "@/components/page-visuals";
 import { ServiceCards } from "@/components/ServiceCards";
 import { interpolate, useTranslation } from "@/contexts/LanguageContext";
 import { siteConfig } from "@/lib/site";
@@ -12,14 +14,11 @@ export function ServicesContent() {
 
   return (
     <>
-      <section className="bg-slate-900 py-16 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{p.title}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-300">
-            {interpolate(p.subtitle, { brandName: siteConfig.name })}
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title={p.title}
+        subtitle={interpolate(p.subtitle, { brandName: siteConfig.name })}
+        visual={<ServicesPageVisual />}
+      />
 
       <section className="border-b border-slate-200 bg-slate-50 py-12">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">

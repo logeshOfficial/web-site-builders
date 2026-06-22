@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
 import { DomainHostingExplainer } from "@/components/DomainHostingExplainer";
+import { PageHero } from "@/components/PageHero";
+import { PricingPageVisual } from "@/components/page-visuals";
 import { PriceComparison } from "@/components/PriceComparison";
 import { PricingCards } from "@/components/PricingCards";
 import { PricingTransparencyTable } from "@/components/PricingTransparencyTable";
@@ -14,20 +16,20 @@ export function PricingContent() {
 
   return (
     <>
-      <section className="bg-slate-900 py-16 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{p.title}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-300">{p.subtitle}</p>
-          <p className="mt-6">
-            <Link
-              href="/what-is-domain-hosting"
-              className="text-sm font-semibold text-teal-400 hover:text-teal-300"
-            >
-              {p.domainHostingLink} →
-            </Link>
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title={p.title}
+        subtitle={p.subtitle}
+        visual={<PricingPageVisual />}
+      >
+        <p className="mt-6">
+          <Link
+            href="/what-is-domain-hosting"
+            className="text-sm font-semibold text-teal-400 hover:text-teal-300"
+          >
+            {p.domainHostingLink} →
+          </Link>
+        </p>
+      </PageHero>
 
       <PricingCards />
 

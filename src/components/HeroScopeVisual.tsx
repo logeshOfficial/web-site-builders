@@ -1,53 +1,9 @@
 "use client";
 
 import { useTranslation } from "@/contexts/LanguageContext";
+import { IndustryIcon, type IndustryKey } from "@/components/page-visuals/shared";
 
-const INDUSTRY_KEYS = ["gym", "salon", "clinic", "ecommerce", "restaurant", "shop"] as const;
-
-type IndustryKey = (typeof INDUSTRY_KEYS)[number];
-
-function IndustryIcon({ type }: { type: IndustryKey }) {
-  const className = "h-4 w-4 text-teal-400";
-
-  switch (type) {
-    case "gym":
-      return (
-        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9h12M6 15h12M4 9v6M20 9v6M2 12h2M20 12h2" />
-        </svg>
-      );
-    case "salon":
-      return (
-        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 3v6M18 3v6M6 9c0 3.314 2.686 6 6 6s6-2.686 6-6M12 15v6" />
-        </svg>
-      );
-    case "clinic":
-      return (
-        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-        </svg>
-      );
-    case "ecommerce":
-      return (
-        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-        </svg>
-      );
-    case "restaurant":
-      return (
-        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v13M8 6v4a4 4 0 008 0V6M4 6h16" />
-        </svg>
-      );
-    case "shop":
-      return (
-        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-        </svg>
-      );
-  }
-}
+const INDUSTRY_KEYS: IndustryKey[] = ["gym", "salon", "clinic", "ecommerce", "restaurant", "shop"];
 
 function MiniWebsitePreview({ title, tagline }: { title: string; tagline: string }) {
   return (
@@ -156,7 +112,7 @@ export function HeroScopeVisual() {
             className={`absolute z-30 flex items-center gap-1.5 rounded-full border border-teal-400/30 bg-slate-800/90 px-2.5 py-1.5 shadow-lg backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 ${BADGE_POSITIONS[key]}`}
           >
             <span className="flex h-6 w-6 items-center justify-center rounded-full bg-teal-500/15 sm:h-7 sm:w-7">
-              <IndustryIcon type={key} />
+              <IndustryIcon type={key} className="h-4 w-4 text-teal-400" />
             </span>
             <span className="text-[10px] font-medium text-white sm:text-xs">{s.industries[key]}</span>
           </div>

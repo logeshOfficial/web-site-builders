@@ -87,6 +87,57 @@ export const en = {
     },
   },
 
+  pageVisuals: {
+    about: {
+      caption: "Local team you can trust",
+      trustLabel: "Building together",
+      chennaiLabel: "Chennai, India",
+    },
+    services: {
+      caption: "Everything your business needs online",
+      seo: "SEO Websites",
+      local: "Local SEO",
+      webApp: "Web Apps",
+      maintenance: "Care & Maintenance",
+    },
+    pricing: {
+      caption: "Clear packages, no hidden fees",
+      starter: "Starter",
+      growth: "Growth",
+      premium: "Premium",
+      checklist: ["Hosting included", "Mobile-first", "SEO ready"],
+    },
+    contact: {
+      caption: "Reach us your way",
+      phone: "Call",
+      whatsapp: "WhatsApp",
+      email: "Email",
+    },
+    faq: {
+      caption: "Answers in plain language",
+      questionsLabel: "Your questions",
+      answersLabel: "Clear answers",
+    },
+    whatIsSeo: {
+      caption: "Show up when customers search",
+      searchQuery: "best gym near me",
+      rankLabel: "Move up in Google",
+    },
+    whatIsDomainHosting: {
+      caption: "Your address + online home",
+      domainLabel: "yourbusiness.in",
+      domainHint: "Your website address",
+      hostingLabel: "Server",
+      cloudLabel: "Live 24/7",
+    },
+    showcase: {
+      caption: "Real sites for real businesses",
+    },
+    industries: {
+      caption: "Websites for every industry",
+    },
+  },
+
   home: {
     badge: "Trusted website makers · 30–40% below agency prices",
     headline: "Business website makers you can trust",

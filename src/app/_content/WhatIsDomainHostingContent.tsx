@@ -8,6 +8,8 @@ import {
   HostingServerAnimation,
   WithoutVsWithDomainHosting,
 } from "@/components/domain-hosting-visuals/DomainHostingAnimations";
+import { PageHero } from "@/components/PageHero";
+import { WhatIsDomainHostingPageVisual } from "@/components/page-visuals";
 import { PricingTransparencyTable } from "@/components/PricingTransparencyTable";
 import { interpolate, useTranslation } from "@/contexts/LanguageContext";
 import { siteConfig } from "@/lib/site";
@@ -18,13 +20,12 @@ export function WhatIsDomainHostingContent() {
 
   return (
     <>
-      <section className="bg-slate-900 py-16 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="text-sm font-medium text-teal-400">{p.eyebrow}</p>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">{p.title}</h1>
-          <p className="mt-4 max-w-3xl text-lg text-slate-300">{p.intro}</p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={p.eyebrow}
+        title={p.title}
+        subtitle={p.intro}
+        visual={<WhatIsDomainHostingPageVisual />}
+      />
 
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">

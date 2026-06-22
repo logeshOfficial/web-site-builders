@@ -2,6 +2,8 @@
 
 import { CTA } from "@/components/CTA";
 import { CompanySpecs } from "@/components/CompanySpecs";
+import { PageHero } from "@/components/PageHero";
+import { AboutPageVisual } from "@/components/page-visuals";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { TrustSection } from "@/components/TrustSection";
 import { interpolate, useTranslation } from "@/contexts/LanguageContext";
@@ -13,14 +15,11 @@ export function AboutContent() {
 
   return (
     <>
-      <section className="bg-slate-900 py-16 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            {interpolate(p.title, { brandName: siteConfig.name })}
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-300">{p.subtitle}</p>
-        </div>
-      </section>
+      <PageHero
+        title={interpolate(p.title, { brandName: siteConfig.name })}
+        subtitle={p.subtitle}
+        visual={<AboutPageVisual />}
+      />
 
       <section className="py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">

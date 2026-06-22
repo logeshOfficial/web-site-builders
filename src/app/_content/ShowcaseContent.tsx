@@ -1,6 +1,8 @@
 "use client";
 
 import { CTA } from "@/components/CTA";
+import { PageHero } from "@/components/PageHero";
+import { ShowcasePageVisual } from "@/components/page-visuals";
 import { ServicesShowcase } from "@/components/ServicesShowcase";
 import { useTranslation } from "@/contexts/LanguageContext";
 
@@ -10,15 +12,16 @@ export function ShowcaseContent() {
 
   return (
     <>
-      <section className="bg-slate-900 py-16 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <PageHero
+        eyebrow={
           <p className="text-sm font-semibold uppercase tracking-wider text-teal-400">
             {t.servicesShowcase.eyebrow}
           </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">{p.heroTitle}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-300">{p.heroSubtitle}</p>
-        </div>
-      </section>
+        }
+        title={p.heroTitle}
+        subtitle={p.heroSubtitle}
+        visual={<ShowcasePageVisual />}
+      />
 
       <ServicesShowcase variant="full" showSampleProjects />
 

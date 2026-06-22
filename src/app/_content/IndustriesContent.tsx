@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
 import { AllBusinessTypes } from "@/components/AllBusinessTypes";
+import { PageHero } from "@/components/PageHero";
+import { IndustriesPageVisual } from "@/components/page-visuals";
 import { ServicesShowcase } from "@/components/ServicesShowcase";
 import { useTranslation } from "@/contexts/LanguageContext";
 
@@ -12,18 +14,14 @@ export function IndustriesContent() {
 
   return (
     <>
-      <section className="bg-slate-900 py-16 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{p.title}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-300">{p.subtitle}</p>
-          <Link
-            href="/showcase"
-            className="mt-6 inline-flex text-sm font-semibold text-teal-400 hover:text-teal-300"
-          >
-            {p.showcaseLink}
-          </Link>
-        </div>
-      </section>
+      <PageHero title={p.title} subtitle={p.subtitle} visual={<IndustriesPageVisual />}>
+        <Link
+          href="/showcase"
+          className="mt-6 inline-flex text-sm font-semibold text-teal-400 hover:text-teal-300"
+        >
+          {p.showcaseLink}
+        </Link>
+      </PageHero>
 
       <ServicesShowcase variant="full" showSampleProjects />
 

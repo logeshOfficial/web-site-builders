@@ -89,6 +89,57 @@ export const ta: Translation = {
     },
   },
 
+  pageVisuals: {
+    about: {
+      caption: "நம்பகமான local team",
+      trustLabel: "ஒன்றாக build செய்கிறோம்",
+      chennaiLabel: "Chennai, India",
+    },
+    services: {
+      caption: "Online-க்கு தேவையான எல்லாம்",
+      seo: "SEO Websites",
+      local: "Local SEO",
+      webApp: "Web Apps",
+      maintenance: "Care & Maintenance",
+    },
+    pricing: {
+      caption: "Clear packages · hidden fees இல்லை",
+      starter: "Starter",
+      growth: "Growth",
+      premium: "Premium",
+      checklist: ["Hosting included", "Mobile-first", "SEO ready"],
+    },
+    contact: {
+      caption: "உங்கள் வழியில் தொடர்பு கொள்ளுங்கள்",
+      phone: "Call",
+      whatsapp: "WhatsApp",
+      email: "Email",
+    },
+    faq: {
+      caption: "எளிய மொழியில் பதில்கள்",
+      questionsLabel: "உங்கள் கேள்விகள்",
+      answersLabel: "தெளிவான பதில்கள்",
+    },
+    whatIsSeo: {
+      caption: "Customers search செய்யும்போது தெரியுங்கள்",
+      searchQuery: "best gym near me",
+      rankLabel: "Google-ல் மேலே ஏறுங்கள்",
+    },
+    whatIsDomainHosting: {
+      caption: "உங்கள் address + online home",
+      domainLabel: "yourbusiness.in",
+      domainHint: "உங்கள் website address",
+      hostingLabel: "Server",
+      cloudLabel: "Live 24/7",
+    },
+    showcase: {
+      caption: "Real businesses-க்கு real sites",
+    },
+    industries: {
+      caption: "எல்லா industry-க்கும் websites",
+    },
+  },
+
   home: {
     badge: "நம்பகமான website makers · agency விலையில் 30–40% குறைவு",
     headline: "நம்பகமான business website makers",
