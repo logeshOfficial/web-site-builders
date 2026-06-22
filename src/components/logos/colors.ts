@@ -178,4 +178,18 @@ export type AriesPaletteKey = keyof typeof ariesPalettes;
 
 export const defaultAriesPalette: AriesPaletteKey = "marsRedGold";
 
+/**
+ * Brand visual tokens for page visuals and UI accents.
+ * 80% teal/slate (trust) · 15% gold Aries (luck) · 5% scarlet (highlights only).
+ */
+export const brandVisual = {
+  accentGold: "#C9A227",
+  accentScarlet: "#D6392B",
+  teal: logoColors.teal,
+  tealDark: logoColors.tealDark,
+  tealLight: logoColors.tealLight,
+  slate: logoColors.slate,
+  slateMid: logoColors.slateMid,
+} as const;
+
 

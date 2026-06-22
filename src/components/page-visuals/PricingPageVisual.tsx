@@ -7,7 +7,7 @@ import { useTranslation } from "@/contexts/LanguageContext";
 const TIER_KEYS = ["starter", "growth", "premium"] as const;
 const TIER_HIGHLIGHT: Record<(typeof TIER_KEYS)[number], string> = {
   starter: "border-slate-600/60",
-  growth: "border-teal-400/50 ring-1 ring-teal-400/30",
+  growth: "border-brand-gold/50 ring-2 ring-brand-gold/30",
   premium: "border-slate-600/60",
 };
 
@@ -19,11 +19,11 @@ export function PricingPageVisual() {
     <PageHeroVisual caption={v.caption}>
       <div className="w-full max-w-[280px] space-y-3">
         <div className="flex items-center justify-center gap-2">
-          <span className="text-2xl font-bold text-teal-400">₹</span>
+          <span className="text-2xl font-bold text-brand-gold">₹</span>
           <div className="space-y-1.5">
             {v.checklist.map((item) => (
               <div key={item} className="flex items-center gap-2 text-xs text-slate-300">
-                <svg className="h-3.5 w-3.5 shrink-0 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg className="h-3.5 w-3.5 shrink-0 text-brand-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                 </svg>
                 <span>{item}</span>
@@ -35,7 +35,12 @@ export function PricingPageVisual() {
         <div className="grid grid-cols-3 gap-2">
           {TIER_KEYS.map((key) => (
             <VisualCard key={key} className={`p-2.5 text-center ${TIER_HIGHLIGHT[key]}`}>
-              <svg className="mx-auto h-4 w-4 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              {key === "growth" ? (
+                <span className="mx-auto mb-1 inline-block rounded-full bg-brand-scarlet/90 px-1.5 py-px text-[7px] font-bold text-white">
+                  ★
+                </span>
+              ) : null}
+              <svg className={`mx-auto h-4 w-4 ${key === "growth" ? "text-brand-gold" : "text-teal-400"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"

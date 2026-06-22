@@ -1,7 +1,7 @@
 "use client";
 
 import { PageHeroVisual } from "@/components/page-visuals/PageHeroVisual";
-import { VisualCard } from "@/components/page-visuals/shared";
+import { ICON_GOLD_CLASS, VisualCard } from "@/components/page-visuals/shared";
 import { useTranslation } from "@/contexts/LanguageContext";
 
 export function WhatIsDomainHostingPageVisual() {
@@ -18,7 +18,7 @@ export function WhatIsDomainHostingPageVisual() {
               <div className="h-1.5 w-1.5 rounded-full bg-amber-400/80" />
               <div className="h-1.5 w-1.5 rounded-full bg-green-400/80" />
             </div>
-            <span className="truncate text-[10px] text-teal-300">{v.domainLabel}</span>
+            <span className="truncate text-[10px] text-brand-gold">{v.domainLabel}</span>
           </div>
           <p className="mt-2 text-[10px] text-slate-400">{v.domainHint}</p>
         </VisualCard>
@@ -28,7 +28,7 @@ export function WhatIsDomainHostingPageVisual() {
             <div className="space-y-1">
               {[0, 1, 2].map((i) => (
                 <div key={i} className="flex h-3 w-12 items-center gap-1 rounded bg-slate-700/80 px-1">
-                  <div className="h-1.5 w-1.5 rounded-full bg-teal-400/70" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-brand-gold/70" />
                   <div className="h-1 flex-1 rounded bg-slate-600" />
                 </div>
               ))}
@@ -41,7 +41,7 @@ export function WhatIsDomainHostingPageVisual() {
           </svg>
 
           <VisualCard className="flex flex-col items-center p-3">
-            <svg className="h-8 w-8 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg className={`h-8 w-8 ${ICON_GOLD_CLASS}`} viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"

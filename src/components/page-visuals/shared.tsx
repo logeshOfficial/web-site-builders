@@ -3,6 +3,10 @@
 import type { ReactNode } from "react";
 
 export const ICON_CLASS = "h-5 w-5 text-teal-400";
+export const ICON_GOLD_CLASS = "h-5 w-5 text-brand-gold";
+export const ICON_RING_CLASS =
+  "flex items-center justify-center rounded-full bg-teal-500/10 ring-1 ring-brand-gold/40";
+export const BADGE_BORDER_CLASS = "border border-brand-gold/35";
 
 export type IndustryKey = "gym" | "salon" | "clinic" | "ecommerce" | "restaurant" | "shop";
 
@@ -50,7 +54,7 @@ export function IndustryIcon({ type, className = ICON_CLASS }: { type: IndustryK
 export function VisualCard({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <div
-      className={`rounded-2xl border border-slate-600/60 bg-slate-800/80 p-4 shadow-xl shadow-teal-900/20 backdrop-blur-sm ${className}`}
+      className={`rounded-2xl border border-slate-600/60 bg-slate-800/80 p-4 shadow-xl shadow-teal-900/20 ring-1 ring-brand-gold/10 backdrop-blur-sm ${className}`}
     >
       {children}
     </div>

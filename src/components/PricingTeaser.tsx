@@ -24,11 +24,13 @@ export function PricingTeaser() {
               <div
                 key={pkg.name}
                 className={`rounded-xl border bg-white p-5 text-center ${
-                  meta.highlighted ? "border-teal-500 ring-2 ring-teal-500/20" : "border-slate-200"
+                  meta.highlighted
+                    ? "border-brand-gold ring-2 ring-brand-gold/25"
+                    : "border-slate-200"
                 }`}
               >
                 {meta.highlighted && (
-                  <span className="mb-2 inline-block rounded-full bg-teal-600 px-3 py-0.5 text-xs font-semibold text-white">
+                  <span className="mb-2 inline-block rounded-full bg-teal-600 px-3 py-0.5 text-xs font-semibold text-white ring-1 ring-brand-gold/40">
                     {t.common.mostPopular}
                   </span>
                 )}

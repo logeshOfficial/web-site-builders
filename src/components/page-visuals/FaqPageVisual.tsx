@@ -1,7 +1,7 @@
 "use client";
 
 import { PageHeroVisual } from "@/components/page-visuals/PageHeroVisual";
-import { VisualCard } from "@/components/page-visuals/shared";
+import { ICON_GOLD_CLASS, ICON_RING_CLASS, VisualCard } from "@/components/page-visuals/shared";
 import { useTranslation } from "@/contexts/LanguageContext";
 
 export function FaqPageVisual() {
@@ -13,7 +13,7 @@ export function FaqPageVisual() {
       <div className="relative w-full max-w-[260px]">
         <VisualCard className="hero-float-device">
           <div className="flex items-start gap-2">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-500/20 text-sm font-bold text-teal-300">
+            <span className={`h-8 w-8 shrink-0 text-sm font-bold text-brand-gold ${ICON_RING_CLASS}`}>
               ?
             </span>
             <div className="flex-1 space-y-1.5">
@@ -24,9 +24,9 @@ export function FaqPageVisual() {
           <p className="mt-2 text-[10px] text-slate-400">{v.questionsLabel}</p>
         </VisualCard>
 
-        <VisualCard className="absolute -right-1 top-[38%] w-[130px] hero-float-badge hero-float-badge-2 p-3">
+        <VisualCard className="absolute -right-1 top-[38%] w-[130px] border-brand-gold/30 hero-float-badge hero-float-badge-2 p-3">
           <div className="flex items-center gap-2">
-            <svg className="h-5 w-5 shrink-0 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg className={`h-5 w-5 shrink-0 ${ICON_GOLD_CLASS}`} viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -38,7 +38,7 @@ export function FaqPageVisual() {
           </div>
         </VisualCard>
 
-        <div className="absolute -left-2 bottom-[10%] flex h-9 w-9 items-center justify-center rounded-full border border-teal-400/30 bg-slate-800/90 text-lg font-bold text-teal-300 hero-float-badge hero-float-badge-4">
+        <div className="absolute -left-2 bottom-[10%] flex h-9 w-9 items-center justify-center rounded-full border border-brand-gold/35 bg-slate-800/90 text-lg font-bold text-brand-gold hero-float-badge hero-float-badge-4">
           ?
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { PageHeroVisual } from "@/components/page-visuals/PageHeroVisual";
-import { VisualCard } from "@/components/page-visuals/shared";
+import { ICON_GOLD_CLASS, ICON_RING_CLASS, VisualCard } from "@/components/page-visuals/shared";
 import { useTranslation } from "@/contexts/LanguageContext";
 
 export function AboutPageVisual() {
@@ -17,14 +17,14 @@ export function AboutPageVisual() {
               {[0, 1, 2].map((i) => (
                 <div
                   key={i}
-                  className="flex h-8 w-14 items-center justify-center rounded-md border border-teal-400/30 bg-teal-500/10"
+                  className="flex h-8 w-14 items-center justify-center rounded-md border border-brand-gold/30 bg-teal-500/10"
                   style={{ marginLeft: i * 6 }}
                 >
-                  <div className="h-2 w-6 rounded-sm bg-teal-400/60" />
+                  <div className="h-2 w-6 rounded-sm bg-brand-gold/50" />
                 </div>
               ))}
             </div>
-            <svg className="h-10 w-10 shrink-0 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg className={`h-10 w-10 shrink-0 ${ICON_GOLD_CLASS}`} viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -36,11 +36,13 @@ export function AboutPageVisual() {
           <p className="mt-3 text-center text-xs font-medium text-slate-300">{v.trustLabel}</p>
         </VisualCard>
 
-        <div className="hero-float-badge absolute -bottom-1 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-teal-400/30 bg-slate-800/95 px-3 py-1.5 shadow-lg">
-          <svg className="h-4 w-4 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <div className="hero-float-badge absolute -bottom-1 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-brand-gold/35 bg-slate-800/95 px-3 py-1.5 shadow-lg">
+          <span className={`h-6 w-6 ${ICON_RING_CLASS}`}>
+            <svg className="h-3.5 w-3.5 text-brand-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
+            </svg>
+          </span>
           <span className="text-xs font-medium text-white">{v.chennaiLabel}</span>
         </div>
       </div>

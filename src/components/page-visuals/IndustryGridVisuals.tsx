@@ -1,7 +1,7 @@
 "use client";
 
 import { PageHeroVisual } from "@/components/page-visuals/PageHeroVisual";
-import { IndustryIcon, type IndustryKey, VisualCard } from "@/components/page-visuals/shared";
+import { ICON_GOLD_CLASS, ICON_RING_CLASS, IndustryIcon, type IndustryKey, VisualCard } from "@/components/page-visuals/shared";
 import { useTranslation } from "@/contexts/LanguageContext";
 
 const INDUSTRY_KEYS: IndustryKey[] = ["gym", "salon", "clinic", "ecommerce", "restaurant", "shop"];
@@ -18,11 +18,11 @@ export function ShowcasePageVisual() {
           {INDUSTRY_KEYS.map((key) => (
             <div
               key={key}
-              className="flex flex-col items-center gap-1.5 rounded-lg border border-slate-600/40 bg-slate-900/50 p-2"
+              className="flex flex-col items-center gap-1.5 rounded-lg border border-brand-gold/25 bg-slate-900/50 p-2"
             >
-              <div className="aspect-[4/3] w-full overflow-hidden rounded bg-gradient-to-br from-teal-500/20 to-slate-700/50">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded bg-gradient-to-br from-teal-500/20 to-slate-700/50 ring-1 ring-brand-gold/20">
                 <div className="flex h-full items-center justify-center">
-                  <IndustryIcon type={key} className="h-4 w-4 text-teal-400" />
+                  <IndustryIcon type={key} className={`h-4 w-4 ${ICON_GOLD_CLASS}`} />
                 </div>
               </div>
               <span className="truncate text-[8px] font-medium text-slate-300 sm:text-[9px]">
@@ -47,10 +47,10 @@ export function IndustriesPageVisual() {
         {INDUSTRY_KEYS.map((key) => (
           <div
             key={key}
-            className="flex flex-col items-center gap-1 rounded-xl border border-slate-600/50 bg-slate-800/80 px-2 py-2.5"
+            className="flex flex-col items-center gap-1 rounded-xl border border-brand-gold/30 bg-slate-800/80 px-2 py-2.5"
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-teal-500/15">
-              <IndustryIcon type={key} className="h-4 w-4 text-teal-400" />
+            <span className={`h-8 w-8 ${ICON_RING_CLASS}`}>
+              <IndustryIcon type={key} className={`h-4 w-4 ${ICON_GOLD_CLASS}`} />
             </span>
             <span className="truncate text-[9px] font-medium text-slate-200">{industries[key]}</span>
           </div>

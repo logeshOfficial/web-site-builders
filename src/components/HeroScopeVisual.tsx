@@ -32,7 +32,7 @@ function MiniWebsitePreview({ title, tagline }: { title: string; tagline: string
           <div className="h-1 w-full rounded bg-slate-200" />
           <div className="h-1 w-4/5 rounded bg-slate-100" />
         </div>
-        <div className="mt-1 inline-block rounded-full bg-teal-500 px-2 py-0.5 text-[6px] font-semibold text-white sm:text-[7px]">
+        <div className="mt-1 inline-block rounded-full bg-brand-scarlet px-2 py-0.5 text-[6px] font-semibold text-white sm:text-[7px]">
           Book Now
         </div>
       </div>
@@ -106,13 +106,15 @@ export function HeroScopeVisual() {
       <div className="absolute inset-0 rounded-3xl bg-teal-500/5 blur-2xl" />
 
       <div className="relative flex min-h-[280px] items-center justify-center sm:min-h-[320px]">
-        {INDUSTRY_KEYS.map((key) => (
+        {INDUSTRY_KEYS.map((key, i) => (
           <div
             key={key}
-            className={`absolute z-30 flex items-center gap-1.5 rounded-full border border-teal-400/30 bg-slate-800/90 px-2.5 py-1.5 shadow-lg backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 ${BADGE_POSITIONS[key]}`}
+            className={`absolute z-30 flex items-center gap-1.5 rounded-full border bg-slate-800/90 px-2.5 py-1.5 shadow-lg backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 ${
+              i === 1 ? "border-brand-scarlet/40" : "border-brand-gold/35"
+            } ${BADGE_POSITIONS[key]}`}
           >
-            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-teal-500/15 sm:h-7 sm:w-7">
-              <IndustryIcon type={key} className="h-4 w-4 text-teal-400" />
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-teal-500/10 ring-1 ring-brand-gold/45 sm:h-7 sm:w-7">
+              <IndustryIcon type={key} className="h-4 w-4 text-brand-gold" />
             </span>
             <span className="text-[10px] font-medium text-white sm:text-xs">{s.industries[key]}</span>
           </div>

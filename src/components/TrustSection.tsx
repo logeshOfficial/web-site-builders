@@ -62,7 +62,7 @@ export function TrustSection({
             <div className="grid grid-cols-1 gap-4 min-[360px]:grid-cols-2 sm:grid-cols-4">
               {t.trustBadges.map((badge, i) => (
                 <div key={badge.label} className="flex min-w-0 items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-100 text-teal-700">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-100 text-teal-700 ring-2 ring-brand-gold/25">
                     {badgeIcons[trustBadgeIcons[i]]}
                   </span>
                   <span className="min-w-0 text-sm font-medium text-slate-700 break-words">{badge.label}</span>
