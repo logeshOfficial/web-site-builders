@@ -110,7 +110,7 @@ function WeDoScene() {
             style={{ animationDelay: `${i * 0.15}s` }}
           >
             <span className="text-2xl">{item.icon}</span>
-            <p className="mt-1 text-[10px] font-medium text-slate-700 sm:text-xs">{item.text}</p>
+            <p className="mt-1 text-[10px] font-medium text-slate-700 break-words sm:text-xs">{item.text}</p>
           </div>
         ))}
       </div>
@@ -134,7 +134,7 @@ function TrustScene() {
         {badges.map((b) => (
           <div key={b.text} className="flex items-center gap-2 rounded-xl bg-white p-3 shadow-sm">
             <span className="text-xl">{b.icon}</span>
-            <p className="text-[10px] font-medium text-slate-700 sm:text-xs">{b.text}</p>
+            <p className="text-[10px] font-medium text-slate-700 break-words sm:text-xs">{b.text}</p>
           </div>
         ))}
       </div>
@@ -159,7 +159,7 @@ function CtaScene() {
       </div>
       <Link
         href="/contact"
-        className="rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-teal-700 shadow-md ring-2 ring-teal-300 hover:bg-teal-50"
+        className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold whitespace-nowrap text-teal-700 shadow-md ring-2 ring-teal-300 hover:bg-teal-50"
       >
         {c.getFreeQuote}
       </Link>
@@ -211,11 +211,11 @@ export function SeoTrustShowcase() {
           <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">
             {t.seoShowcase.eyebrow}
           </p>
-          <h2 className="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">{t.seoShowcase.title}</h2>
-          <p className="mt-3 text-slate-600">{t.seoShowcase.description}</p>
+          <h2 className="mt-2 text-2xl font-bold text-slate-900 break-words sm:text-3xl">{t.seoShowcase.title}</h2>
+          <p className="mt-3 text-slate-600 break-words">{t.seoShowcase.description}</p>
         </div>
 
-        <div className="mt-8 grid items-stretch gap-6 lg:grid-cols-5">
+        <div className="mt-8 flex flex-col gap-6 lg:grid lg:grid-cols-5 lg:items-stretch">
           <div className="flex flex-row flex-wrap justify-center gap-2 lg:col-span-1 lg:flex-col lg:justify-start">
             {scenes.map((s, i) => (
               <button
@@ -224,24 +224,24 @@ export function SeoTrustShowcase() {
                 onClick={() => goTo(i)}
                 aria-label={interpolate(t.seoShowcase.ariaShowScene, { title: s.title })}
                 aria-current={i === active ? "step" : undefined}
-                className={`rounded-lg px-3 py-2 text-left text-xs transition sm:text-sm ${
+                className={`min-h-[44px] rounded-lg px-3 py-2.5 text-left text-xs transition sm:text-sm ${
                   i === active
                     ? "bg-teal-600 font-semibold text-white shadow-md"
                     : "bg-white text-slate-600 hover:bg-teal-50"
                 }`}
               >
-                <span className="block font-medium">{s.label}</span>
+                <span className="block font-medium break-words">{s.label}</span>
               </button>
             ))}
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl lg:col-span-3">
+          <div className="min-w-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl lg:col-span-3">
             <div
               className={`${SCENE_ACCENTS[sceneId]} px-4 py-3 text-white transition-colors duration-500`}
             >
               <p className="text-xs font-medium uppercase tracking-wider opacity-80">{scene.label}</p>
-              <h3 className="text-lg font-bold sm:text-xl">{scene.title}</h3>
-              <p className="text-sm opacity-90">{scene.subtitle}</p>
+              <h3 className="text-base font-bold break-words sm:text-lg md:text-xl">{scene.title}</h3>
+              <p className="text-sm opacity-90 break-words">{scene.subtitle}</p>
             </div>
 
             <div
@@ -262,16 +262,16 @@ export function SeoTrustShowcase() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center rounded-2xl border border-teal-100 bg-teal-50/50 p-5 lg:col-span-1">
+          <div className="flex min-w-0 flex-col justify-center rounded-2xl border border-teal-100 bg-teal-50/50 p-5 lg:col-span-1">
             <p className="text-xs font-semibold uppercase text-teal-700">{t.seoShowcase.forOwners}</p>
-            <p className="mt-2 text-sm leading-relaxed text-slate-700">{t.seoShowcase.sidePanelExtra}</p>
-            <p className="mt-4 text-xs text-slate-500">
+            <p className="mt-2 text-sm leading-relaxed text-slate-700 break-words">{t.seoShowcase.sidePanelExtra}</p>
+            <p className="mt-4 text-xs text-slate-500 break-words">
               {interpolate(t.common.sceneOf, { current: active + 1, total: scenes.length })}
               {t.common.loopsLikeGif}
             </p>
             <Link
               href="/contact"
-              className="mt-4 inline-flex items-center justify-center rounded-full bg-teal-600 px-4 py-2 text-xs font-semibold text-white hover:bg-teal-700"
+              className="mt-4 inline-flex min-h-[44px] w-full items-center justify-center rounded-full bg-teal-600 px-4 py-3 text-xs font-semibold whitespace-nowrap text-white hover:bg-teal-700 sm:w-auto sm:py-2"
             >
               {t.seoShowcase.talkToUs}
             </Link>

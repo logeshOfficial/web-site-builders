@@ -48,8 +48,8 @@ export const siteConfig = {
 } as const;
 
 export const navLinks = [
-  { href: "/", key: "home", hideUntil: "xl" },
-  { href: "/what-is-seo", key: "whatIsSeo", hideUntil: "xl" },
+  { href: "/", key: "home", hideUntil: "lg" },
+  { href: "/what-is-seo", key: "whatIsSeo", hideUntil: "lg" },
   { href: "/services", key: "services" },
   { href: "/showcase", key: "showcase" },
   { href: "/pricing", key: "pricing" },

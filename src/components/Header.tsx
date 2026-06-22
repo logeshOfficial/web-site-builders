@@ -11,13 +11,10 @@ type NavLinkItem = (typeof navLinks)[number];
 
 function desktopNavLinkClassName(link: NavLinkItem) {
   const base =
-    "whitespace-nowrap text-xs font-medium text-slate-600 transition hover:text-teal-700 xl:text-sm";
+    "whitespace-nowrap text-sm font-medium text-slate-600 transition hover:text-teal-700";
 
   const hideUntil = "hideUntil" in link ? link.hideUntil : undefined;
 
-  if (hideUntil === "xl") {
-    return `${base} hidden xl:inline`;
-  }
   if (hideUntil === "lg") {
     return `${base} hidden lg:inline`;
   }
@@ -29,23 +26,21 @@ export function Header() {
   const { t } = useTranslation();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-6xl min-h-[3.25rem] items-center gap-3 px-4 py-3 sm:min-h-[3.5rem] sm:px-6 sm:py-3.5">
+    <header className="sticky top-0 z-50 w-full overflow-x-hidden border-b border-slate-200/80 bg-white/95 backdrop-blur-sm">
+      <div className="flex w-full min-h-[3.25rem] items-center gap-2 px-4 py-2.5 sm:min-h-[3.5rem] sm:gap-3 sm:px-6 sm:py-3.5 lg:px-10 xl:px-12">
         <Logo
           variant="full"
           theme="light"
           asLink
+          truncateName
           subtitleVisible="sm"
-          className="min-w-0 shrink-0"
+          className="min-w-0 flex-1 md:flex-none md:shrink-0"
           subtitle={interpolate(t.header.subtitle, { shortName: siteConfig.shortName })}
         />
 
-        <div className="ml-auto hidden min-w-0 flex-1 items-center justify-end gap-2 md:flex lg:gap-3">
-          <nav
-            className="min-w-0 flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            aria-label="Main navigation"
-          >
-            <div className="flex w-max max-w-full flex-nowrap items-center gap-3 lg:gap-4 xl:gap-5">
+        <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 md:flex lg:gap-6">
+          <nav aria-label="Main navigation">
+            <div className="flex flex-nowrap items-center gap-4 lg:gap-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -58,22 +53,21 @@ export function Header() {
             </div>
           </nav>
 
-          <div className="flex shrink-0 items-center gap-2 lg:gap-3">
-            <LanguageSwitcher />
-            <Link
-              href="/contact"
-              className="shrink-0 whitespace-nowrap rounded-full bg-teal-600 px-4 py-2 text-xs font-semibold leading-none text-white transition hover:bg-teal-700 xl:px-5 xl:text-sm"
-            >
-              {t.common.freeConsultation}
-            </Link>
-          </div>
+          <LanguageSwitcher />
+
+          <Link
+            href="/contact"
+            className="inline-flex min-h-[44px] shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-teal-600 px-4 py-2 text-sm font-semibold leading-none text-white transition hover:bg-teal-700 lg:px-5"
+          >
+            {t.common.freeConsultation}
+          </Link>
         </div>
 
-        <div className="ml-auto flex shrink-0 items-center gap-2 md:hidden">
-          <LanguageSwitcher />
+        <div className="ml-auto flex shrink-0 items-center gap-1.5 sm:gap-2 md:hidden">
+          <LanguageSwitcher compact />
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-lg p-2 text-slate-600"
+            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg p-2 text-slate-600 hover:bg-slate-50"
             onClick={() => setOpen(!open)}
             aria-label={t.common.toggleMenu}
             aria-expanded={open}
@@ -90,13 +84,13 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-slate-100 px-4 py-4 md:hidden">
-          <div className="flex flex-col gap-3">
+        <nav className="border-t border-slate-100 px-4 py-3 sm:px-6 sm:py-4 md:hidden lg:px-10 xl:px-12">
+          <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
+                className="flex min-h-[44px] w-full items-center rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 break-words hover:bg-slate-50"
                 onClick={() => setOpen(false)}
               >
                 {t.nav[link.key]}
@@ -104,7 +98,7 @@ export function Header() {
             ))}
             <Link
               href="/contact"
-              className="rounded-full bg-teal-600 px-5 py-2.5 text-center text-sm font-semibold text-white"
+              className="mt-2 flex min-h-[44px] w-full items-center justify-center rounded-full bg-teal-600 px-5 py-3 text-center text-sm font-semibold whitespace-nowrap text-white hover:bg-teal-700"
               onClick={() => setOpen(false)}
             >
               {t.common.freeConsultation}

@@ -118,7 +118,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="w-full space-y-5">
       {formspreeMisconfigured && (
         <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
           <p className="font-semibold">{f.formspreeInvalidId}</p>
@@ -161,7 +161,7 @@ export function ContactForm() {
             name="name"
             type="text"
             required
-            className="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-2.5 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
+            className="mt-1.5 w-full min-h-[44px] rounded-lg border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
             placeholder={f.placeholderName}
           />
         </div>
@@ -174,7 +174,7 @@ export function ContactForm() {
             name="phone"
             type="tel"
             required
-            className="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-2.5 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
+            className="mt-1.5 w-full min-h-[44px] rounded-lg border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
             placeholder={f.placeholderPhone}
           />
         </div>
@@ -188,7 +188,7 @@ export function ContactForm() {
           id="email"
           name="email"
           type="email"
-          className="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-2.5 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
+          className="mt-1.5 w-full min-h-[44px] rounded-lg border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
           placeholder={f.placeholderEmail}
         />
       </div>
@@ -200,7 +200,7 @@ export function ContactForm() {
         <select
           id="business"
           name="business"
-          className="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-2.5 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
+          className="mt-1.5 w-full min-h-[44px] rounded-lg border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
         >
           <option value="">{f.selectIndustry}</option>
           <option value="dentist">{f.industries.dentist}</option>
@@ -219,7 +219,7 @@ export function ContactForm() {
         <select
           id="package"
           name="package"
-          className="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-2.5 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
+          className="mt-1.5 w-full min-h-[44px] rounded-lg border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20"
         >
           <option value="">{f.notSureYet}</option>
           <option value="starter">{f.packages.starter}</option>
@@ -246,7 +246,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={loading || formspreeMisconfigured}
-        className="w-full rounded-full bg-teal-600 py-3.5 text-base font-semibold text-white transition hover:bg-teal-700 disabled:opacity-60"
+        className="w-full min-h-[44px] rounded-full bg-teal-600 py-3 text-base font-semibold text-white transition hover:bg-teal-700 disabled:opacity-60"
       >
         {loading ? t.common.sending : formspreeEnabled ? t.common.sendMessage : f.sendViaEmail}
       </button>

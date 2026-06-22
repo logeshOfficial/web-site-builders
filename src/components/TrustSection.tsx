@@ -57,15 +57,15 @@ export function TrustSection({
   return (
     <>
       {show("badges") && (
-        <section className="border-y border-slate-200 bg-white py-6">
+        <section className="border-y border-slate-200 bg-white py-5 sm:py-6">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 min-[360px]:grid-cols-2 sm:grid-cols-4">
               {t.trustBadges.map((badge, i) => (
-                <div key={badge.label} className="flex items-center gap-3">
+                <div key={badge.label} className="flex min-w-0 items-center gap-3">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-100 text-teal-700">
                     {badgeIcons[trustBadgeIcons[i]]}
                   </span>
-                  <span className="text-sm font-medium text-slate-700">{badge.label}</span>
+                  <span className="min-w-0 text-sm font-medium text-slate-700 break-words">{badge.label}</span>
                 </div>
               ))}
             </div>
@@ -80,10 +80,10 @@ export function TrustSection({
               <p className="text-sm font-semibold uppercase tracking-wider text-teal-600">
                 {t.whyTrustUs.eyebrow}
               </p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 break-words sm:text-3xl md:text-4xl">
                 {t.whyTrustUs.title}
               </h2>
-              <p className="mt-4 text-lg text-slate-600">
+              <p className="mt-4 text-base text-slate-600 break-words sm:text-lg">
                 {interpolate(t.whyTrustUs.description, {
                   brandName: siteConfig.name,
                   shortName: siteConfig.shortName,
@@ -91,11 +91,11 @@ export function TrustSection({
               </p>
             </div>
 
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
               {t.whyTrustUs.items.map((item) => (
-                <div key={item.title} className="rounded-xl border border-slate-200 bg-slate-50 p-6">
-                  <h3 className="font-semibold text-slate-900">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.text}</p>
+                <div key={item.title} className="rounded-xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
+                  <h3 className="font-semibold text-slate-900 break-words">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600 break-words">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -138,10 +138,10 @@ export function TrustSection({
       {show("cta") && (
         <section className="border-t border-slate-200 py-10">
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-            <p className="text-lg font-medium text-slate-800">{t.trustSection.ctaText}</p>
+            <p className="text-lg font-medium text-slate-800 break-words">{t.trustSection.ctaText}</p>
             <Link
               href="/contact"
-              className="mt-4 inline-flex rounded-full bg-teal-600 px-8 py-3 text-sm font-semibold text-white hover:bg-teal-700"
+              className="mt-4 inline-flex min-h-[44px] w-full items-center justify-center rounded-full bg-teal-600 px-8 py-3 text-sm font-semibold whitespace-nowrap text-white hover:bg-teal-700 sm:w-auto"
             >
               {t.trustSection.ctaButton}
             </Link>

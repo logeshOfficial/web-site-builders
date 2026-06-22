@@ -8,23 +8,23 @@ export function PricingCards({ showAllLink = false }: { showAllLink?: boolean })
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-12 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{t.packages.title}</h2>
-          <p className="mt-4 text-lg text-slate-600">{t.packages.description}</p>
-          <p className="mt-3 rounded-xl bg-teal-50 px-4 py-3 text-sm font-medium text-teal-800">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 break-words sm:text-3xl md:text-4xl">{t.packages.title}</h2>
+          <p className="mt-4 text-base text-slate-600 break-words sm:text-lg">{t.packages.description}</p>
+          <p className="mt-3 rounded-xl bg-teal-50 px-4 py-3 text-sm font-medium text-teal-800 break-words">
             {t.packages.gymNote}
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 sm:gap-8 lg:grid-cols-3">
           {t.packages.items.map((pkg, i) => {
             const meta = packagePrices[i];
             return (
               <div
                 key={pkg.name}
-                className={`relative flex flex-col rounded-2xl border p-8 ${
+                className={`relative flex flex-col rounded-2xl border p-6 sm:p-8 ${
                   meta.highlighted
                     ? "border-teal-500 bg-teal-50 shadow-xl shadow-teal-500/10 ring-2 ring-teal-500"
                     : "border-slate-200 bg-white"
@@ -45,23 +45,23 @@ export function PricingCards({ showAllLink = false }: { showAllLink?: boolean })
                   {"priceNote" in pkg && pkg.priceNote && (
                     <p className="mt-2 text-xs font-medium text-teal-700">{pkg.priceNote}</p>
                   )}
-                  <p className="mt-3 text-sm text-slate-600">{pkg.description}</p>
+                  <p className="mt-3 text-sm text-slate-600 break-words">{pkg.description}</p>
                 </div>
 
-                <ul className="mt-8 flex-1 space-y-3">
+                <ul className="mt-6 flex-1 space-y-3 sm:mt-8">
                   {pkg.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3 text-sm text-slate-700">
                       <svg className="mt-0.5 h-5 w-5 shrink-0 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      {feature}
+                      <span className="break-words">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <Link
                   href="/contact"
-                  className={`mt-8 block rounded-full py-3 text-center text-sm font-semibold transition ${
+                  className={`mt-6 flex min-h-[44px] items-center justify-center rounded-full py-3 text-center text-sm font-semibold whitespace-nowrap transition sm:mt-8 ${
                     meta.highlighted
                       ? "bg-teal-600 text-white hover:bg-teal-700"
                       : "border border-slate-300 text-slate-800 hover:border-teal-500 hover:text-teal-700"

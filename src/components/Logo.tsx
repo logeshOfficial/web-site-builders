@@ -11,6 +11,8 @@ type LogoProps = {
   subtitle?: string;
   subtitleVisible?: "always" | "sm";
   asLink?: boolean;
+  /** Single-line truncated name — use in the header to leave room for nav. */
+  truncateName?: boolean;
 };
 
 /** SVG intrinsic size; display height follows the stacked text block (min 52px / 62px at sm+). */
@@ -83,6 +85,7 @@ export function Logo({
   subtitle,
   subtitleVisible = "sm",
   asLink = false,
+  truncateName = false,
 }: LogoProps) {
   const styles = themeStyles[theme];
   const wrapperClass = `group flex min-w-0 items-center justify-start gap-2.5 sm:gap-3 ${className}`;
@@ -92,20 +95,28 @@ export function Logo({
       : `hidden text-[11px] leading-snug sm:block ${styles.subtext}`;
 
   const iconWrapperClass = defaultConcept
-    ? `flex aspect-square h-full w-auto min-h-[52px] shrink-0 items-center justify-center sm:min-h-[62px] ${styles.box}`
-    : `flex aspect-square h-full w-auto min-h-[52px] shrink-0 items-center justify-center rounded-lg sm:min-h-[62px] ${styles.box}`;
+    ? `flex aspect-square h-full w-auto min-h-[40px] shrink-0 items-center justify-center sm:min-h-[52px] md:min-h-[62px] ${styles.box}`
+    : `flex aspect-square h-full w-auto min-h-[40px] shrink-0 items-center justify-center rounded-lg sm:min-h-[52px] md:min-h-[62px] ${styles.box}`;
 
   const inner = (
     <>
       <span className={iconWrapperClass}>
         <BrandLogoMark
-          className={defaultConcept ? "h-full w-full" : "h-10 w-10 sm:h-full sm:w-full sm:max-h-[62px] sm:max-w-[62px]"}
+          className={defaultConcept ? "h-full w-full max-h-[40px] max-w-[40px] sm:max-h-none sm:max-w-none" : "h-9 w-9 sm:h-10 sm:w-10 md:h-full md:w-full md:max-h-[62px] md:max-w-[62px]"}
         />
       </span>
       {variant === "full" ? (
-        <span className="flex min-w-0 flex-col justify-center overflow-hidden leading-tight">
+        <span
+          className={`flex min-w-0 flex-col justify-center overflow-hidden leading-tight${
+            truncateName ? " max-w-[7rem] sm:max-w-[11rem] lg:max-w-[10rem] xl:max-w-[12rem]" : ""
+          }`}
+        >
           <span
-            className={`block overflow-hidden text-ellipsis whitespace-nowrap text-xl font-semibold tracking-tight sm:overflow-visible sm:whitespace-normal sm:text-2xl ${styles.text}`}
+            className={`block font-semibold tracking-tight ${styles.text} ${
+              truncateName
+                ? "truncate whitespace-nowrap text-sm sm:text-base md:text-lg"
+                : "overflow-hidden text-ellipsis whitespace-nowrap text-lg sm:overflow-visible sm:whitespace-normal sm:text-xl md:text-2xl"
+            }`}
           >
             {siteConfig.name}
           </span>
