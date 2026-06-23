@@ -40,7 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# generated at prebuild / predev
-/src/generated/sitemap-xml.ts
-
 .vercel

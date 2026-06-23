@@ -1,6 +1,23 @@
 /** Local dev fallback when no env vars are set. Never use an unowned domain here. */
 const LOCAL_DEV_SITE_URL = "http://localhost:3000";
 
+/** Canonical production URL when env vars are missing on Vercel (prevents localhost in sitemap). */
+const PRODUCTION_FALLBACK_URL = "https://web-site-builders.vercel.app";
+
+/** Indexable static routes (single source of truth for sitemap). */
+export const publicSitemapPaths = [
+  "",
+  "/services",
+  "/pricing",
+  "/about",
+  "/contact",
+  "/industries",
+  "/showcase",
+  "/what-is-seo",
+  "/what-is-domain-hosting",
+  "/faq",
+] as const;
+
 function resolveSiteUrl(raw: string | undefined): string | null {
   if (!raw?.trim()) return null;
 
@@ -20,7 +37,9 @@ export function getSiteUrl(): string {
     resolveSiteUrl(
       process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined,
     ) ??
-    LOCAL_DEV_SITE_URL
+    (process.env.VERCEL === "1"
+      ? PRODUCTION_FALLBACK_URL
+      : LOCAL_DEV_SITE_URL)
   );
 }
 
