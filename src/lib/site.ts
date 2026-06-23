@@ -1,5 +1,5 @@
-/** Placeholder until custom domain is confirmed — set NEXT_PUBLIC_SITE_URL in Vercel or .env.local. */
-const DEFAULT_SITE_URL = "https://websitebuilders.in";
+/** Local dev fallback when no env vars are set. Never use an unowned domain here. */
+const LOCAL_DEV_SITE_URL = "http://localhost:3000";
 
 function resolveSiteUrl(raw: string | undefined): string | null {
   if (!raw?.trim()) return null;
@@ -20,7 +20,7 @@ export function getSiteUrl(): string {
     resolveSiteUrl(
       process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined,
     ) ??
-    DEFAULT_SITE_URL
+    LOCAL_DEV_SITE_URL
   );
 }
 
