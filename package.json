@@ -4,10 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predev": "node scripts/generate-sitemap.mjs",
+    "prebuild": "node scripts/generate-sitemap.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "export-logos": "node scripts/export-logo-pngs.mjs"
+    "export-logos": "node scripts/export-logo-pngs.mjs",
+    "instagram-story": "node scripts/generate-instagram-story.mjs",
+    "instagram-story-seo-explainer": "node scripts/generate-seo-explainer-story.mjs"
   },
   "dependencies": {
     "next": "16.2.9",
