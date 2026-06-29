@@ -51,7 +51,7 @@ export const industryPages: Record<string, IndustryContent> = {
       {
         question: "How much does a dental website cost in Chennai?",
         answer:
-          "Our dental websites start from ₹6,000–8,000 for a Starter package with 5–6 pages and basic SEO. Growth packages with domain, hosting, and booking range from ₹15,000–22,000. Premium custom sites are ₹28,000–45,000.",
+          "Our dental websites start from ₹4,999–7,999 for a Starter package with 5–6 pages and basic SEO. Growth packages with domain, hosting, and booking range from ₹14,999–21999. Premium custom sites are ₹27,999–44,999.",
       },
       {
         question: "How long does it take to build a dental clinic website?",
@@ -111,7 +111,7 @@ export const industryPages: Record<string, IndustryContent> = {
       {
         question: "How much does a plumber website cost?",
         answer:
-          "Starter packages begin at ₹6,000–8,000. Most plumbers choose our Growth package (₹15,000–22,000) for service area pages, domain, and enhanced local SEO.",
+          "Starter packages begin at ₹4,999–7,999. Most plumbers choose our Growth package (₹14,999–21,999) for service area pages, domain, and enhanced local SEO.",
       },
       {
         question: "Can you help me get more Google reviews?",
@@ -161,12 +161,12 @@ export const industryPages: Record<string, IndustryContent> = {
       {
         question: "How much does a salon website cost in India?",
         answer:
-          "Our salon websites start from ₹6,000–8,000. Growth packages with domain, hosting, and booking integration range from ₹15,000–22,000. Premium custom sites are ₹28,000–45,000.",
+          "Our salon websites start from ₹4,999–7,999. Growth packages with domain, hosting, and booking integration range from ₹14,999–21,999. Premium custom sites are ₹27,999–44,999.",
       },
       {
         question: "Can you integrate online booking for my salon?",
         answer:
-          "Yes. We integrate Calendly, Fresha, or custom booking systems starting from ₹8,000 as an add-on.",
+          "Yes. We integrate Calendly, Fresha, or custom booking systems starting from ₹7,999 as an add-on.",
       },
       {
         question: "Will you help with photos and content?",

@@ -2,6 +2,7 @@ import { FaqContent } from "@/app/_content/FaqContent";
 import { JsonLd } from "@/components/JsonLd";
 import { en } from "@/lib/i18n/en";
 import { createMetadata, faqJsonLd } from "@/lib/seo";
+import { PRICING } from "@/lib/pricing-config";
 
 function getAllFaqs(): { question: string; answer: string }[] {
   return en.faqPage.categories.flatMap((category) =>
@@ -12,7 +13,7 @@ function getAllFaqs(): { question: string; answer: string }[] {
 export const metadata = createMetadata({
   title: "FAQ — Website, SEO, Domain, Hosting & Pricing Questions",
   description:
-    "Answers to common questions about business websites, SEO, domain, hosting, SSL, pricing (from ₹6,000), payment terms, timelines, and WhatsApp support. Plain English for Indian business owners.",
+    `Answers to common questions about business websites, SEO, domain, hosting, SSL, pricing (from ${PRICING.starter.min}), payment terms, timelines, and WhatsApp support. Plain English for Indian business owners.`,
   path: "/faq",
   keywords: [
     "website FAQ India",

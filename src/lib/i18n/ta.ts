@@ -1,3 +1,4 @@
+import { PRICING } from "../pricing-config";
 import type { Translation } from "./types";
 
 export const ta: Translation = {
@@ -171,7 +172,7 @@ export const ta: Translation = {
     },
     pricingTeaser: {
       eyebrow: "Affordable packages",
-      title: "தெளிவான விலை — ₹6,000-ல் இருந்து",
+      title: `தெளிவான விலை — ${PRICING.starter.min}-ல் இருந்து`,
       subtitle: "ஒரு முறை build fee. Agency markup இல்லை. எல்லா plan-லும் hosting included.",
       ctaLink: "முழு விலை & add-ons பார்க்க →",
       domainNote: "Domain & hosting செலவு என்ன? →",
@@ -586,7 +587,7 @@ export const ta: Translation = {
         "Gyms, restaurants, farm sellers, turf grounds, furniture makers, travel tours—எல்லா business type-க்கும் professional websites. SEO, mobile, booking & WhatsApp — Chennai.",
       heroTitle: "உங்கள் business-க்கு என்ன build",
       heroSubtitle:
-        "Below ஒவ்வொரு vertical-உம் நாம் deliver செய்யும் real site type—mobile-first, SEO-ready, Google-லிருந்து customers. Packages ₹6,000-லிருந்து.",
+        `Below ஒவ்வொரு vertical-உம் நாம் deliver செய்யும் real site type—mobile-first, SEO-ready, Google-லிருந்து customers. Packages ${PRICING.starter.min}-லிருந்து.`,
       bottomCtaTitle: "உங்கள் exact industry தெரியவில்லையா?",
       bottomCtaSubtitle:
         "Online customers வேண்டும் எந்த business-க்கும் build. நீங்கள் என்ன செய்கிறீர்கள் சொல்லுங்கள்—right features recommend, honest quote.",
@@ -609,11 +610,11 @@ export const ta: Translation = {
   },
 
   marketComparison: [
-    { item: "Basic business website (5–6 pages)", agency: "₹50,000 – ₹80,000", us: "₹6,000 – ₹8,000" },
-    { item: "SEO-ready website + domain", agency: "₹80,000 – ₹1,50,000", us: "₹15,000 – ₹22,000" },
-    { item: "Custom premium site", agency: "₹2,00,000+", us: "₹28,000 – ₹45,000" },
-    { item: "SEO setup (add-on)", agency: "₹25,000 – ₹50,000", us: "சேர்க்கப்பட்டுள்ளது" },
-    { item: "Mobile optimization", agency: "₹15,000 – ₹30,000", us: "சேர்க்கப்பட்டுள்ளது" },
+    { item: "Basic business website (5–6 pages)", agency: PRICING.agency.basicRange, us: PRICING.starter.range },
+    { item: "SEO-ready website + domain", agency: PRICING.agency.growthRange, us: PRICING.growth.range },
+    { item: "Custom premium site", agency: PRICING.agency.premiumRange, us: PRICING.premium.range },
+    { item: "SEO setup (add-on)", agency: PRICING.agency.seoRange, us: "சேர்க்கப்பட்டுள்ளது" },
+    { item: "Mobile optimization", agency: PRICING.agency.mobileRange, us: "சேர்க்கப்பட்டுள்ளது" },
   ],
 
   services: {
@@ -650,14 +651,14 @@ export const ta: Translation = {
       "Gym, salon, shop, clinic — clear one-time build fees. எல்லா plans-லும் hosting included. Growth tier-லிருந்து domain included. 50% start, 50% launch.",
     seeAddons: "Cost breakdown & add-ons பார்க்க →",
     gymNote:
-      "Gym & small business intro sites ₹8,000-லிருந்து Growth (Standard)-ல் — domain + hosting first year included.",
+      `Gym & small business intro sites ${PRICING.misc.gymIntro}-லிருந்து Growth (Standard)-ல் — domain + hosting first year included.`,
     items: [
       {
         name: "Starter",
         subtitle: "Basic — online-ல் வாருங்கள்",
         description:
-          "Gym, shop, simple businesses-க்கு 5–6 pages. Hosting included; domain தனியாக (~₹800–1,200/year).",
-        priceNote: "Domain ~₹800–1,200/yr தனியாக",
+          `Gym, shop, simple businesses-க்கு 5–6 pages. Hosting included; domain தனியாக (${PRICING.domain.rangeYearlyCompact}).`,
+        priceNote: `Domain ${PRICING.domain.rangeYearlyCompact} தனியாக`,
         features: [
           "5–6 pages (Home, About, Services, Gallery, Contact)",
           "Mobile-first responsive design",
@@ -709,11 +710,11 @@ export const ta: Translation = {
   },
 
   addOns: [
-    { name: "Domain renewal (year 1-க்கு பிறகு)", price: "~₹800 – ₹1,200/yr" },
-    { name: "Online booking integration", price: "₹5,000 – ₹15,000" },
-    { name: "E-commerce (small catalog)", price: "₹20,000 – ₹60,000" },
-    { name: "Monthly SEO retainer", price: "₹5,000 – ₹15,000/mo" },
-    { name: "Professional copywriting", price: "₹3,000 – ₹12,000" },
+    { name: "Domain renewal (year 1-க்கு பிறகு)", price: PRICING.domain.rangeYearlyCompact },
+    { name: "Online booking integration", price: PRICING.addOns.booking.range },
+    { name: "E-commerce (small catalog)", price: PRICING.addOns.ecommerce.range },
+    { name: "Monthly SEO retainer", price: PRICING.addOns.seoRetainer.rangeMonthly },
+    { name: "Professional copywriting", price: PRICING.addOns.copywriting.range },
   ],
 
   pricingTransparency: {
@@ -729,13 +730,13 @@ export const ta: Translation = {
     rows: [
       {
         item: "Website build",
-        typicalCost: "₹6,000 – ₹45,000 (package-க்கு ஏற்ப)",
+        typicalCost: `${PRICING.starter.min} – ${PRICING.premium.max} (package-க்கு ஏற்ப)`,
         whoPays: "Client",
         included: "Yes — one-time fee",
       },
       {
         item: "Domain (.in / .com)",
-        typicalCost: "~₹800 – ₹1,200/year",
+        typicalCost: PRICING.domain.rangeYearly,
         whoPays: "Client or included",
         included: "Starter: தனியாக · Growth+: included (yr 1)",
       },
@@ -753,13 +754,13 @@ export const ta: Translation = {
       },
       {
         item: "SEO setup",
-        typicalCost: "Agencies ₹25k–50k extra charge",
+        typicalCost: `Agencies ${PRICING.agency.seoRange} extra charge`,
         whoPays: "—",
         included: "Yes — எல்லா plans-லும் included",
       },
     ],
     footnote:
-      "First year-க்கு பிறகு domain renewal ~₹800–1,200/year. உங்கள் பெயரில் register — எப்போதும் உங்களுக்கே சொந்தம்.",
+      `First year-க்கு பிறகு domain renewal ${PRICING.domain.rangeYearly}. உங்கள் பெயரில் register — எப்போதும் உங்களுக்கே சொந்தம்.`,
   },
 
   domainHostingExplainer: {
@@ -779,11 +780,11 @@ export const ta: Translation = {
       "Shop space rent போல — domain = signboard, hosting = எல்லாம் store செய்யும் actual shop.",
     togetherTitle: "Domain + hosting ஒன்றாக",
     togetherText:
-      "Live website-க்கு இரண்டும் தேவை. Domain ≈ ₹800–1,200/year. Vercel போன்ற platforms-ல் hosting free — எங்கள் எல்லா package-லும் included.",
+      `Live website-க்கு இரண்டும் தேவை. Domain ≈ ${PRICING.domain.rangeYearly}. Vercel போன்ற platforms-ல் hosting free — எங்கள் எல்லா package-லும் included.`,
     comparisonTitle: "Proper setup இல்லாம vs உடன்",
     costSummaryTitle: "Typical yearly costs",
     costSummaryItems: [
-      { label: "Domain (.in or .com)", cost: "~₹800 – ₹1,200/yr" },
+      { label: "Domain (.in or .com)", cost: PRICING.domain.rangeYearlyCompact },
       { label: "Hosting (Vercel)", cost: "₹0 — நாங்கள் include" },
       { label: "SSL security lock", cost: "Free — included" },
     ],
@@ -833,15 +834,15 @@ export const ta: Translation = {
     packageNoteTitle: "எங்கள் packages-ல் என்ன included",
     packageNoteItems: [
       {
-        title: "Starter (₹6,000–8,000)",
-        text: "Website build + free hosting. Domain தனியாக (~₹800–1,200/year) — register-ல் help.",
+        title: `Starter (${PRICING.starter.rangeCompact})`,
+        text: `Website build + free hosting. Domain தனியாக (${PRICING.domain.rangeYearly}) — register-ல் help.`,
       },
       {
-        title: "Growth / Standard (₹15,000–22,000)",
-        text: "Domain + hosting first year included. Gym, small business ₹8,000 intro offers-க்கு perfect.",
+        title: `Growth / Standard (${PRICING.growth.rangeCompact})`,
+        text: `Domain + hosting first year included. Gym, small business ${PRICING.misc.gymIntro} intro offers-க்கு perfect.`,
       },
       {
-        title: "Premium (₹28,000–45,000)",
+        title: `Premium (${PRICING.premium.rangeCompact})`,
         text: "Growth + custom design, multi-location SEO, priority support.",
       },
     ],
@@ -857,7 +858,7 @@ export const ta: Translation = {
       },
       {
         myth: "Pay stop செய்தால் domain forever போய்விடும்",
-        truth: "Domain உங்கள் பெயரில் register. Yearly renew (~₹1,000) அல்லது anytime transfer.",
+        truth: `Domain உங்கள் பெயரில் register. Yearly renew (${PRICING.domain.rangeYearlyCompact}) அல்லது anytime transfer.`,
       },
     ],
     readyTitle: "Clear quote தயாரா?",
@@ -935,9 +936,9 @@ export const ta: Translation = {
     notSureYet: "இன்னும் தெரியவில்லை",
     customQuote: "Custom quote",
     packages: {
-      starter: "Starter — ₹6,000–8,000",
-      growth: "Growth — ₹15,000–22,000",
-      premium: "Premium — ₹28,000–45,000",
+      starter: `Starter — ${PRICING.starter.rangeCompact}`,
+      growth: `Growth — ${PRICING.growth.rangeCompact}`,
+      premium: `Premium — ${PRICING.premium.rangeCompact}`,
     },
     industries: {
       dentist: "பல் மருத்துவர் / Dental Clinic",
@@ -1233,7 +1234,7 @@ export const ta: Translation = {
       {
         myth: "SEO too expensive",
         truth:
-          "Basic SEO எல்லா website package-லும் included—agencies charge ₹50,000 add-on இல்லை.",
+          `Basic SEO எல்லா website package-லும் included—agencies charge ${PRICING.agency.seoAddonApprox} add-on இல்லை.`,
       },
       {
         myth: "Results instant",
@@ -1272,7 +1273,7 @@ export const ta: Translation = {
       { label: "Monthly", text: "SEO retainers மற்றும் maintenance advance bill" },
     ],
     webAppNote:
-      "Web app projects scope-க்கு separately quote. Simple MVPs ₹1,50,000 to ₹8,00,000+. Accurate estimate-க்கு free call book.",
+      `Web app projects scope-க்கு separately quote. Simple MVPs ${PRICING.misc.webAppMvpRange}. Accurate estimate-க்கு free call book.`,
     ctaHeadline: "எந்த package fit என்று தெரியவில்லையா?",
     ctaSubheadline:
       "உங்கள் business சொல்லுங்கள், best option recommend—no obligation.",
@@ -1283,7 +1284,7 @@ export const ta: Translation = {
     subtitle:
       "Trusted business website makers—எல்லா Indian business type-க்கும் Google-ல் found, big agencies-ஐ விட 30–40% குறைவு.",
     whoWeAre: "நாம் யார்",
-    p1: "{brandName} {shortName}-ஆக start—business owners agencies-க்கு ₹80,000–₹2,00,000 overpay, Google-லிருந்து customers bring ஆகாத websites.",
+    p1: `{brandName} {shortName}-ஆக start—business owners agencies-க்கு ${PRICING.agency.overpayRange} overpay, Google-லிருந்து customers bring ஆகாத websites.`,
     p2: "நாங்கள் professional website makers, bloated agency அல்ல. Lower prices, direct communication, actually build செய்யும் people-ன் accountability. India முழுவதும் shops, clinics, restaurants, coaches, startups, online stores.",
     p3: "Trust matter. Pay-க்கு முன் SEO plain language-ல் explain. Price, timeline, என்ன getting என்று always தெரியும்.",
     marketingTitle: "Design மட்டும் அல்ல — marketing-ஐ ஏன் focus செய்கிறோம்",
@@ -1307,7 +1308,7 @@ export const ta: Translation = {
     howWeHelp: "எப்படி help",
     whatsIncluded: "என்ன included",
     faqTitle: "Frequently asked questions",
-    ctaSubheadline: "உங்கள் business-க்கு tailored free quote. Packages ₹6,000-லிருந்து.",
+    ctaSubheadline: `உங்கள் business-க்கு tailored free quote. Packages ${PRICING.starter.min}-லிருந்து.`,
     ctaHeadlines: {
       dentists: "Dental practice grow தயாரா?",
       plumbers: "Plumbing business grow தயாரா?",
@@ -1356,7 +1357,7 @@ export const ta: Translation = {
         {
           question: "Chennai-ல் dental website cost எவ்வளவு?",
           answer:
-            "Dental websites ₹6,000–8,000 Starter (5–6 pages, basic SEO). Domain, hosting, booking Growth ₹15,000–22,000. Premium custom ₹28,000–45,000.",
+            `Dental websites ${PRICING.starter.range} Starter (5–6 pages, basic SEO). Domain, hosting, booking Growth ${PRICING.growth.range}. Premium custom ${PRICING.premium.range}.`,
         },
         {
           question: "Dental clinic website build எவ்வளவு நாள்?",
@@ -1415,7 +1416,7 @@ export const ta: Translation = {
         {
           question: "Plumber website cost?",
           answer:
-            "Starter ₹6,000–8,000. Service area pages, domain, local SEO Growth (₹15,000–22,000) பெரும்பாலும் choose.",
+            `Starter ${PRICING.starter.range}. Service area pages, domain, local SEO Growth (${PRICING.growth.range}) பெரும்பாலும் choose.`,
         },
         {
           question: "More Google reviews help?",
@@ -1464,12 +1465,12 @@ export const ta: Translation = {
         {
           question: "India-ல் salon website cost?",
           answer:
-            "Salon websites ₹6,000–8,000-லிருந்து. Domain, hosting, booking Growth ₹15,000–22,000. Premium custom ₹28,000–45,000.",
+            `Salon websites ${PRICING.starter.range}-லிருந்து. Domain, hosting, booking Growth ${PRICING.growth.range}. Premium custom ${PRICING.premium.range}.`,
         },
         {
           question: "Salon online booking integrate?",
           answer:
-            "Yes. Calendly, Fresha, custom booking ₹8,000 add-on-லிருந்து.",
+            `Yes. Calendly, Fresha, custom booking ${PRICING.addOns.booking.min} add-on-லிருந்து.`,
         },
         {
           question: "Photos, content help?",
@@ -1521,7 +1522,7 @@ export const ta: Translation = {
           {
             question: "Domain name என்றால் என்ன?",
             answer:
-              "Domain என்பது உங்கள் website address — fitzonegym.in, myclinic.com போல. Browser-ல் type செய்யும் அல்லது Google-ல் பார்க்கும். India-ல் domain ~₹800–1,200/year.",
+              `Domain என்பது உங்கள் website address — fitzonegym.in, myclinic.com போல. Browser-ல் type செய்யும் அல்லது Google-ல் பார்க்கும். India-ல் domain ${PRICING.domain.rangeYearly}.`,
             guide: { href: "/what-is-domain-hosting", labelKey: "readDomainHostingGuide" },
           },
           {
@@ -1533,7 +1534,7 @@ export const ta: Translation = {
           {
             question: "Domain மற்றும் hosting இரண்டும் வேண்டுமா?",
             answer:
-              "ஆம். Domain = address; hosting = site வாழும் இடம். Domain = shop signboard, hosting = shop space. Starter-ல் hosting included; domain separate (~₹800–1,200/year) அல்லது Growth tier-லிருந்து included.",
+              `ஆம். Domain = address; hosting = site வாழும் இடம். Domain = shop signboard, hosting = shop space. Starter-ல் hosting included; domain separate (${PRICING.domain.rangeYearlyCompact}) அல்லது Growth tier-லிருந்து included.`,
             guide: { href: "/what-is-domain-hosting", labelKey: "readDomainHostingGuide" },
           },
         ],
@@ -1545,13 +1546,13 @@ export const ta: Translation = {
           {
             question: "Business website-க்கு எவ்வளவு செலவு?",
             answer:
-              "Starter ₹6,000–8,000 (5–6 pages), Growth ₹15,000–22,000 (domain + local SEO), Premium ₹28,000–45,000 (custom design + advanced SEO). Gym, small business intro sites ₹6,000–8,000-லிருந்து. எல்லாம் one-time build fee INR-ல்.",
+              `Starter ${PRICING.starter.range} (5–6 pages), Growth ${PRICING.growth.range} (domain + local SEO), Premium ${PRICING.premium.range} (custom design + advanced SEO). Gym, small business intro sites ${PRICING.starter.range}-லிருந்து. எல்லாம் one-time build fee INR-ல்.`,
             guide: { href: "/pricing", labelKey: "viewFullPricing" },
           },
           {
-            question: "₹6,000–8,000 Starter package-ல் என்ன included?",
+            question: `${PRICING.starter.range} Starter package-ல் என்ன included?`,
             answer:
-              "5–6 pages, mobile-first design, on-page SEO, contact form, WhatsApp button, Google Maps, free hosting, SSL, 30 days post-launch support. Domain (~₹800–1,200/year) separate — உங்கள் பெயரில் register செய்ய உதவுவோம்.",
+              `5–6 pages, mobile-first design, on-page SEO, contact form, WhatsApp button, Google Maps, free hosting, SSL, 30 days post-launch support. Domain (${PRICING.domain.rangeYearlyCompact}) separate — உங்கள் பெயரில் register செய்ய உதவுவோம்.`,
             guide: { href: "/pricing", labelKey: "seeOurPackages" },
           },
           {
@@ -1563,13 +1564,13 @@ export const ta: Translation = {
           {
             question: "Basic package-ல் online booking included-ஆ?",
             answer:
-              "Growth மேல் quote/enquiry form included. Full booking (Calendly, Fresha, custom) ₹5,000–15,000 add-on — Starter-ல் included இல்லை. Free call-ல் சரியான option recommend செய்வோம்.",
+              `Growth மேல் quote/enquiry form included. Full booking (Calendly, Fresha, custom) ${PRICING.addOns.booking.range} add-on — Starter-ல் included இல்லை. Free call-ல் சரியான option recommend செய்வோம்.`,
             guide: { href: "/pricing", labelKey: "viewFullPricing" },
           },
           {
             question: "Hidden charges உள்ளதா?",
             answer:
-              "இல்லை. Package price upfront தெரியும். Year two-ல் typical cost domain renewal (~₹800–1,200). Booking, e-commerce, monthly SEO optional — agree செய்வதற்கு முன் quote.",
+              `இல்லை. Package price upfront தெரியும். Year two-ல் typical cost domain renewal (${PRICING.domain.rangeYearlyCompact}). Booking, e-commerce, monthly SEO optional — agree செய்வதற்கு முன் quote.`,
           },
         ],
       },
@@ -1580,7 +1581,7 @@ export const ta: Translation = {
           {
             question: "India-ல் domain செலவு எவ்வளவு?",
             answer:
-              ".in அல்லது .com ~₹800–1,200/year. Starter-ல் separate (உங்கள் பெயரில் register). Growth, Premium-ல் first year domain package-ல் included.",
+              `.in அல்லது .com ${PRICING.domain.rangeYearly}. Starter-ல் separate (உங்கள் பெயரில் register). Growth, Premium-ல் first year domain package-ல் included.`,
             guide: { href: "/what-is-domain-hosting", labelKey: "readDomainHostingGuide" },
           },
           {
@@ -1597,7 +1598,7 @@ export const ta: Translation = {
           {
             question: "Domain first year-க்கு பிறகு என்ன?",
             answer:
-              "Renewal ~₹800–1,200/year. Expiry-க்கு முன் remind செய்வோம். Growth, Premium first year included; year two-ல் direct அல்லது எங்கள் மூலம் renew — உங்கள் choice.",
+              `Renewal ${PRICING.domain.rangeYearly}. Expiry-க்கு முன் remind செய்வோம். Growth, Premium first year included; year two-ல் direct அல்லது எங்கள் மூலம் renew — உங்கள் choice.`,
           },
         ],
       },
@@ -1666,7 +1667,7 @@ export const ta: Translation = {
           {
             question: "Website content எழுதுவீர்களா?",
             answer:
-              "Basic structure, SEO headings included. Professional copywriting (full descriptions, blog) ₹3,000–12,000 add-on scope-படி.",
+              `Basic structure, SEO headings included. Professional copywriting (full descriptions, blog) ${PRICING.addOns.copywriting.range} add-on scope-படி.`,
           },
         ],
       },
@@ -1693,7 +1694,7 @@ export const ta: Translation = {
           {
             question: "Monthly maintenance fees என்ன?",
             answer:
-              "Maintenance (updates, security, small changes) optional — needs-படி quote. Monthly SEO retainers ₹5,000–15,000/month. Basic sites-க்கு occasional updates போதும், monthly fee must இல்லை.",
+              `Maintenance (updates, security, small changes) optional — needs-படி quote. Monthly SEO retainers ${PRICING.addOns.seoRetainer.rangeMonthly}. Basic sites-க்கு occasional updates போதும், monthly fee must இல்லை.`,
             guide: { href: "/pricing", labelKey: "viewFullPricing" },
           },
           {

@@ -1,3 +1,5 @@
+import { PRICING } from "./pricing-config";
+
 /** Local dev fallback when no env vars are set. Never use an unowned domain here. */
 const LOCAL_DEV_SITE_URL = "http://localhost:3000";
 
@@ -135,9 +137,9 @@ export const businessTypeEmojis = [
 ] as const;
 
 export const packagePrices = [
-  { price: "₹6,000–8,000", highlighted: false },
-  { price: "₹15,000–22,000", highlighted: true },
-  { price: "₹28,000–45,000", highlighted: false },
+  { price: PRICING.starter.rangeCompact, highlighted: false },
+  { price: PRICING.growth.rangeCompact, highlighted: true },
+  { price: PRICING.premium.rangeCompact, highlighted: false },
 ] as const;
 
 export const serviceIcons = ["globe", "map", "code", "shield"] as const;

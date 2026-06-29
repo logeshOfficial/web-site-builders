@@ -1,3 +1,5 @@
+import { PRICING, formatPrice } from "../pricing-config";
+
 export const en = {
   common: {
     brandName: "Business Website Makers",
@@ -169,7 +171,7 @@ export const en = {
     },
     pricingTeaser: {
       eyebrow: "Affordable packages",
-      title: "Clear pricing — from ₹6,000",
+      title: `Clear pricing — from ${PRICING.starter.min}`,
       subtitle: "One-time build fee. No agency markup. Hosting included on all plans.",
       ctaLink: "View full pricing & add-ons →",
       domainNote: "What are domain & hosting costs? →",
@@ -584,7 +586,7 @@ export const en = {
         "Professional websites for gyms, restaurants, farm sellers, turf grounds, furniture makers, travel tours, and every business type. SEO, mobile, booking & WhatsApp — Chennai.",
       heroTitle: "What we build for your business",
       heroSubtitle:
-        "Every vertical below is a real type of site we deliver — mobile-first, SEO-ready, and built to bring customers from Google. Packages from ₹6,000.",
+        `Every vertical below is a real type of site we deliver — mobile-first, SEO-ready, and built to bring customers from Google. Packages from ${PRICING.starter.min}.`,
       bottomCtaTitle: "Don't see your exact industry?",
       bottomCtaSubtitle:
         "We build for any business that needs customers online. Tell us what you do — we'll recommend the right features and quote honestly.",
@@ -607,11 +609,11 @@ export const en = {
   },
 
   marketComparison: [
-    { item: "Basic business website (5–6 pages)", agency: "₹50,000 – ₹80,000", us: "₹6,000 – ₹8,000" },
-    { item: "SEO-ready website + domain", agency: "₹80,000 – ₹1,50,000", us: "₹15,000 – ₹22,000" },
-    { item: "Custom premium site", agency: "₹2,00,000+", us: "₹28,000 – ₹45,000" },
-    { item: "SEO setup (add-on)", agency: "₹25,000 – ₹50,000", us: "Included" },
-    { item: "Mobile optimization", agency: "₹15,000 – ₹30,000", us: "Included" },
+    { item: "Basic business website (5–6 pages)", agency: PRICING.agency.basicRange, us: PRICING.starter.range },
+    { item: "SEO-ready website + domain", agency: PRICING.agency.growthRange, us: PRICING.growth.range },
+    { item: "Custom premium site", agency: PRICING.agency.premiumRange, us: PRICING.premium.range },
+    { item: "SEO setup (add-on)", agency: PRICING.agency.seoRange, us: "Included" },
+    { item: "Mobile optimization", agency: PRICING.agency.mobileRange, us: "Included" },
   ],
 
   services: {
@@ -648,14 +650,14 @@ export const en = {
       "Gym, salon, shop, or clinic — clear one-time build fees. Hosting included on all plans. Domain included from Growth tier. 50% to start, 50% before launch.",
     seeAddons: "See cost breakdown & add-ons →",
     gymNote:
-      "Gym & small business intro sites from ₹8,000 on Growth (Standard) — domain + hosting included for the first year.",
+      `Gym & small business intro sites from ${PRICING.misc.gymIntro} on Growth (Standard) — domain + hosting included for the first year.`,
     items: [
       {
         name: "Starter",
         subtitle: "Basic — get online",
         description:
-          "Ideal for gyms, shops, and simple businesses needing 5–6 pages. Hosting included; domain is separate (~₹800–1,200/year).",
-        priceNote: "Domain ~₹800–1,200/yr billed separately",
+          `Ideal for gyms, shops, and simple businesses needing 5–6 pages. Hosting included; domain is separate (${PRICING.domain.rangeYearlyCompact}).`,
+        priceNote: `Domain ${PRICING.domain.rangeYearlyCompact} billed separately`,
         features: [
           "5–6 pages (Home, About, Services, Gallery, Contact)",
           "Mobile-first responsive design",
@@ -707,11 +709,11 @@ export const en = {
   },
 
   addOns: [
-    { name: "Domain renewal (after year 1)", price: "~₹800 – ₹1,200/yr" },
-    { name: "Online booking integration", price: "₹5,000 – ₹15,000" },
-    { name: "E-commerce (small catalog)", price: "₹20,000 – ₹60,000" },
-    { name: "Monthly SEO retainer", price: "₹5,000 – ₹15,000/mo" },
-    { name: "Professional copywriting", price: "₹3,000 – ₹12,000" },
+    { name: "Domain renewal (after year 1)", price: PRICING.domain.rangeYearlyCompact },
+    { name: "Online booking integration", price: PRICING.addOns.booking.range },
+    { name: "E-commerce (small catalog)", price: PRICING.addOns.ecommerce.range },
+    { name: "Monthly SEO retainer", price: PRICING.addOns.seoRetainer.rangeMonthly },
+    { name: "Professional copywriting", price: PRICING.addOns.copywriting.range },
   ],
 
   pricingTransparency: {
@@ -727,13 +729,13 @@ export const en = {
     rows: [
       {
         item: "Website build",
-        typicalCost: "₹6,000 – ₹45,000 (by package)",
+        typicalCost: `${PRICING.starter.min} – ${PRICING.premium.max} (by package)`,
         whoPays: "Client",
         included: "Yes — one-time fee",
       },
       {
         item: "Domain (.in / .com)",
-        typicalCost: "~₹800 – ₹1,200/year",
+        typicalCost: PRICING.domain.rangeYearly,
         whoPays: "Client or included",
         included: "Starter: separate · Growth+: included (yr 1)",
       },
@@ -757,7 +759,7 @@ export const en = {
       },
     ],
     footnote:
-      "Domain renewals after the first year are ~₹800–1,200/year. We register in your name so you always own it.",
+      `Domain renewals after the first year are ${PRICING.domain.rangeYearly}. We register in your name so you always own it.`,
   },
 
   domainHostingExplainer: {
@@ -777,11 +779,11 @@ export const en = {
       "Think of it like renting a shop space — the domain is your signboard, hosting is the actual shop where everything is stored.",
     togetherTitle: "Domain + hosting together",
     togetherText:
-      "You need both to have a live website. Domain ≈ ₹800–1,200/year. Hosting can be free on modern platforms like Vercel — we include it in every package.",
+      `You need both to have a live website. Domain ≈ ${PRICING.domain.rangeYearly}. Hosting can be free on modern platforms like Vercel — we include it in every package.`,
     comparisonTitle: "Without vs with a proper setup",
     costSummaryTitle: "Typical yearly costs",
     costSummaryItems: [
-      { label: "Domain (.in or .com)", cost: "~₹800 – ₹1,200/yr" },
+      { label: "Domain (.in or .com)", cost: PRICING.domain.rangeYearlyCompact },
       { label: "Hosting (Vercel)", cost: "₹0 — included by us" },
       { label: "SSL security lock", cost: "Free — included" },
     ],
@@ -831,15 +833,15 @@ export const en = {
     packageNoteTitle: "What's included in our packages",
     packageNoteItems: [
       {
-        title: "Starter (₹6,000–8,000)",
-        text: "Website build + free hosting. Domain is separate (~₹800–1,200/year) — we help you register it.",
+        title: `Starter (${PRICING.starter.rangeCompact})`,
+        text: `Website build + free hosting. Domain is separate (${PRICING.domain.rangeYearly}) — we help you register it.`,
       },
       {
-        title: "Growth / Standard (₹15,000–22,000)",
-        text: "Domain + hosting included for the first year. Perfect for gyms and small businesses from ₹8,000 intro offers.",
+        title: `Growth / Standard (${PRICING.growth.rangeCompact})`,
+        text: `Domain + hosting included for the first year. Perfect for gyms and small businesses from ${PRICING.starter.min} intro offers.`,
       },
       {
-        title: "Premium (₹28,000–45,000)",
+        title: `Premium (${PRICING.premium.rangeCompact})`,
         text: "Everything in Growth plus custom design, multi-location SEO, and priority support.",
       },
     ],
@@ -855,7 +857,7 @@ export const en = {
       },
       {
         myth: "If I stop paying, I lose my domain forever",
-        truth: "Your domain is registered in your name. You can renew it yearly (~₹1,000) or transfer anytime.",
+        truth: `Your domain is registered in your name. You can renew it yearly (~${PRICING.domain.priceYearly}) or transfer anytime.`,
       },
     ],
     readyTitle: "Ready for a clear quote?",
@@ -933,9 +935,9 @@ export const en = {
     notSureYet: "Not sure yet",
     customQuote: "Custom quote",
     packages: {
-      starter: "Starter — ₹6,000–8,000",
-      growth: "Growth — ₹15,000–22,000",
-      premium: "Premium — ₹28,000–45,000",
+      starter: `Starter — ${PRICING.starter.rangeCompact}`,
+      growth: `Growth — ${PRICING.growth.rangeCompact}`,
+      premium: `Premium — ${PRICING.premium.rangeCompact}`,
     },
     industries: {
       dentist: "Dentist / Dental Clinic",
@@ -1231,7 +1233,7 @@ export const en = {
       {
         myth: "SEO is too expensive",
         truth:
-          "We include basic SEO in every website package—no extra ₹50,000 add-on like agencies charge.",
+          `We include basic SEO in every website package—no extra ${PRICING.agency.seoAddonApprox} add-on like agencies charge.`,
       },
       {
         myth: "Results are instant",
@@ -1270,7 +1272,7 @@ export const en = {
       { label: "Monthly", text: "SEO retainers and maintenance billed in advance" },
     ],
     webAppNote:
-      "Web app projects are quoted separately based on scope. Simple MVPs typically range from ₹1,50,000 to ₹8,00,000+. Book a free call for an accurate estimate.",
+      `Web app projects are quoted separately based on scope. Simple MVPs typically range from ${PRICING.misc.webAppMvpRange}. Book a free call for an accurate estimate.`,
     ctaHeadline: "Not sure which package fits?",
     ctaSubheadline:
       "Tell us about your business and we'll recommend the best option—no obligation.",
@@ -1281,7 +1283,7 @@ export const en = {
     subtitle:
       "Trusted business website makers—helping every type of Indian business get found on Google at prices 30–40% below big agencies.",
     whoWeAre: "Who we are",
-    p1: "{brandName} started as {shortName}—a dedicated team tired of seeing business owners overpay agencies ₹80,000–₹2,00,000 for websites that never bring customers from Google.",
+    p1: `{brandName} started as {shortName}—a dedicated team tired of seeing business owners overpay agencies ${PRICING.agency.overpayRange} for websites that never bring customers from Google.`,
     p2: "We are professional website makers, not a bloated agency. That means lower prices for you, direct communication, and accountability from the people actually building your site. We serve shops, clinics, restaurants, coaches, startups, and online stores across India.",
     p3: "Trust matters to us. We explain SEO in plain language before you pay anything. You always know the price, the timeline, and what you're getting.",
     marketingTitle: "Why we focus on marketing, not just design",
@@ -1305,7 +1307,7 @@ export const en = {
     howWeHelp: "How we help",
     whatsIncluded: "What's included",
     faqTitle: "Frequently asked questions",
-    ctaSubheadline: "Get a free quote tailored to your business. Packages from ₹6,000.",
+    ctaSubheadline: `Get a free quote tailored to your business. Packages from ${PRICING.starter.min}.`,
     ctaHeadlines: {
       dentists: "Ready to grow your dental practice?",
       plumbers: "Ready to grow your plumbing business?",
@@ -1354,7 +1356,7 @@ export const en = {
         {
           question: "How much does a dental website cost in Chennai?",
           answer:
-            "Our dental websites start from ₹6,000–8,000 for a Starter package with 5–6 pages and basic SEO. Growth packages with domain, hosting, and booking range from ₹15,000–22,000. Premium custom sites are ₹28,000–45,000.",
+            `Our dental websites start from ${PRICING.starter.range} for a Starter package with 5–6 pages and basic SEO. Growth packages with domain, hosting, and booking range from ${PRICING.growth.range}. Premium custom sites are ${PRICING.premium.range}.`,
         },
         {
           question: "How long does it take to build a dental clinic website?",
@@ -1413,7 +1415,7 @@ export const en = {
         {
           question: "How much does a plumber website cost?",
           answer:
-            "Starter packages begin at ₹6,000–8,000. Most plumbers choose our Growth package (₹15,000–22,000) for service area pages, domain, and enhanced local SEO.",
+            `Starter packages begin at ${PRICING.starter.range}. Most plumbers choose our Growth package (${PRICING.growth.range}) for service area pages, domain, and enhanced local SEO.`,
         },
         {
           question: "Can you help me get more Google reviews?",
@@ -1462,12 +1464,12 @@ export const en = {
         {
           question: "How much does a salon website cost in India?",
           answer:
-            "Our salon websites start from ₹6,000–8,000. Growth packages with domain, hosting, and booking integration range from ₹15,000–22,000. Premium custom sites are ₹28,000–45,000.",
+            `Our salon websites start from ${PRICING.starter.range}. Growth packages with domain, hosting, and booking integration range from ${PRICING.growth.range}. Premium custom sites are ${PRICING.premium.range}.`,
         },
         {
           question: "Can you integrate online booking for my salon?",
           answer:
-            "Yes. We integrate Calendly, Fresha, or custom booking systems starting from ₹8,000 as an add-on.",
+            `Yes. We integrate Calendly, Fresha, or custom booking systems starting from ${PRICING.addOns.booking.min} as an add-on.`,
         },
         {
           question: "Will you help with photos and content?",
@@ -1519,7 +1521,7 @@ export const en = {
           {
             question: "What is a domain name?",
             answer:
-              "Your domain is your website address on the internet — like fitzonegym.in or myclinic.com. It's what people type in the browser or see on Google. You need a domain so customers can find you easily. Domains typically cost ~₹800–1,200 per year in India.",
+              `Your domain is your website address on the internet — like fitzonegym.in or myclinic.com. It's what people type in the browser or see on Google. You need a domain so customers can find you easily. Domains typically cost ~${PRICING.domain.rangeYearly} per year in India.`,
             guide: { href: "/what-is-domain-hosting", labelKey: "readDomainHostingGuide" },
           },
           {
@@ -1531,7 +1533,7 @@ export const en = {
           {
             question: "Do I need both a domain and hosting?",
             answer:
-              "Yes. The domain is your address; hosting is where the site lives. Think of the domain as your shop signboard and hosting as the actual shop space. Starter packages include hosting; domain is separate (~₹800–1,200/year) or included from our Growth tier.",
+              `Yes. The domain is your address; hosting is where the site lives. Think of the domain as your shop signboard and hosting as the actual shop space. Starter packages include hosting; domain is separate (${PRICING.domain.rangeYearlyCompact}) or included from our Growth tier.`,
             guide: { href: "/what-is-domain-hosting", labelKey: "readDomainHostingGuide" },
           },
         ],
@@ -1543,13 +1545,13 @@ export const en = {
           {
             question: "How much does a business website cost?",
             answer:
-              "Our packages range from ₹6,000–8,000 (Starter) for a simple 5–6 page site, ₹15,000–22,000 (Growth) with domain and local SEO, to ₹28,000–45,000 (Premium) for custom design and advanced SEO. Gym and small business intro sites often start around ₹6,000–8,000. All prices are one-time build fees in INR.",
+              `Our packages range from ${PRICING.starter.range} (Starter) for a simple 5–6 page site, ${PRICING.growth.range} (Growth) with domain and local SEO, to ${PRICING.premium.range} (Premium) for custom design and advanced SEO. Gym and small business intro sites often start around ${PRICING.starter.range}. All prices are one-time build fees in INR.`,
             guide: { href: "/pricing", labelKey: "viewFullPricing" },
           },
           {
-            question: "What's included in the ₹6,000–8,000 Starter package?",
+            question: `What's included in the ${PRICING.starter.range} Starter package?`,
             answer:
-              "Starter includes 5–6 pages (Home, About, Services, Gallery, Contact), mobile-first design, on-page SEO, contact form, WhatsApp button, Google Maps, free hosting, SSL security, and 30 days post-launch support. Domain (~₹800–1,200/year) is billed separately — we help you register it in your name.",
+              `Starter includes 5–6 pages (Home, About, Services, Gallery, Contact), mobile-first design, on-page SEO, contact form, WhatsApp button, Google Maps, free hosting, SSL security, and 30 days post-launch support. Domain (${PRICING.domain.rangeYearlyCompact}) is billed separately — we help you register it in your name.`,
             guide: { href: "/pricing", labelKey: "seeOurPackages" },
           },
           {
@@ -1561,13 +1563,13 @@ export const en = {
           {
             question: "Is online booking included in the basic package?",
             answer:
-              "Basic booking-ready structure (quote request or enquiry form) is included in Growth and above. Full online booking integration (Calendly, Fresha, or custom system) is an add-on from ₹5,000–15,000 — not included in Starter. We'll recommend the right option on your free call.",
+              `Basic booking-ready structure (quote request or enquiry form) is included in Growth and above. Full online booking integration (Calendly, Fresha, or custom system) is an add-on from ${PRICING.addOns.booking.range} — not included in Starter. We'll recommend the right option on your free call.`,
             guide: { href: "/pricing", labelKey: "viewFullPricing" },
           },
           {
             question: "Are there any hidden charges?",
             answer:
-              "No. You see the package price upfront. The only typical yearly cost after year one is domain renewal (~₹800–1,200). Optional add-ons like booking, e-commerce, or monthly SEO are quoted separately before you agree.",
+              `No. You see the package price upfront. The only typical yearly cost after year one is domain renewal (${PRICING.domain.rangeYearlyCompact}). Optional add-ons like booking, e-commerce, or monthly SEO are quoted separately before you agree.`,
           },
         ],
       },
@@ -1578,7 +1580,7 @@ export const en = {
           {
             question: "How much does a domain cost in India?",
             answer:
-              "A .in or .com domain usually costs ~₹800–1,200 per year. On our Starter plan, you pay this separately (we register it in your name). On Growth and Premium, the first year of domain is included in your package price.",
+              `A .in or .com domain usually costs ${PRICING.domain.rangeYearly}. On our Starter plan, you pay this separately (we register it in your name). On Growth and Premium, the first year of domain is included in your package price.`,
             guide: { href: "/what-is-domain-hosting", labelKey: "readDomainHostingGuide" },
           },
           {
@@ -1595,7 +1597,7 @@ export const en = {
           {
             question: "What happens after the first year of domain?",
             answer:
-              "Domain renewals are ~₹800–1,200 per year. We'll remind you before expiry. Growth and Premium include the first year; from year two you renew directly or through us — your choice.",
+              `Domain renewals are ${PRICING.domain.rangeYearly}. We'll remind you before expiry. Growth and Premium include the first year; from year two you renew directly or through us — your choice.`,
           },
         ],
       },
@@ -1664,7 +1666,7 @@ export const en = {
           {
             question: "Can you write the content for my website?",
             answer:
-              "Basic page structure and SEO-friendly headings are included. Professional copywriting (full service descriptions, blog posts) is available as an add-on from ₹3,000–12,000 depending on scope.",
+              `Basic page structure and SEO-friendly headings are included. Professional copywriting (full service descriptions, blog posts) is available as an add-on from ${PRICING.addOns.copywriting.range} depending on scope.`,
           },
         ],
       },
@@ -1691,7 +1693,7 @@ export const en = {
           {
             question: "What are monthly maintenance fees?",
             answer:
-              "Website maintenance (updates, security, small content changes) is optional — typically quoted based on your needs. Monthly SEO retainers range from ₹5,000–15,000/month for ongoing rankings and content. Basic sites often need only occasional updates, not a monthly fee.",
+              `Website maintenance (updates, security, small content changes) is optional — typically quoted based on your needs. Monthly SEO retainers range from ${PRICING.addOns.seoRetainer.rangeMonthly} for ongoing rankings and content. Basic sites often need only occasional updates, not a monthly fee.`,
             guide: { href: "/pricing", labelKey: "viewFullPricing" },
           },
           {
