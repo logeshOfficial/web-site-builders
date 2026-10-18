@@ -222,7 +222,7 @@ export const en = {
       {
         title: "No hidden charges",
         description:
-          "Fixed packages in INR. You see the price upfront. 50% to start, 50% before launch.",
+          "Fixed packages in INR. You see the price upfront.",
       },
       {
         title: "Local + online businesses",
@@ -251,7 +251,7 @@ export const en = {
       },
       {
         title: "Transparent pricing in INR",
-        text: "Fixed packages, no hidden fees. 50% to start, 50% before launch. You always know what you pay.",
+        text: "Fixed packages, no hidden fees. You always know what you pay.",
       },
       {
         title: "SEO explained in plain language",
@@ -647,7 +647,7 @@ export const en = {
   packages: {
     title: "Realistic pricing — no agency markup",
     description:
-      "Gym, salon, shop, or clinic — clear one-time build fees. Hosting included on all plans. Domain included from Growth tier. 50% to start, 50% before launch.",
+      "Gym, salon, shop, or clinic — clear one-time build fees. Hosting included on all plans. Domain included from Growth tier. .",
     seeAddons: "See cost breakdown & add-ons →",
     gymNote:
       `Gym & small business intro sites from ${PRICING.misc.gymIntro} on Growth (Standard) — domain + hosting included for the first year.`,
