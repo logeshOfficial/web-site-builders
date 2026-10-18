@@ -164,7 +164,7 @@ export const en = {
           text: "Good SEO means your business appears when people search nearby. Calls, WhatsApp messages, and walk-ins follow — even while you are busy with customers.",
         },
         {
-          title: "Built for Indian small businesses",
+          title: "Built for small businesses",
           text: "Mobile-first pages, clear service details, and trust signals that work for local shops and online stores alike.",
         },
       ],
@@ -243,7 +243,7 @@ export const en = {
     eyebrow: "Why trust us",
     title: "Trusted professional website makers",
     description:
-      "{brandName} ({shortName}) helps Indian business owners get online with confidence—clear pricing, honest advice, and websites that actually bring customers.",
+      "{brandName} ({shortName}) helps business owners get online with confidence—clear pricing, honest advice, and websites that actually bring customers.",
     items: [
       {
         title: "Direct accountability",
@@ -259,7 +259,7 @@ export const en = {
       },
       {
         title: "Marketing-first approach",
-        text: "We do not just build pretty pages—we build your digital marketing foundation. Website + SEO is how Indian small businesses get found and grow.",
+        text: "We do not just build pretty pages—we build your digital marketing foundation. Website + SEO is how  small businesses get found and grow.",
       },
       {
         title: "Chennai roots, India-wide service",
@@ -270,7 +270,7 @@ export const en = {
         text: "30–90 days support on every package. We don't disappear after your website goes live.",
       },
       {
-        title: "Mobile-first for Indian customers",
+        title: "Mobile-first for customers",
         text: "Most of your customers search on phone. Every site is built for Jio/Airtel 4G speed and ease.",
       },
     ],
@@ -1281,7 +1281,7 @@ export const en = {
   aboutPage: {
     title: "About {brandName}",
     subtitle:
-      "Trusted business website makers—helping every type of Indian business get found on Google at prices 30–40% below big agencies.",
+      "Trusted business website makers—helping every type of  business get found on Google at prices 30–40% below big agencies.",
     whoWeAre: "Who we are",
     p1: `{brandName} started as {shortName}—a dedicated team tired of seeing business owners overpay agencies ${PRICING.agency.overpayRange} for websites that never bring customers from Google.`,
     p2: "We are professional website makers, not a bloated agency. That means lower prices for you, direct communication, and accountability from the people actually building your site. We serve shops, clinics, restaurants, coaches, startups, and online stores across India.",
@@ -1349,7 +1349,7 @@ export const en = {
         "Google Business Profile optimization",
         "Schema markup for medical/dental businesses",
         "HIPAA-conscious contact forms",
-        "WhatsApp click-to-chat for Indian patients",
+        "WhatsApp click-to-chat for patients",
         "Multi-language support (English + Tamil)",
       ],
       faqs: [
@@ -1623,7 +1623,7 @@ export const en = {
           {
             question: "Will my website work on mobile phones?",
             answer:
-              "Yes — 100% mobile-first. Most Indian customers search on phones (Jio/Airtel 4G). Big buttons, fast loading, click-to-call, and WhatsApp are standard on every plan.",
+              "Yes — 100% mobile-first. Most customers search on phones (Jio/Airtel 4G). Big buttons, fast loading, click-to-call, and WhatsApp are standard on every plan.",
           },
         ],
       },
@@ -1634,7 +1634,7 @@ export const en = {
           {
             question: "What are your payment terms?",
             answer:
-              "50% deposit to start work, 50% balance before the website goes live. No surprises. Monthly services like SEO retainers or maintenance are billed in advance each month. We accept UPI, bank transfer, and other common Indian payment methods.",
+              "50% deposit to start work, 50% balance before the website goes live. No surprises. Monthly services like SEO retainers or maintenance are billed in advance each month. We accept UPI, bank transfer, and other common  payment methods.",
             guide: { href: "/pricing", labelKey: "viewFullPricing" },
           },
           {

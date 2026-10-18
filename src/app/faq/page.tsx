@@ -13,7 +13,7 @@ function getAllFaqs(): { question: string; answer: string }[] {
 export const metadata = createMetadata({
   title: "FAQ — Website, SEO, Domain, Hosting & Pricing Questions",
   description:
-    `Answers to common questions about business websites, SEO, domain, hosting, SSL, pricing (from ${PRICING.starter.min}), payment terms, timelines, and WhatsApp support. Plain English for Indian business owners.`,
+    `Answers to common questions about business websites, SEO, domain, hosting, SSL, pricing (from ${PRICING.starter.min}), payment terms, timelines, and WhatsApp support. Plain English for business owners.`,
   path: "/faq",
   keywords: [
     "website FAQ India",

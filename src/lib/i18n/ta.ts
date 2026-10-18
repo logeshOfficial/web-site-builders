@@ -165,7 +165,7 @@ export const ta: Translation = {
           text: "நல்ல SEO என்றால் அருகில் search செய்யும் போது உங்கள் வணிகம் தெரியும். Calls, WhatsApp messages, walk-ins வரும் — நீங்கள் customers-உடன் busy-ஆக இருக்கும்போதும்.",
         },
         {
-          title: "Indian small businesses-க்கு build செய்யப்பட்டது",
+          title: "small businesses-க்கு build செய்யப்பட்டது",
           text: "Mobile-first pages, தெளிவான service details, local shops மற்றும் online stores இரண்டிற்கும் வேலை செய்யும் trust signals.",
         },
       ],
@@ -244,7 +244,7 @@ export const ta: Translation = {
     eyebrow: "எங்களை ஏன் நம்ப வேண்டும்",
     title: "நம்பகமான professional website makers",
     description:
-      "{brandName} ({shortName}) Indian business owners-க்கு confidence-உடன் online-ல் வர உதவுகிறது—clear pricing, honest advice, customers-ஐ உண்மையில் கொண்டு வரும் websites.",
+      "{brandName} ({shortName}) business owners-க்கு confidence-உடன் online-ல் வர உதவுகிறது—clear pricing, honest advice, customers-ஐ உண்மையில் கொண்டு வரும் websites.",
     items: [
       {
         title: "Direct accountability",
@@ -260,7 +260,7 @@ export const ta: Translation = {
       },
       {
         title: "Marketing-first approach",
-        text: "அழகான pages மட்டும் build செய்ய மாட்டோம்—உங்கள் digital marketing foundation build செய்கிறோம். Website + SEO = Indian small businesses கண்டுபிடிக்கப்பட்டு வளர்வது.",
+        text: "அழகான pages மட்டும் build செய்ய மாட்டோம்—உங்கள் digital marketing foundation build செய்கிறோம். Website + SEO =  small businesses கண்டுபிடிக்கப்பட்டு வளர்வது.",
       },
       {
         title: "சென்னை roots, India-wide service",
@@ -271,7 +271,7 @@ export const ta: Translation = {
         text: "எல்லா package-லும் 30–90 days support. website live ஆன பிறகு disappear ஆக மாட்டோம்.",
       },
       {
-        title: "Indian customers-க்கு mobile-first",
+        title: " customers-க்கு mobile-first",
         text: "உங்கள் customers பெரும்பாலும் phone-ல் search செய்கிறார்கள். எல்லா site-யும் Jio/Airtel 4G speed-க்கு build.",
       },
     ],
@@ -1282,7 +1282,7 @@ export const ta: Translation = {
   aboutPage: {
     title: "{brandName} பற்றி",
     subtitle:
-      "Trusted business website makers—எல்லா Indian business type-க்கும் Google-ல் found, big agencies-ஐ விட 30–40% குறைவு.",
+      "Trusted business website makers—எல்லா  business type-க்கும் Google-ல் found, big agencies-ஐ விட 30–40% குறைவு.",
     whoWeAre: "நாம் யார்",
     p1: `{brandName} {shortName}-ஆக start—business owners agencies-க்கு ${PRICING.agency.overpayRange} overpay, Google-லிருந்து customers bring ஆகாத websites.`,
     p2: "நாங்கள் professional website makers, bloated agency அல்ல. Lower prices, direct communication, actually build செய்யும் people-ன் accountability. India முழுவதும் shops, clinics, restaurants, coaches, startups, online stores.",
@@ -1350,7 +1350,7 @@ export const ta: Translation = {
         "Google Business Profile optimization",
         "Medical/dental businesses schema markup",
         "HIPAA-conscious contact forms",
-        "Indian patients WhatsApp click-to-chat",
+        "patients WhatsApp click-to-chat",
         "Multi-language support (English + Tamil)",
       ],
       faqs: [
@@ -1624,7 +1624,7 @@ export const ta: Translation = {
           {
             question: "Mobile phone-ல் work ஆகுமா?",
             answer:
-              "ஆம் — 100% mobile-first. Indian customers phone-ல் search (Jio/Airtel 4G). Big buttons, fast loading, click-to-call, WhatsApp எல்லா plan-லும் standard.",
+              "ஆம் — 100% mobile-first. customers phone-ல் search (Jio/Airtel 4G). Big buttons, fast loading, click-to-call, WhatsApp எல்லா plan-லும் standard.",
           },
         ],
       },
@@ -1635,7 +1635,7 @@ export const ta: Translation = {
           {
             question: "Payment terms என்ன?",
             answer:
-              "50% deposit work start-க்கு, 50% site live-க்கு முன் balance. Surprises இல்லை. Monthly SEO, maintenance advance bill. UPI, bank transfer, common Indian payment methods.",
+              "50% deposit work start-க்கு, 50% site live-க்கு முன் balance. Surprises இல்லை. Monthly SEO, maintenance advance bill. UPI, bank transfer, common  payment methods.",
             guide: { href: "/pricing", labelKey: "viewFullPricing" },
           },
           {

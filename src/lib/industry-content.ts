@@ -44,7 +44,7 @@ export const industryPages: Record<string, IndustryContent> = {
       "Google Business Profile optimization",
       "Schema markup for medical/dental businesses",
       "HIPAA-conscious contact forms",
-      "WhatsApp click-to-chat for Indian patients",
+      "WhatsApp click-to-chat for patients",
       "Multi-language support (English + Tamil)",
     ],
     faqs: [
