@@ -53,12 +53,12 @@ export const en = {
   },
 
   header: {
-    subtitle: "SEO · Web Design · India",
+    subtitle: "Software · Websites · Local SEO",
   },
 
   footer: {
     description:
-      "Trusted business website makers. Affordable SEO websites for every business type across India.",
+      "Custom desktop software, websites, and Google care for businesses in Chennai. Support, maintenance, and minor updates included.",
     pages: "Pages",
     learn: "Learn",
     examples: "Examples",

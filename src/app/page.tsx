@@ -2,9 +2,9 @@ import { HomeContent } from "@/app/_content/HomeContent";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Business Website Makers Chennai — Affordable SEO Websites",
+  title: "Custom Software, Websites, and Local SEO in Chennai",
   description:
-    "Trusted business website makers. Affordable SEO websites for every business type across India—30–40% below agency prices.",
+    "Desktop software, website design, local SEO, and Google Business Profile care. Monthly plans from ₹3,000, with 24/7 support and minor updates included.",
   path: "/",
 });
 

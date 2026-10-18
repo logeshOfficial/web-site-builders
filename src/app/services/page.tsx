@@ -2,9 +2,9 @@ import { ServicesContent } from "@/app/_content/ServicesContent";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "SEO Website Services — Business Website Makers Chennai",
+  title: "Desktop Software, Web Design, Local SEO, and Google Profile Care",
   description:
-    "Affordable SEO websites, local SEO, web apps, and maintenance from trusted professional website makers across India.",
+    "Custom desktop software, website design, local SEO, and Google Business Profile management for businesses in Chennai.",
   path: "/services",
 });
 

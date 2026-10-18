@@ -13,12 +13,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4">
           <div className="min-w-0 sm:col-span-2 lg:col-span-1">
-            <Logo
-              variant="full"
-              theme="dark"
-              subtitle={t.header.subtitle}
-              subtitleVisible="always"
-            />
+            <Logo variant="full" theme="dark" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400 break-words">
               {interpolate(t.footer.description, { city: siteConfig.location.city })}
             </p>

@@ -59,20 +59,18 @@ export function getWhatsAppUrl(): string {
 export const siteConfig = {
   name: "Business Website Makers",
   shortName: "Web site builders",
-  tagline: "Trusted professional website makers",
+  tagline: "Software, websites, and local SEO",
   description:
-    "Business Website Makers is a trusted team of professional website makers in India. We create affordable SEO-ready business websites for shops, clinics, restaurants, and online brands—30–40% below agency prices.",
+    "Custom desktop software, website design, local SEO, and Google Business Profile care for businesses in Chennai. Monthly support with maintenance and minor updates included.",
   valueProposition:
-    "Trusted business website makers at fair prices—typically 30–40% less than market agencies.",
+    "SEO, custom software, and websites with 24/7 support. Maintenance and minor updates included.",
   seoKeywords: [
+    "local SEO Chennai",
+    "Google Business Profile management",
+    "custom desktop software Chennai",
+    "website design Chennai",
+    "SEO monthly plan",
     "business website makers Chennai",
-    "website makers India",
-    "affordable SEO website",
-    "trusted website builders Chennai",
-    "professional web designers India",
-    "business website design Chennai",
-    "SEO website for small business",
-    "local business website makers",
   ],
   alternateNames: [
     "Web site builders",
@@ -80,7 +78,7 @@ export const siteConfig = {
     "Business Website Makers Chennai",
   ],
   email: "iamlogeshwaran.info@gmail.com",
-  phone: "+91 8608036735",
+  phone: "+91 6383470063",
   location: {
     city: "Chennai",
     state: "Tamil Nadu",
@@ -94,10 +92,8 @@ export const siteConfig = {
 } as const;
 
 export const navLinks = [
-  { href: "/", key: "home", hideUntil: "lg" },
-  { href: "/what-is-seo", key: "whatIsSeo", hideUntil: "lg" },
+  { href: "/", key: "home" },
   { href: "/services", key: "services" },
-  { href: "/showcase", key: "showcase" },
   { href: "/pricing", key: "pricing" },
   { href: "/about", key: "about" },
   { href: "/contact", key: "contact" },

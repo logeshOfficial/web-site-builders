@@ -54,12 +54,12 @@ export const ta: Translation = {
   },
 
   header: {
-    subtitle: "SEO · Web Design · India",
+    subtitle: "மென்பொருள் · இணையதளம் · உள்ளூர் SEO",
   },
 
   footer: {
     description:
-      "நம்பகமான business website makers. இந்தியா முழுவதும் எல்லா வணிக வகைகளுக்கும் affordable SEO websites.",
+      "சென்னை வணிகங்களுக்கு டெஸ்க்டாப் மென்பொருள், இணையதளம், மற்றும் கூகுள் பராமரிப்பு. ஆதரவு, பராமரிப்பு, சிறிய மாற்றங்கள் சேர்க்கப்பட்டுள்ளன.",
     pages: "பக்கங்கள்",
     learn: "கற்றுக்கொள்ளுங்கள்",
     examples: "உதாரணங்கள்",

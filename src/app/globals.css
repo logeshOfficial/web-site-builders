@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
+  --background: #f6f3ec;
+  --foreground: #142033;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-dm-sans);
+  --font-sans: var(--font-dm-sans), "Nirmala UI", "Noto Sans Tamil", sans-serif;
+  --font-serif: Georgia, "Nirmala UI", "Times New Roman", serif;
   --color-brand-gold: #c9a227;
   --color-brand-scarlet: #d6392b;
 }
@@ -21,8 +22,18 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-family: var(--font-sans), "Nirmala UI", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif), Georgia, "Nirmala UI", serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 @keyframes showcase-progress {
@@ -229,9 +240,31 @@ body {
   animation-delay: 2s;
 }
 
+@keyframes client-run-ltr {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.client-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 1.25rem;
+  animation: client-run-ltr 42s linear infinite;
+}
+
+.client-marquee:hover .client-marquee-track {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-float-device,
-  .hero-float-badge {
+  .hero-float-badge,
+  .client-marquee-track {
     animation: none;
   }
 }

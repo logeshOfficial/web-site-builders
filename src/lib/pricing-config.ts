@@ -25,6 +25,16 @@ export const PRICING_RAW = {
   }
 };
 
+/** Monthly care plans shown on the site. */
+export const CARE_PLANS = {
+  complete: 5000,
+  software: 4000,
+  websiteSetup: 15000,
+  websiteMonthly: 3000,
+  seo: 3000,
+  softwareOnce: 30000,
+} as const;
+
 export function formatPrice(amount: number): string {
   return "₹" + new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(amount);
 }

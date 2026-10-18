@@ -1,17 +1,17 @@
 import { PricingContent } from "@/app/_content/PricingContent";
+import { offerMoney } from "@/lib/offers";
 import { createMetadata } from "@/lib/seo";
-import { PRICING } from "@/lib/pricing-config";
 
 export const metadata = createMetadata({
-  title: "Affordable Website Pricing — Business Website Makers Chennai",
+  title: "Monthly Plans — SEO, Software, and Websites",
   description:
-    `Transparent pricing from trusted professional website makers in India. Realistic packages from ${PRICING.starter.min}. Domain, hosting, and SEO explained. No hidden fees.`,
+    `SEO only ${offerMoney.seo}/month. SEO plus software ${offerMoney.software}/month. Full care ${offerMoney.complete}/month. Website design ${offerMoney.websiteSetup}, then ${offerMoney.websiteMonthly}/month. Software can also be a one-time build from ${offerMoney.softwareOnce}. No extra charges.`,
   path: "/pricing",
   keywords: [
-    "affordable SEO website",
-    "website pricing Chennai",
-    "business website makers price",
-    "website cost India",
+    "SEO monthly plan Chennai",
+    "Google Business Profile management price",
+    "website design EMI",
+    "custom software monthly support",
   ],
 });
 

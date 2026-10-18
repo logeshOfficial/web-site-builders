@@ -1,34 +1,23 @@
 "use client";
 
-import { AllBusinessTypes } from "@/components/AllBusinessTypes";
 import { CTA } from "@/components/CTA";
-import { FaqTeaser } from "@/components/FaqTeaser";
-import { Hero } from "@/components/Hero";
-import { MarketingSection } from "@/components/MarketingSection";
-import { PricingTeaser } from "@/components/PricingTeaser";
-import { ProcessSteps } from "@/components/ProcessSteps";
-import { SeoTrustShowcase } from "@/components/SeoTrustShowcase";
-import { interpolate, useTranslation } from "@/contexts/LanguageContext";
-import { siteConfig } from "@/lib/site";
+import { ClientMarquee } from "@/components/studio/ClientMarquee";
+import { PlanBoard, SeoWorkboard, SkillGallery, StudioHero } from "@/components/studio/OfferSections";
+import { useTranslation } from "@/contexts/LanguageContext";
+import { getOfferCopy } from "@/lib/offers";
 
 export function HomeContent() {
-  const { t } = useTranslation();
+  const { locale } = useTranslation();
+  const copy = getOfferCopy(locale);
 
   return (
     <>
-      <Hero
-        badge={t.home.badge}
-        headline={t.home.headline}
-        subheadline={interpolate(t.home.subheadline, { brandName: siteConfig.name })}
-        secondaryCta={{ label: t.home.secondaryCta, href: "/what-is-seo" }}
-      />
-      <MarketingSection compact />
-      <SeoTrustShowcase />
-      <AllBusinessTypes showShowcaseLink />
-      <PricingTeaser />
-      <ProcessSteps />
-      <FaqTeaser maxItems={3} />
-      <CTA headline={t.home.ctaHeadline} subheadline={t.home.ctaSubheadline} />
+      <StudioHero />
+      <ClientMarquee />
+      <SkillGallery />
+      <PlanBoard />
+      <SeoWorkboard />
+      <CTA headline={copy.heroTitle} subheadline={copy.plansText} />
     </>
   );
 }

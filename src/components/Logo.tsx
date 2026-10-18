@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { defaultLogoConceptId, logoConcepts } from "@/components/logos";
-import { siteConfig } from "@/lib/site";
 
 type LogoTheme = "light" | "dark";
 
@@ -54,6 +53,14 @@ export function LogoMark({ className }: { className?: string }) {
   );
 }
 
+function Divider() {
+  return (
+    <span aria-hidden="true" className="mx-2 inline-block translate-y-[-1px] text-[#a6842d]">
+      ·
+    </span>
+  );
+}
+
 function BrandLogoMark({ className }: { className?: string }) {
   if (defaultConcept) {
     const { Component } = defaultConcept;
@@ -82,43 +89,32 @@ export function Logo({
   variant = "icon",
   theme = "light",
   className = "",
-  subtitle,
-  subtitleVisible = "sm",
   asLink = false,
-  truncateName = false,
 }: LogoProps) {
   const styles = themeStyles[theme];
-  const wrapperClass = `group flex min-w-0 items-center justify-start gap-2.5 sm:gap-3 ${className}`;
-  const subtitleClass =
-    subtitleVisible === "always"
-      ? `block text-xs leading-snug ${styles.subtext}`
-      : `hidden text-[11px] leading-snug sm:block ${styles.subtext}`;
+  const wrapperClass = `group flex min-w-0 items-center gap-3 ${className}`;
 
   const iconWrapperClass = defaultConcept
-    ? `flex aspect-square h-full w-auto min-h-[36px] shrink-0 items-center justify-center sm:min-h-[52px] md:min-h-[62px] ${styles.box}`
-    : `flex aspect-square h-full w-auto min-h-[36px] shrink-0 items-center justify-center rounded-lg sm:min-h-[52px] md:min-h-[62px] ${styles.box}`;
+    ? `flex h-11 w-11 shrink-0 items-center justify-center sm:h-12 sm:w-12 ${styles.box}`
+    : `flex h-11 w-11 shrink-0 items-center justify-center rounded-lg sm:h-12 sm:w-12 ${styles.box}`;
 
   const inner = (
     <>
       <span className={iconWrapperClass}>
-        <BrandLogoMark
-          className={defaultConcept ? "h-full w-full max-h-[36px] max-w-[36px] sm:max-h-none sm:max-w-none" : "h-8 w-8 sm:h-10 sm:w-10 md:h-full md:w-full md:max-h-[62px] md:max-w-[62px]"}
-        />
+        <BrandLogoMark className="h-full w-full" />
       </span>
       {variant === "full" ? (
-        <span className="flex min-w-0 flex-col justify-center leading-tight">
-          <span
-            className={`block font-semibold tracking-tight ${styles.text} ${
-              truncateName
-                ? "line-clamp-2 text-sm leading-snug sm:text-base md:line-clamp-none md:overflow-visible md:whitespace-nowrap md:text-lg"
-                : "overflow-hidden text-ellipsis whitespace-nowrap text-lg sm:overflow-visible sm:whitespace-normal sm:text-xl md:text-2xl"
-            }`}
-          >
-            {siteConfig.name}
+        <span className="flex min-w-0 flex-col">
+          <span className={`text-lg font-semibold leading-tight tracking-tight sm:text-xl ${styles.text}`}>
+            levyntech
           </span>
-          {subtitle ? (
-            <span className={subtitleClass}>{subtitle}</span>
-          ) : null}
+          <span className={`inline-flex items-center text-base leading-none ${styles.subtext}`}>
+            Leverage
+            <Divider />
+            Innovation
+            <Divider />
+            Technology
+          </span>
         </span>
       ) : null}
     </>
