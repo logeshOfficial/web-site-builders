@@ -32,10 +32,10 @@ export function Header() {
           variant="full"
           theme="light"
           asLink
-          className="min-w-0 max-w-[calc(100%-7.5rem)] flex-1 sm:max-w-none md:flex-none md:shrink-0"
+          className="min-w-0 flex-1 lg:flex-none lg:shrink-0"
         />
 
-        <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 md:flex lg:gap-6">
+        <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 lg:flex lg:gap-6">
           <nav aria-label="Main navigation">
             <div className="flex flex-nowrap items-center gap-4 lg:gap-5">
               {navLinks.map((link) => (
@@ -60,7 +60,7 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="ml-auto flex shrink-0 items-center gap-1.5 sm:gap-2 md:hidden">
+        <div className="ml-auto flex shrink-0 items-center gap-1.5 sm:gap-2 lg:hidden">
           <LanguageSwitcher compact />
           <button
             type="button"
@@ -68,6 +68,7 @@ export function Header() {
             onClick={() => setOpen(!open)}
             aria-label={t.common.toggleMenu}
             aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {open ? (
@@ -81,7 +82,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-[#142033]/10 md:hidden">
+        <nav id="mobile-navigation" aria-label={t.common.toggleMenu} className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-[#142033]/10 lg:hidden">
           <div className="mx-auto w-full max-w-6xl px-4 py-3 sm:px-6">
           <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
@@ -96,7 +97,7 @@ export function Header() {
             ))}
             <Link
               href="/contact"
-              className="mt-2 flex min-h-12 w-full items-center justify-center rounded-full bg-[#0f6e62] px-5 py-3 text-center text-lg font-semibold whitespace-nowrap text-white hover:bg-[#0c5c52]"
+              className="mt-2 flex min-h-12 w-full items-center justify-center rounded-full bg-[#0f6e62] px-5 py-3 text-center text-lg font-semibold text-white hover:bg-[#0c5c52]"
               onClick={() => setOpen(false)}
             >
               {t.common.freeConsultation}

@@ -92,11 +92,11 @@ export function Logo({
   asLink = false,
 }: LogoProps) {
   const styles = themeStyles[theme];
-  const wrapperClass = `group flex min-w-0 items-center gap-3 ${className}`;
+  const wrapperClass = `group flex min-w-0 items-center gap-2 sm:gap-3 ${className}`;
 
   const iconWrapperClass = defaultConcept
-    ? `flex h-11 w-11 shrink-0 items-center justify-center sm:h-12 sm:w-12 ${styles.box}`
-    : `flex h-11 w-11 shrink-0 items-center justify-center rounded-lg sm:h-12 sm:w-12 ${styles.box}`;
+    ? `flex h-9 w-9 shrink-0 items-center justify-center sm:h-12 sm:w-12 ${styles.box}`
+    : `flex h-9 w-9 shrink-0 items-center justify-center rounded-lg sm:h-12 sm:w-12 ${styles.box}`;
 
   const inner = (
     <>
@@ -108,7 +108,7 @@ export function Logo({
           <span className={`text-lg font-semibold leading-tight tracking-tight sm:text-xl ${styles.text}`}>
             levyntech
           </span>
-          <span className={`inline-flex items-center text-base leading-none ${styles.subtext}`}>
+          <span className={`hidden items-center text-sm leading-none min-[420px]:inline-flex ${styles.subtext}`}>
             Leverage
             <Divider />
             Innovation
