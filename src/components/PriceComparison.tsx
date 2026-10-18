@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
-import { siteConfig } from "@/lib/site";
 
 export function PriceComparison() {
   const { t } = useTranslation();
@@ -26,7 +25,7 @@ export function PriceComparison() {
                 <th className="hidden px-4 py-4 font-semibold text-slate-500 sm:table-cell sm:px-6">
                   {t.priceComparison.typicalAgency}
                 </th>
-                <th className="px-4 py-4 font-semibold text-teal-700 sm:px-6">{siteConfig.name}</th>
+                <th className="px-4 py-4 font-semibold text-teal-700 sm:px-6">{t.common.brandName}</th>
               </tr>
             </thead>
             <tbody>

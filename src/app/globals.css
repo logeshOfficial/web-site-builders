@@ -19,6 +19,19 @@ html {
   overflow-x: hidden;
 }
 
+:focus-visible {
+  outline: 3px solid #0f8a78;
+  outline-offset: 3px;
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -261,14 +274,37 @@ html[lang="ta-IN"] h3 {
   width: max-content;
   align-items: center;
   gap: 1.25rem;
-  animation: client-run-ltr 42s linear infinite;
+  padding: 0 1rem 0.5rem;
 }
 
-.client-marquee:hover .client-marquee-track {
-  animation-play-state: paused;
+.client-marquee {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.client-marquee-duplicate {
+  display: none;
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .client-marquee-track {
+    animation: client-run-ltr 42s linear infinite;
+  }
+
+  .client-marquee-duplicate {
+    display: block;
+  }
+
+  .client-marquee:hover .client-marquee-track,
+  .client-marquee:focus-within .client-marquee-track {
+    animation-play-state: paused;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   .hero-float-device,
   .hero-float-badge,
   .client-marquee-track {

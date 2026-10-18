@@ -3,7 +3,7 @@
 import { useTranslation } from "@/contexts/LanguageContext";
 
 export function DomainBrowserAnimation() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const s = t.domainHostingAnimations.domainBrowser;
 
   return (
@@ -26,8 +26,8 @@ export function DomainBrowserAnimation() {
           <div className="flex items-center gap-3">
             <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-teal-100 text-2xl">🏋️</div>
             <div>
-              <p className="font-bold text-slate-900">FitZone Gym</p>
-              <p className="text-xs text-slate-500">Chennai · Open 6am–10pm</p>
+              <p className="font-bold text-slate-900">{locale === "ta" ? "ஃபிட்சோன் உடற்பயிற்சி மையம்" : "FitZone Gym"}</p>
+              <p className="text-xs text-slate-500">{locale === "ta" ? "சென்னை · காலை 6 – இரவு 10" : "Chennai · Open 6am–10pm"}</p>
             </div>
           </div>
           <div className="mt-4 space-y-2">
@@ -36,7 +36,7 @@ export function DomainBrowserAnimation() {
             <div className="h-2 w-3/5 rounded bg-slate-100" />
           </div>
           <div className="mt-4 inline-flex rounded-full bg-teal-600 px-4 py-2 text-xs font-semibold text-white">
-            WhatsApp · Book trial
+            {locale === "ta" ? "வாட்ஸ்அப் · பயிற்சிக்கு முன்பதிவு" : "WhatsApp · Book trial"}
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@ export function DomainBrowserAnimation() {
 }
 
 export function HostingServerAnimation() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const s = t.domainHostingAnimations.hosting;
 
   return (
@@ -67,7 +67,7 @@ export function HostingServerAnimation() {
             >
               <span className="text-lg">{["📄", "🖼️", "📋"][i]}</span>
               <span className="text-sm text-slate-200">{file}</span>
-              <span className="ml-auto text-xs text-green-400">Live</span>
+              <span className="ml-auto text-xs text-green-400">{locale === "ta" ? "இயங்குகிறது" : "Live"}</span>
             </div>
           ))}
         </div>
@@ -75,7 +75,7 @@ export function HostingServerAnimation() {
           <svg className="h-4 w-4 animate-pulse text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
           </svg>
-          Vercel · Free tier
+          {locale === "ta" ? "வெர்செல் · இலவசத் திட்டம்" : "Vercel · Free tier"}
         </div>
       </div>
       <p className="mt-3 text-center text-xs text-slate-500">{s.caption}</p>
@@ -129,7 +129,7 @@ export function WithoutVsWithDomainHosting() {
 }
 
 export function DomainHostingDiagram() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const d = t.domainHostingExplainer;
 
   return (
@@ -150,7 +150,7 @@ export function DomainHostingDiagram() {
       <div className="flex flex-col items-center rounded-2xl border-2 border-slate-200 bg-slate-50 p-5 shadow-sm">
         <span className="text-3xl">🖥️</span>
         <p className="mt-2 text-sm font-bold text-slate-900">{d.hostingTitle.replace("?", "")}</p>
-        <p className="mt-1 text-xs font-medium text-slate-600">24/7 online</p>
+        <p className="mt-1 text-xs font-medium text-slate-600">{locale === "ta" ? "24/7 இணையத்தில்" : "24/7 online"}</p>
         <p className="mt-2 max-w-[140px] text-center text-[10px] text-slate-500">{d.hostingAnalogy}</p>
       </div>
 
@@ -160,8 +160,8 @@ export function DomainHostingDiagram() {
 
       <div className="flex flex-col items-center rounded-2xl border-2 border-teal-400 bg-teal-50 p-5 shadow-md ring-2 ring-teal-200">
         <span className="text-3xl">✅</span>
-        <p className="mt-2 text-sm font-bold text-teal-900">Live website</p>
-        <p className="mt-1 text-xs text-teal-700">Customers can visit anytime</p>
+        <p className="mt-2 text-sm font-bold text-teal-900">{locale === "ta" ? "இயங்கும் இணையதளம்" : "Live website"}</p>
+        <p className="mt-1 text-xs text-teal-700">{locale === "ta" ? "வாடிக்கையாளர்கள் எப்போது வேண்டுமானாலும் பார்வையிடலாம்" : "Customers can visit anytime"}</p>
       </div>
     </div>
   );

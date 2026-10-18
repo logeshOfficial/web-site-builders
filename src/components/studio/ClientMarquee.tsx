@@ -14,12 +14,13 @@ export function ClientMarquee() {
       <div className="client-marquee mt-6">
         <ul className="client-marquee-track">
           {loop.map((client, index) => (
-            <li key={`${client.name}-${index}`} className="shrink-0">
+            <li key={`${client.name}-${index}`} className={`shrink-0 ${index >= clients.length ? "client-marquee-duplicate" : ""}`} aria-hidden={index >= clients.length ? true : undefined}>
               <a
                 href={client.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-24 items-center gap-3 rounded-2xl bg-[#f6f3ec] px-5"
+                tabIndex={index >= clients.length ? -1 : undefined}
+                className="flex h-24 items-center gap-3 rounded-2xl bg-[#f6f3ec] px-5 transition hover:bg-[#e8f2ee]"
               >
                 {client.logo ? (
                   <img

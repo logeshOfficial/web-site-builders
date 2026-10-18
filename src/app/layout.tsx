@@ -47,7 +47,7 @@ export default function RootLayout({
         <Providers>
           <JsonLd data={rootJsonLd()} />
           <Header />
-          <main className="flex-1 overflow-x-hidden">{children}</main>
+          <main id="main-content" tabIndex={-1} className="flex-1 overflow-x-hidden">{children}</main>
           <Footer />
         </Providers>
       </body>

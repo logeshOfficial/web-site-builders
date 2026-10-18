@@ -7,7 +7,6 @@ import { AboutPageVisual } from "@/components/page-visuals";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { TrustSection } from "@/components/TrustSection";
 import { interpolate, useTranslation } from "@/contexts/LanguageContext";
-import { siteConfig } from "@/lib/site";
 
 export function AboutContent() {
   const { t } = useTranslation();
@@ -16,7 +15,7 @@ export function AboutContent() {
   return (
     <>
       <PageHero
-        title={interpolate(p.title, { brandName: siteConfig.name })}
+        title={interpolate(p.title, { brandName: t.common.brandName })}
         subtitle={p.subtitle}
         visual={<AboutPageVisual />}
       />
@@ -25,7 +24,7 @@ export function AboutContent() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="text-2xl font-bold text-slate-900">{p.whoWeAre}</h2>
           <p className="mt-4 text-lg leading-relaxed text-slate-600">
-            {interpolate(p.p1, { brandName: siteConfig.name, shortName: siteConfig.shortName })}
+            {interpolate(p.p1, { brandName: t.common.brandName, shortName: t.common.shortName })}
           </p>
           <p className="mt-4 text-lg leading-relaxed text-slate-600">{p.p2}</p>
           <p className="mt-4 text-lg leading-relaxed text-slate-600">{p.p3}</p>

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { interpolate, useTranslation } from "@/contexts/LanguageContext";
-import { siteConfig } from "@/lib/site";
 
 type LogoAsset = {
   file: string;
@@ -56,7 +55,7 @@ export function LogoDownloadContent() {
           className="h-20 w-20 shrink-0"
         />
         <div>
-          <p className="font-semibold text-slate-900">{siteConfig.name}</p>
+          <p className="font-semibold text-slate-900">{t.common.brandName}</p>
           <p className="text-sm text-slate-500">{ld.conceptLabel}</p>
         </div>
       </div>

@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-900 text-slate-300">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[1.25fr_0.7fr_1fr_1fr_1.2fr] lg:gap-6">
           <div className="min-w-0 sm:col-span-2 lg:col-span-1">
             <Logo variant="full" theme="dark" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400 break-words">

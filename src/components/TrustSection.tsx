@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { interpolate, useTranslation } from "@/contexts/LanguageContext";
-import { siteConfig, trustBadgeIcons } from "@/lib/site";
+import { trustBadgeIcons } from "@/lib/site";
 
 const badgeIcons: Record<string, React.ReactNode> = {
   location: (
@@ -85,8 +85,8 @@ export function TrustSection({
               </h2>
               <p className="mt-4 text-base text-slate-600 break-words sm:text-lg">
                 {interpolate(t.whyTrustUs.description, {
-                  brandName: siteConfig.name,
-                  shortName: siteConfig.shortName,
+                  brandName: t.common.brandName,
+                  shortName: t.common.shortName,
                 })}
               </p>
             </div>

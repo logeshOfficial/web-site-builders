@@ -55,18 +55,7 @@ export function PlanBoard() {
           <p className="mt-4 text-lg leading-relaxed text-[#3d4a5c]">{copy.plansText}</p>
         </div>
 
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {[copy.support, copy.maintenance, copy.updates, copy.noExtraShort].map((item) => (
-            <li
-              key={item}
-              className="rounded-2xl bg-[#142033] px-4 py-4 text-center text-lg font-semibold text-[#fffdf8]"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-8 grid items-stretch gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-2">
           {copy.plans.map((plan) => (
             <article
               key={plan.id}
@@ -267,24 +256,41 @@ export function StudioHero() {
   const copy = getOfferCopy(locale);
 
   return (
-    <section className="bg-[#142033] text-[#fffdf8]">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <p className="text-lg font-semibold text-[#e7c56a]">{copy.heroKicker}</p>
-        <h1 className={`mt-3 max-w-4xl leading-tight sm:text-5xl ${locale === "ta" ? "text-[1.75rem]" : "text-4xl"}`}>{copy.heroTitle}</h1>
+    <section className="relative overflow-hidden bg-[#142033] text-[#fffdf8]">
+      <div aria-hidden="true" className="pointer-events-none absolute -right-32 -top-40 h-96 w-96 rounded-full bg-[#0f6e62]/30 blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:gap-16">
+        <div>
+        <p className="inline-flex rounded-full border border-[#e7c56a]/30 bg-[#e7c56a]/10 px-4 py-1.5 text-sm font-semibold text-[#e7c56a] sm:text-base">{copy.heroKicker}</p>
+        <h1 className={`mt-5 max-w-4xl leading-tight sm:text-5xl ${locale === "ta" ? "text-[1.75rem]" : "text-4xl"}`}>{copy.heroTitle}</h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#d5ddd9] sm:text-xl">{copy.heroText}</p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Link
             href="/contact"
-            className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#e7c56a] px-7 text-lg font-semibold text-[#142033] hover:bg-[#f3dc8d]"
+            className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#e7c56a] px-7 py-3 text-center text-lg font-semibold leading-snug text-[#142033] hover:bg-[#f3dc8d]"
           >
             {copy.talk}
           </Link>
           <Link
             href="#plans"
-            className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#fffdf8]/30 px-7 text-lg font-semibold text-[#fffdf8] hover:border-[#e7c56a]"
+            className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#fffdf8]/30 px-7 py-3 text-center text-lg font-semibold leading-snug text-[#fffdf8] hover:border-[#e7c56a]"
           >
             {copy.seePlans}
           </Link>
+        </div>
+        </div>
+        <div className="rounded-[2rem] border border-white/15 bg-white/[0.06] p-5 shadow-2xl shadow-black/10 sm:p-7">
+          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#e7c56a]">{locale === "ta" ? "எங்கள் சேவைகள்" : "What we do"}</p>
+          <h2 className="mt-2 text-2xl leading-snug sm:text-3xl">{copy.skillsTitle}</h2>
+          <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+            {copy.skills.map((skill, index) => (
+              <li key={skill.id} className="rounded-2xl border border-white/10 bg-[#142033]/60 p-4">
+                <span aria-hidden="true" className="text-sm font-semibold text-[#e7c56a]">0{index + 1}</span>
+                <p className="mt-2 text-base font-semibold leading-snug text-white">{skill.title}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
         </div>
         <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {[

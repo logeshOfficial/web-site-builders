@@ -22,7 +22,8 @@ export function PageHero({
   const maxW = maxWidth === "4xl" ? "max-w-4xl" : "max-w-6xl";
 
   return (
-    <section className="bg-slate-900 py-16 text-white">
+    <section className="relative overflow-hidden bg-slate-900 py-14 text-white sm:py-20">
+      <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-40 h-80 w-80 rounded-full bg-teal-600/10 blur-3xl" />
       <div className={`mx-auto ${maxW} px-4 sm:px-6`}>
         <div className={visual ? "lg:grid lg:grid-cols-2 lg:items-center lg:gap-12 xl:gap-16" : undefined}>
           <div>
@@ -34,7 +35,7 @@ export function PageHero({
               )
             ) : null}
             <h1
-              className={`text-4xl font-bold tracking-tight break-words sm:text-5xl${eyebrow ? " mt-2" : ""}`}
+              className={`text-3xl font-bold leading-tight tracking-tight break-words sm:text-5xl${eyebrow ? " mt-3" : ""}`}
             >
               {title}
             </h1>

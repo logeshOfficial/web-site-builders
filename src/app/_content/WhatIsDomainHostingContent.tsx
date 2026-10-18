@@ -12,7 +12,6 @@ import { PageHero } from "@/components/PageHero";
 import { WhatIsDomainHostingPageVisual } from "@/components/page-visuals";
 import { PricingTransparencyTable } from "@/components/PricingTransparencyTable";
 import { interpolate, useTranslation } from "@/contexts/LanguageContext";
-import { siteConfig } from "@/lib/site";
 
 export function WhatIsDomainHostingContent() {
   const { t } = useTranslation();
@@ -115,7 +114,7 @@ export function WhatIsDomainHostingContent() {
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <h2 className="text-2xl font-bold text-slate-900">{p.readyTitle}</h2>
           <p className="mt-4 text-lg text-slate-600">
-            {interpolate(p.readyText, { brandName: siteConfig.name })}
+            {interpolate(p.readyText, { brandName: t.common.brandName })}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link

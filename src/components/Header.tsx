@@ -1,48 +1,42 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Logo } from "@/components/Logo";
 import { navLinks } from "@/lib/site";
 
-type NavLinkItem = (typeof navLinks)[number];
-
-function desktopNavLinkClassName(link: NavLinkItem) {
-  const base =
-    "whitespace-nowrap text-base font-medium text-[#3d4a5c] transition hover:text-[#0f6e62]";
-
-  const hideUntil = "hideUntil" in link ? link.hideUntil : undefined;
-
-  if (hideUntil === "lg") {
-    return `${base} hidden lg:inline`;
-  }
-  return base;
-}
-
 export function Header() {
   const [open, setOpen] = useState(false);
   const { t, locale } = useTranslation();
+  const pathname = usePathname();
+  const isActive = (href: string) => href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <header className="sticky top-0 z-50 w-full overflow-x-hidden border-b border-[#142033]/10 bg-[#fffdf8]/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-[#142033]/10 bg-[#fffdf8]/95 backdrop-blur-sm" onKeyDown={(event) => { if (event.key === "Escape") setOpen(false); }}>
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#142033] focus:shadow-lg">
+        {locale === "ta" ? "முக்கிய உள்ளடக்கத்திற்குச் செல்லவும்" : "Skip to main content"}
+      </a>
       <div className="mx-auto flex w-full max-w-6xl items-center gap-3 px-4 py-3 sm:px-6">
         <Logo
           variant="full"
           theme="light"
           asLink
-          className="min-w-0 flex-1 lg:flex-none lg:shrink-0"
+          showSubtitle={false}
+          className="min-w-0 flex-1 xl:flex-none xl:shrink-0"
         />
 
-        <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 lg:flex lg:gap-6">
+        <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 xl:flex">
           <nav aria-label={locale === "ta" ? "முதன்மை வழிசெலுத்தல்" : "Main navigation"}>
-            <div className="flex flex-nowrap items-center gap-4 lg:gap-5">
+            <div className="flex flex-nowrap items-center gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={desktopNavLinkClassName(link)}
+                  aria-current={isActive(link.href) ? "page" : undefined}
+                  className={`whitespace-nowrap rounded-md py-2 text-base font-medium transition hover:text-[#0f6e62] ${isActive(link.href) ? "text-[#0f6e62] underline decoration-2 underline-offset-8" : "text-[#3d4a5c]"}`}
                 >
                   {t.nav[link.key]}
                 </Link>
@@ -60,7 +54,7 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="ml-auto flex shrink-0 items-center gap-1.5 sm:gap-2 lg:hidden">
+        <div className="ml-auto flex shrink-0 items-center gap-1.5 sm:gap-2 xl:hidden">
           <LanguageSwitcher compact />
           <button
             type="button"
@@ -68,7 +62,7 @@ export function Header() {
             onClick={() => setOpen(!open)}
             aria-label={t.common.toggleMenu}
             aria-expanded={open}
-            aria-controls="mobile-navigation"
+            aria-controls={open ? "mobile-navigation" : undefined}
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {open ? (
@@ -82,14 +76,15 @@ export function Header() {
       </div>
 
       {open && (
-        <nav id="mobile-navigation" aria-label={t.common.toggleMenu} className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-[#142033]/10 lg:hidden">
+        <nav id="mobile-navigation" aria-label={locale === "ta" ? "முதன்மை வழிசெலுத்தல்" : "Main navigation"} className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-[#142033]/10 xl:hidden">
           <div className="mx-auto w-full max-w-6xl px-4 py-3 sm:px-6">
           <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex min-h-12 w-full items-center rounded-lg px-3 py-2.5 text-lg font-medium text-[#142033] hover:bg-[#f6f3ec]"
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`flex min-h-12 w-full items-center rounded-lg px-3 py-2.5 text-lg font-medium hover:bg-[#f6f3ec] ${isActive(link.href) ? "bg-[#e7f2ee] text-[#0f6e62]" : "text-[#142033]"}`}
                 onClick={() => setOpen(false)}
               >
                 {t.nav[link.key]}

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { interpolate, useTranslation } from "@/contexts/LanguageContext";
-import { siteConfig } from "@/lib/site";
 
 const SCENE_DURATION_MS = 3500;
 
@@ -100,7 +99,7 @@ function WeDoScene() {
   return (
     <div className="flex flex-col items-center justify-center gap-3 p-4">
       <p className="text-center text-xs font-semibold uppercase tracking-wider text-teal-600">
-        {siteConfig.name}
+        {t.common.brandName}
       </p>
       <div className="grid w-full max-w-xs grid-cols-2 gap-2">
         {items.map((item, i) => (

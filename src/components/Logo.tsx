@@ -11,6 +11,7 @@ type LogoProps = {
   subtitle?: string;
   subtitleVisible?: "always" | "sm";
   asLink?: boolean;
+  showSubtitle?: boolean;
   /** Header layout: wrap on small screens, full name on md+. */
   truncateName?: boolean;
 };
@@ -91,6 +92,7 @@ export function Logo({
   theme = "light",
   className = "",
   asLink = false,
+  showSubtitle = true,
 }: LogoProps) {
   const { locale } = useTranslation();
   const styles = themeStyles[theme];
@@ -110,13 +112,13 @@ export function Logo({
           <span className={`${locale === "ta" ? "text-xs min-[380px]:text-lg" : "text-lg"} font-semibold leading-tight tracking-tight sm:text-xl ${styles.text}`}>
             {locale === "ta" ? "லெவின்டெக்" : "levyntech"}
           </span>
-          <span className={`hidden items-center text-sm leading-none min-[420px]:inline-flex ${styles.subtext}`}>
+          {showSubtitle && <span className={`hidden items-center whitespace-nowrap text-sm leading-none min-[420px]:inline-flex ${styles.subtext}`}>
             {locale === "ta" ? "முன்னேற்றம்" : "Leverage"}
             <Divider />
             {locale === "ta" ? "புதுமை" : "Innovation"}
             <Divider />
             {locale === "ta" ? "தொழில்நுட்பம்" : "Technology"}
-          </span>
+          </span>}
         </span>
       ) : null}
     </>
