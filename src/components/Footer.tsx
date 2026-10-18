@@ -6,7 +6,7 @@ import { Logo } from "@/components/Logo";
 import { navLinks, siteConfig } from "@/lib/site";
 
 export function Footer() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   return (
     <footer className="border-t border-slate-200 bg-slate-900 text-slate-300">
@@ -89,14 +89,14 @@ export function Footer() {
                   {siteConfig.phone}
                 </a>
               </li>
-              <li className="break-words leading-relaxed">{siteConfig.location.address}</li>
+              <li className="break-words leading-relaxed">{locale === "ta" ? "சென்னை, தமிழ்நாடு, இந்தியா" : siteConfig.location.address}</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-slate-800 pt-6 text-center sm:mt-10 sm:flex-row sm:gap-4 sm:pt-8 sm:text-left">
           <p className="text-sm text-slate-500 break-words">
-            © {new Date().getFullYear()} {siteConfig.name}. {t.common.allRightsReserved}
+            © {new Date().getFullYear()} {locale === "ta" ? "லெவின்டெக்" : siteConfig.name}. {t.common.allRightsReserved}
           </p>
           <p className="text-sm text-slate-500 break-words">{t.common.builtWith}</p>
         </div>

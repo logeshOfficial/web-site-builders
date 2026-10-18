@@ -271,7 +271,7 @@ export const en = {
       },
       {
         title: "Mobile-first for customers",
-        text: "Most of your customers search on phone. Every site is built for Jio/Airtel 4G speed and ease.",
+        text: "Most of your customers search on phone. Every site is built mobile-first, fast, and easy to use.",
       },
     ],
   },

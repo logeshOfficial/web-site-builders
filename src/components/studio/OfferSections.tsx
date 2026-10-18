@@ -12,6 +12,13 @@ const planParts: Record<PlanId, string[]> = {
   seo: ["SEO"],
 };
 
+const tamilPlanParts: Record<PlanId, string[]> = {
+  complete: ["தேடல் மேம்பாடு", "மென்பொருள்", "இணையதளம்"],
+  software: ["தேடல் மேம்பாடு", "மென்பொருள்"],
+  website: ["தேடல் மேம்பாடு", "இணையதளம்"],
+  seo: ["தேடல் மேம்பாடு"],
+};
+
 export function SkillGallery() {
   const { locale } = useTranslation();
   const copy = getOfferCopy(locale);
@@ -81,7 +88,7 @@ export function PlanBoard() {
               </div>
               <h3 className="mt-2 text-2xl leading-snug">{plan.includes}</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
-                {planParts[plan.id].map((part) => (
+                {(locale === "ta" ? tamilPlanParts : planParts)[plan.id].map((part) => (
                   <li
                     key={part}
                     className={`rounded-full px-3 py-1 text-base font-semibold ${
@@ -263,7 +270,7 @@ export function StudioHero() {
     <section className="bg-[#142033] text-[#fffdf8]">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <p className="text-lg font-semibold text-[#e7c56a]">{copy.heroKicker}</p>
-        <h1 className="mt-3 max-w-4xl text-4xl leading-tight sm:text-5xl">{copy.heroTitle}</h1>
+        <h1 className={`mt-3 max-w-4xl leading-tight sm:text-5xl ${locale === "ta" ? "text-[1.75rem]" : "text-4xl"}`}>{copy.heroTitle}</h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#d5ddd9] sm:text-xl">{copy.heroText}</p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Link

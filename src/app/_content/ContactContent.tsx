@@ -8,7 +8,7 @@ import { useTranslation } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, siteConfig } from "@/lib/site";
 
 export function ContactContent() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const p = t.contactPage;
 
   return (
@@ -41,7 +41,7 @@ export function ContactContent() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-slate-500">{p.locationLabel}</p>
-                  <p className="mt-1 text-lg text-slate-800">{siteConfig.location.address}</p>
+                  <p className="mt-1 text-lg text-slate-800">{locale === "ta" ? "சென்னை, தமிழ்நாடு, இந்தியா" : siteConfig.location.address}</p>
                 </div>
                 <div>
                   <p className="text-sm font-medium text-slate-500">{p.hoursLabel}</p>

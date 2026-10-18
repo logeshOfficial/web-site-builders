@@ -36,6 +36,13 @@ h3 {
   letter-spacing: -0.02em;
 }
 
+html[lang="ta-IN"] h1,
+html[lang="ta-IN"] h2,
+html[lang="ta-IN"] h3 {
+  overflow-wrap: anywhere;
+  letter-spacing: normal;
+}
+
 @keyframes showcase-progress {
   from {
     width: 0%;

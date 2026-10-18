@@ -6,16 +6,16 @@ import { useTranslation } from "@/contexts/LanguageContext";
 export function MySlotHub() {
   const { locale } = useTranslation();
   const copy = locale === "ta" ? {
-    label: "உங்கள் இணையதளத்துடன் இணையும் appointment software",
-    title: "MySlotHub மூலம் appointments எளிதாக",
-    intro: "உங்கள் இணையதளத்தைப் பார்வையிடுபவர்கள் அடுத்த படியை எடுக்க உதவுங்கள். MySlotHub ஒரு online appointment booking தீர்வு; உங்கள் website-க்கு ஒரு பயனுள்ள துணை.",
+    label: "உங்கள் இணையதளத்துடன் இணையும் முன்பதிவு மென்பொருள்",
+    title: "மைஸ்லாட்ஹப் மூலம் முன்பதிவு எளிதாக",
+    intro: "உங்கள் இணையதளத்தைப் பார்வையிடுபவர்கள் எளிதாக நேரம் முன்பதிவு செய்ய உதவுங்கள். மைஸ்லாட்ஹப் உங்கள் இணையதளத்துடன் இணையும் ஒரு முன்பதிவு தீர்வு.",
     items: [
-      { title: "Online booking", text: "வாடிக்கையாளர்கள் booking page-ல் appointment நேரத்தைத் தேர்வு செய்யலாம்." },
-      { title: "Website-லிருந்து booking", text: "உங்கள் website-ல் booking link சேர்த்து, பார்வையாளர்களை appointment page-க்கு அழைத்துச் செல்லுங்கள்." },
-      { title: "Clinic-களுக்கும் சேவை நிறுவனங்களுக்கும்", text: "Appointment அடிப்படையில் செயல்படும் நிறுவனங்களுக்கு ஒரு எளிய booking வழி." },
+      { title: "இணையவழி முன்பதிவு", text: "வாடிக்கையாளர்கள் முன்பதிவுப் பக்கத்தில் தங்களுக்கு ஏற்ற நேரத்தைத் தேர்வு செய்யலாம்." },
+      { title: "இணையதளத்திலிருந்து முன்பதிவு", text: "உங்கள் இணையதளத்தில் இணைப்பைச் சேர்த்து, பார்வையாளர்களை முன்பதிவுப் பக்கத்திற்கு அழைத்துச் செல்லுங்கள்." },
+      { title: "சேவை நிறுவனங்களுக்காக", text: "மருத்துவமனைகள் மற்றும் முன்பதிவு அடிப்படையில் செயல்படும் நிறுவனங்களுக்கு ஒரு எளிய வழி." },
     ],
-    example: "META DENTAL தனது website-லிருந்து MySlotHub booking page-க்கு வாடிக்கையாளர்களை வழிநடத்துகிறது.",
-    action: "MySlotHub பற்றி கேளுங்கள்",
+    example: "மெட்டா டென்டல் தனது இணையதளத்திலிருந்து மைஸ்லாட்ஹப் முன்பதிவுப் பக்கத்திற்கு வாடிக்கையாளர்களை வழிநடத்துகிறது.",
+    action: "மைஸ்லாட்ஹப் பற்றி கேளுங்கள்",
   } : {
     label: "Appointment software for your website",
     title: "Make appointments easier with MySlotHub",

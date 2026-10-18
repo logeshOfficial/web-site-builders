@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslation } from "@/contexts/LanguageContext";
 import { defaultLogoConceptId, logoConcepts } from "@/components/logos";
 
 type LogoTheme = "light" | "dark";
@@ -91,12 +92,13 @@ export function Logo({
   className = "",
   asLink = false,
 }: LogoProps) {
+  const { locale } = useTranslation();
   const styles = themeStyles[theme];
-  const wrapperClass = `group flex min-w-0 items-center gap-2 sm:gap-3 ${className}`;
+  const wrapperClass = `group flex min-w-0 items-center gap-1 min-[380px]:gap-2 sm:gap-3 ${className}`;
 
   const iconWrapperClass = defaultConcept
-    ? `flex h-9 w-9 shrink-0 items-center justify-center sm:h-12 sm:w-12 ${styles.box}`
-    : `flex h-9 w-9 shrink-0 items-center justify-center rounded-lg sm:h-12 sm:w-12 ${styles.box}`;
+    ? `flex h-7 w-7 shrink-0 items-center justify-center min-[380px]:h-9 min-[380px]:w-9 sm:h-12 sm:w-12 ${styles.box}`
+    : `flex h-7 w-7 shrink-0 items-center justify-center rounded-lg min-[380px]:h-9 min-[380px]:w-9 sm:h-12 sm:w-12 ${styles.box}`;
 
   const inner = (
     <>
@@ -105,15 +107,15 @@ export function Logo({
       </span>
       {variant === "full" ? (
         <span className="flex min-w-0 flex-col">
-          <span className={`text-lg font-semibold leading-tight tracking-tight sm:text-xl ${styles.text}`}>
-            levyntech
+          <span className={`${locale === "ta" ? "text-xs min-[380px]:text-lg" : "text-lg"} font-semibold leading-tight tracking-tight sm:text-xl ${styles.text}`}>
+            {locale === "ta" ? "லெவின்டெக்" : "levyntech"}
           </span>
           <span className={`hidden items-center text-sm leading-none min-[420px]:inline-flex ${styles.subtext}`}>
-            Leverage
+            {locale === "ta" ? "முன்னேற்றம்" : "Leverage"}
             <Divider />
-            Innovation
+            {locale === "ta" ? "புதுமை" : "Innovation"}
             <Divider />
-            Technology
+            {locale === "ta" ? "தொழில்நுட்பம்" : "Technology"}
           </span>
         </span>
       ) : null}

@@ -23,7 +23,7 @@ function desktopNavLinkClassName(link: NavLinkItem) {
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   return (
     <header className="sticky top-0 z-50 w-full overflow-x-hidden border-b border-[#142033]/10 bg-[#fffdf8]/95 backdrop-blur-sm">
@@ -36,7 +36,7 @@ export function Header() {
         />
 
         <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 lg:flex lg:gap-6">
-          <nav aria-label="Main navigation">
+          <nav aria-label={locale === "ta" ? "முதன்மை வழிசெலுத்தல்" : "Main navigation"}>
             <div className="flex flex-nowrap items-center gap-4 lg:gap-5">
               {navLinks.map((link) => (
                 <Link
