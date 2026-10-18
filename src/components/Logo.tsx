@@ -57,7 +57,7 @@ export function LogoMark({ className }: { className?: string }) {
 
 function Divider() {
   return (
-    <span aria-hidden="true" className="mx-2 inline-block translate-y-[-1px] text-[#a6842d]">
+    <span aria-hidden="true" className="mx-1 inline-block translate-y-[-1px] text-[#a6842d]">
       ·
     </span>
   );
@@ -112,7 +112,7 @@ export function Logo({
           <span className={`${locale === "ta" ? "text-xs min-[380px]:text-lg" : "text-lg"} font-semibold leading-tight tracking-tight sm:text-xl ${styles.text}`}>
             {locale === "ta" ? "லெவின்டெக்" : "levyntech"}
           </span>
-          {showSubtitle && <span className={`hidden items-center whitespace-nowrap text-sm leading-none min-[420px]:inline-flex ${styles.subtext}`}>
+          {showSubtitle && <span className={`mt-0.5 text-[10px] leading-tight sm:text-xs ${styles.subtext}`}>
             {locale === "ta" ? "முன்னேற்றம்" : "Leverage"}
             <Divider />
             {locale === "ta" ? "புதுமை" : "Innovation"}

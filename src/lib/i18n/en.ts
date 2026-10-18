@@ -2,8 +2,8 @@ import { PRICING, formatPrice } from "../pricing-config";
 
 export const en = {
   common: {
-    brandName: "Business Website Makers",
-    shortName: "Web site builders",
+    brandName: "Levyntech",
+    shortName: "Levyntech",
     freeConsultation: "Free Consultation",
     getFreeQuote: "Get a Free Quote",
     getFreeQuoteShort: "Get Free Quote",
@@ -617,19 +617,19 @@ export const en = {
   ],
 
   services: {
-    title: "Your digital marketing foundation",
+    title: "Build a stronger online presence",
     description:
-      "Marketing drives growth—and for most businesses today, that starts with a professional website and Google visibility. From SEO-ready pages to local search, we handle the tech so you can focus on customers.",
+      "Give customers a clear way to find and connect with your business. From websites to local search, we handle the technical work so you can focus on your customers.",
     items: [
       {
         title: "SEO Websites",
         description:
-          "Fast, mobile-first websites built to rank on Google and convert visitors into calls and bookings.",
+          "Fast, mobile-friendly websites designed to be found on Google and make it easy for visitors to contact you.",
       },
       {
         title: "Local SEO",
         description:
-          "Google Business Profile, local keywords, schema markup, and city pages so customers in Chennai find you first.",
+          "Google Business Profile support, local search terms and location pages to help customers in Chennai discover your business.",
       },
       {
         title: "Web Apps",
@@ -647,7 +647,7 @@ export const en = {
   packages: {
     title: "Realistic pricing — no agency markup",
     description:
-      "Gym, salon, shop, or clinic — clear one-time build fees. Hosting included on all plans. Domain included from Growth tier. .",
+      "For gyms, salons, shops and clinics: clear one-time build fees, hosting on all plans, and a domain included from the Growth tier.",
     seeAddons: "See cost breakdown & add-ons →",
     gymNote:
       `Gym & small business intro sites from ${PRICING.misc.gymIntro} on Growth (Standard) — domain + hosting included for the first year.`,

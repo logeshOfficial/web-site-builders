@@ -19,13 +19,12 @@ export function Header() {
       <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#142033] focus:shadow-lg">
         {locale === "ta" ? "முக்கிய உள்ளடக்கத்திற்குச் செல்லவும்" : "Skip to main content"}
       </a>
-      <div className="mx-auto flex w-full max-w-6xl items-center gap-3 px-4 py-3 sm:px-6">
+      <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-4 py-3 sm:px-6">
         <Logo
           variant="full"
           theme="light"
           asLink
-          showSubtitle={false}
-          className="min-w-0 flex-1 xl:flex-none xl:shrink-0"
+          className="min-w-0 flex-1 xl:min-w-max xl:flex-none xl:shrink-0"
         />
 
         <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 xl:flex">
